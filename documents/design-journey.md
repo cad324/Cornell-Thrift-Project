@@ -39,14 +39,30 @@ events that Cornell Thrift is hosting.
 
 [Collect your client's needs and wants for the website. Come up with several appropriate design ideas on how those needs may be met. In the **Rationale** field, justify your ideas and add any additional comments you have. There is no specific number of needs required for this, but you need enough to do the job.]
 
-Example:
-- (_pick one:_) Client Requirement/Target Audience Need
+- Client Requirement #1
   - **Requirement or Need** [What does your client and audience need or want?]
-    - Client wants to cater to people who speak different languages.
+    - The client wants to retain site visitors and keep them informed via newslettlers
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
-    - Create web-pages manually in multiple languages.
+    - Include a mailing list form in the footer to encourage users to sign up for the newsletter listserv
+    - Show confirmation message once signed up
   - **Rationale** [Justify your decisions; additional notes.]
-    - Create multiple pages in multiple languages manually.
+    - Having the mailing list form on every page would remind the visitor of the listserv opportunity.
+
+- Client Requirement #2
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The thrift club wants people to be able to reach out to them for more information.
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include a contact form on a contact page.
+  - **Rationale** [Justify your decisions; additional notes.]
+    - The contact form would allow users to send messages to the client and provide an email and name for correspondence.
+
+- Target Audience Needs #1
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The target audience needs to be aware of the upcoming events hosted by the client.
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include the upcoming events near the top of the events page
+  - **Rationale** [Justify your decisions; additional notes.]
+    - This makes it easy for the visitors to find what events they should be looking out for.
 
 
 ## Initial Design
