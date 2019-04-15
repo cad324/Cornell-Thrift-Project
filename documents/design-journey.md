@@ -1,6 +1,6 @@
 # Project 4: Design Journey
 
-Your Team Name: [your team name]
+Your Team Name: Purple Tiger
 
 **All images must be visible in Markdown Preview. No credit will be provided for images in your repository that are not properly linked in Markdown. Assume all file paths are case sensitive!**
 
@@ -8,9 +8,6 @@ Your Team Name: [your team name]
 ## Client Description
 
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
-
-[NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
-
 
 ## Meeting Notes
 
@@ -25,6 +22,8 @@ Your Team Name: [your team name]
 ## Target Audience(s)
 
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
+
+The potential audience for this website are members of the club and people at Cornell who are intersted in what Cornell Thrift do. The target audiences will be able to find mission of the club and more information (image and position) about eboard members. Also, they can look for the upcoming events/activities such as 'Thrift Exchange Closets' or 'Pop-up Shop'. For anyone who would like to be part of the club can subscribe for newsletter, they can fill out the form. Only Eboard members will be able to upload/delete events and gallery.
 
 
 ## Client Requirements & Target Audiences' Needs
