@@ -148,6 +148,46 @@ Our:
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
+Milestone 1
+
+Initial Sketches
+- Home - Susan
+- About - Yuyi
+- Our Events - Samantha
+- Thrifting Resources - Ha Yeon
+- Contact Us, Header/Footer, Login - Clive
+
+Clive has to sketch up the header and footer before the rest of the team and start their designs.
+
+Milestone 2
+
+- Samantha - Organize a team meeting in advance of the Milestone 2 deadline and the next client meeting
+
+- Clive - Organize a second client meeting in advance of the Milestone 2 deadline
+
+- Everyone is responsible for updating their own pseudocode, structure, and initial coding for each page/template as assigned above.
+
+- The whole team will work together at the two team meetings to plan the database, update the design, and finish any other elements of the milestone not specified above.
+
+Milestone 3
+
+- Samantha - Organize a team meeting to work on the init.sql file to implement the database
+
+- Everyone is responsible for implementing PHP elements and database interactivity for their individual page/templates as assigned above.
+
+- Ha Yeon - Do final check of design to make sure there are no conflicts across pages.
+
+Final Submission
+
+- Everyone makes changes to their page as needed.
+
+At Every Submissions
+
+- Susan - ensure we are on track to meet project guidelines and client expectations the night before the deadline
+
+- Yuyi - ensure that we are meeting each milestone requirement the night before the deadline
+
+
 ## Additional Comments
 
 [If you feel like you haven't fully explained your design choices, or if you want to explain some other functions in your site (such as special design decisions that might not meet the final project requirements), you can use this space to justify your design choices or ask other questions about the project and process.]
