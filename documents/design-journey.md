@@ -9,6 +9,8 @@ Your Team Name: Purple Tiger
 
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
 
+<<<<<<< HEAD
+=======
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
 Our client is Cornell Thrift. They want a website for cornell students interested in the club activities: the events
@@ -17,6 +19,7 @@ their existing website with newly added features, such as forms for updating cur
 for mailing list, image gallery.
 
 
+>>>>>>> 21c15600b781982bd67d186b2aa0a60608b11c85
 ## Meeting Notes
 
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
@@ -33,6 +36,8 @@ events that Cornell Thrift is hosting.
 ## Target Audience(s)
 
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
+
+The potential audience for this website are members of the club and people at Cornell who are intersted in what Cornell Thrift do. The target audiences will be able to find mission of the club and more information (image and position) about eboard members. Also, they can look for the upcoming events/activities such as 'Thrift Exchange Closets' or 'Pop-up Shop'. For anyone who would like to be part of the club can subscribe for newsletter, they can fill out the form. Only Eboard members will be able to upload/delete events and gallery.
 
 
 ## Client Requirements & Target Audiences' Needs
@@ -86,6 +91,15 @@ Example:
     - Mobile Apps
     - Tablets
   - About Me
+
+  - Home
+    - Mission
+    - Slideshow
+  - About
+    - Committees
+  - Our Events
+  - Thrifting Resources
+  - Contact Us
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
