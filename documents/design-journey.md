@@ -190,9 +190,9 @@ Final Submission
 
 At Every Submissions
 
-- Susan - ensure we are on track to meet project guidelines and client expectations the night before the deadline
+- Susan - Ensure we are on track to meet project guidelines and client expectations the night before the deadline
 
-- Yuyi - ensure that we are meeting each milestone requirement the night before the deadline
+- Yuyi - Ensure that we are meeting each milestone requirement the night before the deadline
 
 
 ## Additional Comments
