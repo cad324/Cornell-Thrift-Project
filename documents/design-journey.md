@@ -16,6 +16,7 @@ Your Team Name: [your team name]
 
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
+![Meeting 1 Notes - Client Requirements](client_requirements.jpg)
 
 ## Purpose & Content
 
