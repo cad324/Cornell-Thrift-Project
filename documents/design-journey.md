@@ -71,6 +71,15 @@ Example:
     - Tablets
   - About Me
 
+  - Home
+    - Mission
+    - Slideshow
+  - About
+    - Committees
+  - Our Events
+  - Thrifting Resources
+  - Contact Us
+
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
   - *Websites*: showcase all the websites designed by the client, with thumbnail images and a brief description for each design;
