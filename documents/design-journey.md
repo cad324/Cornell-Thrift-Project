@@ -63,11 +63,21 @@ The potential audience for this website are members of the club and people at Co
 
 - Target Audience Needs #1
   - **Requirement or Need** [What does your client and audience need or want?]
-    - The target audience needs to be aware of the upcoming events hosted by the client.
+    - The Cornell students interested in thrift need to be aware of the upcoming events hosted by the client.
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
     - Include the upcoming events near the top of the events page
   - **Rationale** [Justify your decisions; additional notes.]
     - This makes it easy for the visitors to find what events they should be looking out for.
+
+- Target Audience Needs #2
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The E-Board members of the club need to be able to login and update site content.
+    - Give logged in members access to forms that update the site.
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include a login button in the header of the site so that members are able login appropriately.
+    - Show a logout button when the members are logged in.
+  - **Rationale** [Justify your decisions; additional notes.]
+    - This creates intuitive user access control.
 
 
 ## Initial Design
