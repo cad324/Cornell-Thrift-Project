@@ -76,6 +76,7 @@ Example:
     - Tablets
   - About Me
 
+  Our Naviagtion Planning:
   - Home
     - Mission
     - Slideshow
@@ -99,9 +100,15 @@ Example:
 ## Interactivity
 
 [What interactive features will your site have? What PHP elements will you include?]
+* We have a login/logout page for the E-board members of Cornell Thrift. The login/logout link will appear on the top right of each page.
+* If a E-board member of Cornell Thrift is logged in, then he or she can upload new pictures and update events(make changes to the website)
+* We have a contact form where people can put in their name and email address and write a message to the Cornell Thrift club.
+* Under each page, we will have a form that says "Sign up for the mailling list" and takes in people's email
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
-
+* The login and logout functionality will make sure that Cornell Thrift's E-board members can edit their website and upload new contents which is what our client wants.
+* The contact form allows people who are interested in Cornell Thrift to interact with the Eboard members which is what our client wants.
+* The mailling list sign up would allow people who are interest in Cornell Thrift to get more information about this club which is what our client wants to happen.
 
 ## Work Distribution
 
