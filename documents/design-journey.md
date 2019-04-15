@@ -1,6 +1,6 @@
 # Project 4: Design Journey
 
-Your Team Name: [your team name]
+Your Team Name: Purple Tiger
 
 **All images must be visible in Markdown Preview. No credit will be provided for images in your repository that are not properly linked in Markdown. Assume all file paths are case sensitive!**
 
@@ -11,6 +11,11 @@ Your Team Name: [your team name]
 
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
+Our client is Cornell Thrift. They want a website for cornell students interested in the club activities: the events
+they hosting and the organization mission. Their key goals are to have a new website that uses the content of
+their existing website with newly added features, such as forms for updating current event, forms for sign up
+for mailing list, image gallery.
+
 
 ## Meeting Notes
 
@@ -20,6 +25,7 @@ Your Team Name: [your team name]
 ## Purpose & Content
 
 [Tell us the purpose of the website and what it is all about.]
+The purpose of the website is to promote Cornell Thrift and have Cornell students
 
 
 ## Target Audience(s)
