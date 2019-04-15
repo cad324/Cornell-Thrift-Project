@@ -9,8 +9,6 @@ Your Team Name: Purple Tiger
 
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
 
-<<<<<<< HEAD
-=======
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
 Our client is Cornell Thrift. They want a website for cornell students interested in the club activities: the events
@@ -19,7 +17,6 @@ their existing website with newly added features, such as forms for updating cur
 for mailing list, image gallery.
 
 
->>>>>>> 21c15600b781982bd67d186b2aa0a60608b11c85
 ## Meeting Notes
 
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
@@ -44,14 +41,40 @@ The potential audience for this website are members of the club and people at Co
 
 [Collect your client's needs and wants for the website. Come up with several appropriate design ideas on how those needs may be met. In the **Rationale** field, justify your ideas and add any additional comments you have. There is no specific number of needs required for this, but you need enough to do the job.]
 
-Example:
-- (_pick one:_) Client Requirement/Target Audience Need
+- Client Requirement #1
   - **Requirement or Need** [What does your client and audience need or want?]
-    - Client wants to cater to people who speak different languages.
+    - The client wants to retain site visitors and keep them informed via newslettlers
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
-    - Create web-pages manually in multiple languages.
+    - Include a mailing list form in the footer to encourage users to sign up for the newsletter listserv
+    - Show confirmation message once signed up
   - **Rationale** [Justify your decisions; additional notes.]
-    - Create multiple pages in multiple languages manually.
+    - Having the mailing list form on every page would remind the visitor of the listserv opportunity.
+
+- Client Requirement #2
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The thrift club wants people to be able to reach out to them for more information.
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include a contact form on a contact page.
+  - **Rationale** [Justify your decisions; additional notes.]
+    - The contact form would allow users to send messages to the client and provide an email and name for correspondence.
+
+- Target Audience Needs #1
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The Cornell students interested in thrift need to be aware of the upcoming events hosted by the client.
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include the upcoming events near the top of the events page
+  - **Rationale** [Justify your decisions; additional notes.]
+    - This makes it easy for the visitors to find what events they should be looking out for.
+
+- Target Audience Needs #2
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The E-Board members of the club need to be able to login and update site content.
+    - Give logged in members access to forms that update the site.
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include a login button in the header of the site so that members are able login appropriately.
+    - Show a logout button when the members are logged in.
+  - **Rationale** [Justify your decisions; additional notes.]
+    - This creates intuitive user access control.
 
 
 ## Initial Design
@@ -76,15 +99,15 @@ Example:
     - Tablets
   - About Me
 
-  Our Naviagtion Planning:
+
+Our:
   - Home
-    - Mission
-    - Slideshow
   - About
-    - Committees
   - Our Events
   - Thrifting Resources
   - Contact Us
+
+
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
@@ -92,9 +115,25 @@ Example:
   - *Mobile Apps*: showcase all the mobile apps designed by the client, with thumbnail images and a brief description for each design;
   - *Tablets*: showcase all the tablet applications designed by the client, with thumbnail images and a brief description for each design;
 
+Our:
+  -*Home* : mission statement, slideshow about pictures about cornell thrift
+  -*about* : committess that includes the team members and description of the committees
+  -*our events* : include the Thrift exchange closets and locations
+                  the behind the seams photo campaign and embedded link to instagram
+                  pop up shops
+                  sewing workshops
+  -*thrifting resources* : resources hosted on old websited
+  -*contact us* : form to contact Cornell Thrift with any questions and concerns
+  -*login* : login/logout
+
 - **Process**
   - [photo of card sort]
   - [explanation of how your come up with your content organization and navigation.]
+
+ Explanation of content organization and navigation :
+  - Client's target audience is Cornell Students who want to know about the club
+  and know about the upcoming events.
+  - Also, part of the client's needs on google doc they shared with us.
 
 
 ## Interactivity
