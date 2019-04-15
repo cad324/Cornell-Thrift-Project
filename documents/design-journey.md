@@ -9,8 +9,6 @@ Your Team Name: Purple Tiger
 
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
 
-<<<<<<< HEAD
-=======
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
 Our client is Cornell Thrift. They want a website for cornell students interested in the club activities: the events
@@ -19,7 +17,6 @@ their existing website with newly added features, such as forms for updating cur
 for mailing list, image gallery.
 
 
->>>>>>> 21c15600b781982bd67d186b2aa0a60608b11c85
 ## Meeting Notes
 
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]

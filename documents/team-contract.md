@@ -39,10 +39,11 @@
 
 
 5. What roles will we create? Include a description of exactly what each role is responsible for.
-* Client communicator is responsible for sending emails to the client and setting up meetings between the team and the client.
-* Team coordinator is responsible for arranging meeting times and checking in with members about deadlines.
-* Team monitor is responsible for ensuring that we are both meeting the project guidelines and our client's expectations.
-* Team checker is responsible for submitting every milestone and ensuring all required components are met.
+* Client communicator: Clive is responsible for sending emails to the client and setting up meetings between the team and the client.
+* Team coordinator: Samantha is responsible for arranging meeting times and checking in with members about deadlines.
+* Team monitor: Susan is responsible for ensuring that we are both meeting the project guidelines and our client's expectations.
+* Team checker: Yuyi is responsible for submitting every milestone and ensuring all required components are met.
+* Design checker: Ha Yeon is responsible for making sure the website sticks to our design plan (or that we update the design plan as needed) and that the design is meeting the needs of the target audience and client.
 
 
 6. How will we hold ourselves and one another accountable? What (exactly) will we say to a team member who appears not to be contributing equally? To a team member who fails to deliver what was promised?
