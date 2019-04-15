@@ -25,7 +25,8 @@ for mailing list, image gallery.
 ## Purpose & Content
 
 [Tell us the purpose of the website and what it is all about.]
-The purpose of the website is to promote Cornell Thrift and have Cornell students
+The purpose of the website is to promote Cornell Thrift and have Cornell students know the upcoming
+events that Cornell Thrift is hosting.
 
 
 ## Target Audience(s)
