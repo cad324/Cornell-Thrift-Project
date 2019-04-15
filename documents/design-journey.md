@@ -71,14 +71,14 @@ Example:
     - Tablets
   - About Me
 
+Our:
   - Home
-    - Mission
-    - Slideshow
   - About
-    - Committees
   - Our Events
   - Thrifting Resources
   - Contact Us
+
+
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
@@ -86,9 +86,25 @@ Example:
   - *Mobile Apps*: showcase all the mobile apps designed by the client, with thumbnail images and a brief description for each design;
   - *Tablets*: showcase all the tablet applications designed by the client, with thumbnail images and a brief description for each design;
 
+Our:
+  -*Home* : mission statement, slideshow about pictures about cornell thrift
+  -*about* : committess that includes the team members and description of the committees
+  -*our events* : include the Thrift exchange closets and locations
+                  the behind the seams photo campaign and embedded link to instagram
+                  pop up shops
+                  sewing workshops
+  -*thrifting resources* : resources hosted on old websited
+  -*contact us* : form to contact Cornell Thrift with any questions and concerns
+  -*login* : login/logout
+
 - **Process**
   - [photo of card sort]
   - [explanation of how your come up with your content organization and navigation.]
+
+ Explanation of content organization and navigation :
+  - Client's target audience is Cornell Students who want to know about the club
+  and know about the upcoming events.
+  - Also, part of the client's needs on google doc they shared with us.
 
 
 ## Interactivity
