@@ -11,9 +11,7 @@ Your Team Name: Purple Tiger
 
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
-Our client is Cornell Thrift. They want a website for cornell students interested in the club activities: the events
-they hosting and the organization mission. Their key goals are to have a new website that uses the content of
-their existing website with newly added features, such as forms for updating current event, forms for sign up
+Our client is Cornell Thrift. They want a website for cornell students who are interested in the club activities: the events they are hosting and the organization mission. Their key goals are to have a new website that uses the content of their existing website with newly added features, such as forms for updating current event, forms for sign up
 for mailing list, image gallery.
 
 
@@ -21,13 +19,13 @@ for mailing list, image gallery.
 
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
+Meeting 1 Notes - Client Requirements:
 ![Meeting 1 Notes - Client Requirements](client_requirements.jpg)
 
 ## Purpose & Content
 
 [Tell us the purpose of the website and what it is all about.]
-The purpose of the website is to promote Cornell Thrift and have Cornell students know the upcoming
-events that Cornell Thrift is hosting.
+The purpose of the website is to promote Cornell Thrift and have Cornell students know the upcoming events that Cornell Thrift is hosting.
 
 
 ## Target Audience(s)
@@ -81,6 +79,9 @@ The potential audience for this website are members of the club and people at Co
 
 [Include exploratory idea sketches of your website.]
 
+### **About Page**
+![Initial Design - About](about_page.jpg)
+
 ### **Events Page**
 ![Initial Design - Events](events_page.jpg)
 
@@ -114,7 +115,7 @@ Example:
 
 Our:
   - Home
-  - About
+  - About(Mmebers & Committees)
   - Our Events
   - Thrifting Resources
   - Contact Us
