@@ -131,16 +131,16 @@ Our:
   - *Mobile Apps*: showcase all the mobile apps designed by the client, with thumbnail images and a brief description for each design;
   - *Tablets*: showcase all the tablet applications designed by the client, with thumbnail images and a brief description for each design;
 
-Our:
-  -*Home* : mission statement, slideshow about pictures about cornell thrift
-  -*about* : committess that includes the team members and description of the committees
-  -*our events* : include the Thrift exchange closets and locations
-                  the behind the seams photo campaign and embedded link to instagram
-                  pop up shops
-                  sewing workshops
-  -*thrifting resources* : resources hosted on old websited
-  -*contact us* : form to contact Cornell Thrift with any questions and concerns
-  -*login* : login/logout
+  *Our*:
+    - *Home* : mission statement, slideshow about pictures about cornell thrift
+    - *about* : committess that includes the team members and description of the committees
+    - *our events* : include the Thrift exchange closets and locations
+                    the behind the seams photo campaign and embedded link to instagram
+                    pop up shops
+                    sewing workshops
+    - *thrifting resources* : resources hosted on old websited
+    - *contact us* : form to contact Cornell Thrift with any questions and concerns
+    - *login* : login/logout
 
 - **Process**
   - [photo of card sort]
