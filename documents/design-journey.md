@@ -81,9 +81,17 @@ The potential audience for this website are members of the club and people at Co
 
 [Include exploratory idea sketches of your website.]
 
+### **Events Page**
 ![Initial Design - Events](events_page.jpg)
 
+### **Resources Page**
 ![Initial Design - Resources](resources_sketch.jpg)
+
+### **Login Page**
+![Login Page](login-sketch.jpg)
+
+### **Contact Page**
+![Contact Page](contact_page_1.jpg)
 
 
 ## Information Architecture, Content, and Navigation
