@@ -139,6 +139,17 @@ Our:
   and know about the upcoming events.
   - Also, part of the client's needs on google doc they shared with us.
 
+Most of the sorting of content came from how our client asked us to sort content and certain pages that they wanted on their website. However, we had a lot more leeway in terms of deciding how to implement a login form and various ways to contact the club. We started by putting the mailing list subscription and the get in touch with us form on the contact page, with the login form implemented in the nav bar.
+
+![Card Sort 1](card_sort_1.jpg)
+
+Then we decided to move the mailing list subscription into the footer so that users could access the form no matter what page their on, thus fulfilling the client's goal of reaching as many students as possible through both their website and mailing list.
+
+![Card Sort 2](card_sort_2.jpg)
+
+Finally, we decided to create a separate page for the login form in order to make the nav bar simpler for users.
+
+![Card Sort 3](card_sort_3.jpg)
 
 ## Interactivity
 
