@@ -79,6 +79,9 @@ The potential audience for this website are members of the club and people at Co
 
 [Include exploratory idea sketches of your website.]
 
+### **Home Page**
+![Initial Design - About](home_page.jpg)
+
 ### **About Page**
 ![Initial Design - About](about_page.jpg)
 
