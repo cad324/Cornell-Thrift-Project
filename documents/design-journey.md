@@ -524,7 +524,13 @@ Table: about_img_tags
 * field 2: about_img_id
 * field 2: about_tag_id
 
-
+Table: resources_stores
+* field 1: id
+* field 2: store_name
+* field 3: store_address
+* field 4: store_discription
+* field 5: store_hours
+* field 6: store_price
 
 ## Database Queries
 
