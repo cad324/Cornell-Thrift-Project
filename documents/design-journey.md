@@ -233,10 +233,15 @@ At Every Submissions
 
 [Share the feedback notes you received from your client about your initial design.]
 
+The client said that they liked our initial design and had no major changes to add except to make sure that we use their new logo design that they shared with us in our header.
 
 ## Iterated Design
 
 [Improve your design based on the feedback you received from your client.]
+
+Here is the updated logo the client requested that we use. We will alter the header design to reflect that.
+
+![Cornell Thrift Logo](ThriftLogoYellow.png)
 
 
 ## Evaluate your Design
