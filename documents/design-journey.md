@@ -544,6 +544,22 @@ Table: events
 
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
 
+```php
+  $home_records = exec_sql_query(
+    $db,
+    "SELECT * FROM images"
+  )->fetchAll();
+
+    $sql = "INSERT INTO images (user_id, filename, file_extention, description)
+      VALUES (:user_id, :filename, :upload_ext, :description);";
+    $params = array(
+      ':user_id' => $current_user['id'],
+      ':filename' => $filename,
+      ':upload_ext' => $upload_ext,
+      ':description' => $description
+    );
+    $new_record = exec_sql_query($db, $sql, $params);
+```
 
 ## PHP File Structure
 
