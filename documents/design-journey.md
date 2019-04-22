@@ -581,6 +581,75 @@ Table: events
 
 [For each PHP file, plan out your pseudocode. You probably want a subheading for each file.]
 
+### init.php
+
+```
+Pseudocode for index.php...
+
+include init.php
+
+TODO
+
+// open connection to database
+$db = open_or_init_sqlite_db('secure/gallery.sqlite', 'secure/init.sql');
+
+// length of login is 1 hour = 60s * 60min * 1hr
+define('SESSION_COOKIE_DURATION', 60 * 60 * 1);
+// messages is an array
+$session_messages = array();
+
+function login($username, $password) {}
+function finduser($user_id) {}
+function findsession($session) {}
+function session_login() {}
+function is_user_login() {}
+function logout() {}
+
+```
+
+
+### header.php
+
+```
+Pseudocode for index.php...
+
+include init.php
+
+TODO
+
+  <nav id="nav">
+    <?php
+    $pages = [
+      ["index.php", "HOME"], ["about.php", "ABOUT"], ["events.php", "EVENTS"],
+      ["resources_tip.php", "RESOURCE TIP"], ["resources_stores.php", "RESOURCE STORES"],
+      ["contact.php", "CONTACT"]
+    ];
+    $current_file = basename($_SERVER['PHP_SELF']);
+
+    foreach ($pages as $p) { ?>
+      <li><a href="<?php echo $p[0]; ?>" class="<?php if ($p[0] == $current_file) {
+                                                  echo " format_page";
+                                                } ?>">
+          <?php echo $p[1]; ?></a></li>
+    <?php
+
+  } ?>
+  </nav>
+
+```
+
+### footer.php
+
+```
+Pseudocode for index.php...
+
+include init.php
+
+TODO
+<footer>
+<footer>
+```
+
 ### index.php
 
 ```
