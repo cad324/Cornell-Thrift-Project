@@ -541,8 +541,10 @@ Table: about_img_tags
 * includes/footer.php - the footer for every page
 * about.php - members and committees
 * events.php - events page
-* resources.php - Cornell Thrift resources
+* resources_tip.php - Cornell Thrift resources
+* resources_stores.php - Cornell Thrift resources
 * contact.php - the user submit a question page
+* login.php - log in page
 
 
 ## Pseudocode
