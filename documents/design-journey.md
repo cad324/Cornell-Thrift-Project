@@ -555,8 +555,10 @@ Table: events
 * includes/footer.php - the footer for every page
 * about.php - members and committees
 * events.php - events page
-* resources.php - Cornell Thrift resources
+* resources_tips.php - Cornell Thrift resources: thrift tips
+* resources_stores.php - Cornell Thrift resources: near by thrift stores
 * contact.php - the user submit a question page
+* login.php - log in page
 
 
 ## Pseudocode
