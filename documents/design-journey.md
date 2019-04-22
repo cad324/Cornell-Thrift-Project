@@ -524,7 +524,13 @@ Table: about_img_tags
 * field 2: about_img_id
 * field 2: about_tag_id
 
-
+Table: resources_stores
+* field 1: id
+* field 2: store_name
+* field 3: store_address
+* field 4: store_discription
+* field 5: store_hours
+* field 6: store_price
 
 ## Database Queries
 
@@ -541,8 +547,8 @@ Table: about_img_tags
 * includes/footer.php - the footer for every page
 * about.php - members and committees
 * events.php - events page
-* resources_tip.php - Cornell Thrift resources
-* resources_stores.php - Cornell Thrift resources
+* resources_tips.php - Cornell Thrift resources: thrift tips
+* resources_stores.php - Cornell Thrift resources: near by thrift stores
 * contact.php - the user submit a question page
 * login.php - log in page
 
