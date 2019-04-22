@@ -657,6 +657,8 @@ include init.php
 
 TODO
 <footer>
+// facebook, instagram, email
+// mailing list form
 <footer>
 ```
 
