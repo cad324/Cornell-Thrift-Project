@@ -266,14 +266,18 @@ like Abby can navigate the site and accomplish their tasks.
 
 [For each task, list the ideal set of actions that you would like your users to take when working towards the task.]
 
-Task 1: [describe your task]
+Task 1: Users wants to contact the club to ask a question.
 
-  1. [action 1...]
-  2. [action 2...]
-  3. ...
+  1. Go to Contact page
+  2. Fill out information under "Get in Touch"
+  3. Submit response
 
-Task 2:
+Task 2: Client can upload an image to About page.
 
+  1. Go to About page
+  2. Log in
+  3. Fill out form to upload an image
+  4. Submit an image
 
 ### Cognitive Walkthrough
 
@@ -285,9 +289,188 @@ Task 2:
 
 [You may need to add additional subgoals and/or actions for each task.]
 
+**Task 1: Users wants to contact the club to ask a question.**
+
+[Add as many subgoals as you needs]
+**Subgoal # 1 : Go to Contact page**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # 1 : Click on Contact in navigation bar**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+**Subgoal # 2 : Fill out information under "Get in Touch"**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # 1 : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+**Subgoal # 3 : Submit response**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # 1 : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
 
 #### Task 2 - Cognitive Walkthrough
 
+**Task 2: Client can upload an image to About page.**
+
+[Add as many subgoals as you needs]
+**Subgoal # 1 : Go to About page**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # [action number] : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+**Subgoal # 2 : Log in**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # [action number] : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+**Subgoal # 3 : Fill out form to upload an image**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # [action number] : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+**Subgoal # 4 : Submit an image**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+        [Tell us why..]
+
+[Add as many actions as you need...]
+**Action # [action number] : [action name]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
 
 ### Cognitive Walk-though Results
 
@@ -301,6 +484,7 @@ Task 2:
 [Include sketches of your finalized design.]
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
+
 
 
 ## Database Schema
