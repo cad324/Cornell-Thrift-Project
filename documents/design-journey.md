@@ -494,51 +494,61 @@ Task 2: Client can upload an image to About page.
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
 Table: users
-* id:
-* field 2: username
-* field 3: password
-* field 4: eboard
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* username: TEXT {U}
+* password: TEXT {}
+* eboard: TEXT {Not}
 
 Table: sessions
-* field 1: id
-* field 2: user_id
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* user_id: INTEGER {Not}
+* session TEXT {Not, U}
 
 Table: home_images
-* field 1: id
-* field 2: filename
-* field 3: file_extension
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* filename: TEXT {Not}
+* file_extension: TEXT {Not}
 
 Table: about_images
-* field 1: id
-* field 2: users_id
-* field 3: filename
-* field 4: file_extension
-* field 5: description
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* users_id: INTEGER {Not, U}
+* filename: TEXT {Not}
+* file_extension: TEXT {Not}
+* description: TEXT {Not}
 
 Table: about_tags
-* field 1: id
-* field 2: tag
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* tag: TEXT {Not, U}
 
 Table: about_img_tags
-* field 1: id
-* field 2: about_img_id
-* field 2: about_tag_id
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* about_img_id: INTEGER {Not}
+* about_tag_id: INTEGER {Not}
 
 Table: resources_stores
-* field 1: id
-* field 2: store_name
-* field 3: store_address
-* field 4: store_discription
-* field 5: store_hours
-* field 6: store_price
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* store_name: TEXT {Not}
+* store_address: TEXT {Not}
+* store_description: TEXT {Not}
+* store_hours: TEXT {Not}
+* store_price: TEXT {Not}
 
 Table: events
-* field 1: id
-* field 2: event_name
-* field 3: event_date
-* field 4: event_location
-* field 5: event_time
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* event_name: TEXT {Not}
+* event_date: TEXT {}
+* event_location: TEXT {Not}
+* event_time: TEXT {}
 
+Table: messages
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* name: TEXT {Not}
+* email: TEXT {Not}
+* message: TEXT {Not}
+
+Table: mail_list
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* email: TEXT {Not, U}
 
 ## Database Queries
 
