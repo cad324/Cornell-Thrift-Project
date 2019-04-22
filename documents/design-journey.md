@@ -493,9 +493,37 @@ Task 2: Client can upload an image to About page.
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
-Table: movies
-* field 1: description...
-* field...
+Table: users
+* field 1: id
+* field 2: username
+* field 3: password
+* field 4: eboard
+
+Table: sessions
+* field 1: id
+* field 2: user_id
+
+Table: home_images
+* field 1: id
+* field 2: filename
+* field 3: file_extension
+
+Table: about_images
+* field 1: id
+* field 2: users_id
+* field 3: filename
+* field 4: file_extension
+* field 5: description
+
+Table: about_tags
+* field 1: id
+* field 2: tag
+
+Table: about_img_tags
+* field 1: id
+* field 2: about_img_id
+* field 2: about_tag_id
+
 
 
 ## Database Queries
