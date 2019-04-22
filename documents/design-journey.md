@@ -34,6 +34,8 @@ The purpose of the website is to promote Cornell Thrift and have Cornell student
 
 The potential audience for this website are members of the club and people at Cornell who are intersted in what Cornell Thrift do. The target audiences will be able to find mission of the club and more information (image and position) about eboard members. Also, they can look for the upcoming events/activities such as 'Thrift Exchange Closets' or 'Pop-up Shop'. For anyone who would like to be part of the club can subscribe for newsletter, they can fill out the form. Only Eboard members will be able to upload/delete events and gallery.
 
+We decided that the client (i.e. E-Board members) should be considered a second target audience because there is a lot of funcionality that the client requested for its e-board members. There are a lot of aspects of the website that need to be regularly updated and E-board needs access to that. This aspect of the website is significant enough that we believed that it warranted making the client a second target audience.
+
 
 ## Client Requirements & Target Audiences' Needs
 
