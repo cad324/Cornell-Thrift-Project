@@ -251,8 +251,14 @@ Here is the updated logo the client requested that we use. We will alter the hea
 [Pick a persona that you believe will help you address the gender bias within your design.]
 
 I've selected **[Abby/Patricia/Patrick/Tim]** as my persona.
+Our group selected **[Abby]** as our persona.
 
 I've selected my persona because... [Tell us why you picked your persona in 1-3 sentences. Your explanation should include why your persona will help you address gender-inclusiveness bugs in your design.]
+
+We selected Abby because we feel like Abby isn't comfortable with technology and
+we want to include all users - those who are comfortable and those who are not.
+We want the website to be as user-friendly as possible, so even non-technical people
+like Abby can navigate the site and accomplish their tasks.
 
 ### Tasks
 
