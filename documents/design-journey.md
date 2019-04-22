@@ -270,16 +270,16 @@ like Abby can navigate the site and accomplish their tasks.
 
 Task 1: Users wants to contact the club to ask a question.
 
-  1. Go to Contact page
-  2. Fill out information under "Get in Touch"
-  3. Submit response
+  1. Go to Contact page   -Susan
+  2. Fill out information under "Get in Touch"  -Clive
+  3. Submit response   -Sam
 
 Task 2: Client can upload an image to About page.
 
-  1. Go to About page
-  2. Log in
-  3. Fill out form to upload an image
-  4. Submit an image
+  1. Go to About page  -Susan
+  2. Log in   -Grace
+  3. Fill out form to upload an image  -Yuyi
+  4. Submit an image  -Sam
 
 ### Cognitive Walkthrough
 
