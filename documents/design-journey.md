@@ -541,9 +541,14 @@ Table: resources_stores
 
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
 
-* index.php - main page.
+* index.php - home page.
 * includes/init.php - stuff that useful for every web page.
-* TODO
+* includes/header.php - the header for every page
+* includes/footer.php - the footer for every page
+* about.php - members and committees
+* events.php - events page
+* resources.php - Cornell Thrift resources
+* contact.php - the user submit a question page
 
 
 ## Pseudocode
