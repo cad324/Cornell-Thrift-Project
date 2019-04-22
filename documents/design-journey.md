@@ -494,7 +494,7 @@ Task 2: Client can upload an image to About page.
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
 Table: users
-* field 1: id
+* id:
 * field 2: username
 * field 3: password
 * field 4: eboard
@@ -531,6 +531,14 @@ Table: resources_stores
 * field 4: store_discription
 * field 5: store_hours
 * field 6: store_price
+
+Table: events
+* field 1: id
+* field 2: event_name
+* field 3: event_date
+* field 4: event_location
+* field 5: event_time
+
 
 ## Database Queries
 
