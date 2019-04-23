@@ -93,6 +93,38 @@ $title = "ABOUT"
     </div>
   </div>
 
+  <div>
+    <h2>Add/Modify Members</h2>
+
+    <form id = "members" method="post" action="add_tag.php">
+
+    <div class = "textbox">
+      <label for = "category_branch">Branch:</label>
+      <select name="category_branch">
+        <option value="E-Board">E-Board</option>
+        <option value="Commitees">Commitees</option>
+      </select>
+    </div>
+
+    <div class = "textbox">
+      <label for="name">Name: </label>
+      <input type="text" name="name"/>
+    </div>
+
+    <div class = "textbox">
+      <label for="position">Position: </label>
+      <input type="text" name="position"/>
+    </div>
+
+    <div class = "textbox">
+      <label for="intro">Description: </label>
+      <input type="textfield" name="intro"/>
+    </div>
+
+    <div id="add_buttom" >
+      <input type="submit" name="addmodify" value="Add/Modify " class = "submit"/>
+    </div>
+  </div>
 
 </body>
 </html>
