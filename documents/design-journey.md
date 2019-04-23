@@ -643,6 +643,7 @@ Table: mail_list
 ```
 
 ```php
+//add new event
 $sql = "INSERT INTO events (event_name, event_date, event_location, event_time) VALUES (:event_name, :event_date, :event_location, :event_time):";
 $params = array (
   ':event_name' => $event_name,
@@ -650,15 +651,22 @@ $params = array (
   ':event_location' => $event_location,
   ':event_time' => $event_time
 );
-
 $new_event = exec_sql_query($db, $sql, $params);
 
+//delete an event
 $sql = "DELETE FROM events WHERE event_name = :event_name;";
 $params = array (
-  'event_name' => $event_name
+  ':event_name' => $event_name
 );
-
 $delete_event = exec_sql_query($db, $sql, $params);
+
+//update an event (could be done this way with date, location or time)
+$sql = "UPDATE events SET event_date = :event_date WHERE event_name = :event_name;";
+$params = array (
+  ':event_name' => $event_name
+  ':event_date' => $event_date
+);
+$update_event = exec_sql_query($db, $sql, $params);
 ```
 
 ### Adding Contact Form Message to `messages`
@@ -825,6 +833,7 @@ include init.php
 TODO
 ```
 
+<<<<<<< HEAD
 ### about.php
 
 ```
@@ -847,6 +856,41 @@ function select_branch($branch){
   Select all about_image_id from about_img_branch table where about_branch_id is $branch_id and store it as an array in $branch_array
   Display all images from about_image if their id is in $branch_array
 }
+=======
+### events.php
+
+```
+include init.php
+
+include header.php
+
+for each element in events table {
+  <table>
+  <tr>
+  select * from events where event_name = element
+  </tr>
+  </table>
+}
+
+update form
+if update form is submitted
+  if date is not null
+    update date in table
+  if location is not null
+    update locaiton in table
+  if time is not null
+    update time in table
+
+delete form
+if delete form is submitted
+  delete entry where event_name = user_input
+
+add form
+if add form is submitted
+  insert entry to table
+
+include footer.php
+>>>>>>> f4f7efc31b9bc89bf63094cfdc59a4d5c00ab221
 ```
 
 
