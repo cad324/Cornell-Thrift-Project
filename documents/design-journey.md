@@ -297,27 +297,31 @@ Task 2: Client can modify members' information on About page.
 **Subgoal # 1 : Go to Contact page**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
 
-        [Tell us why..]
+        Abby will be able to go to the Contact page because Abby has used
+        technologies before and this task is not new. "Contact" is also
+        a clear heading for the page.
 
 [Add as many actions as you need...]
 **Action # 1 : Click on Contact in navigation bar**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+        Abby is not comfortable with new technology but clicking on
+        a page in the navigation bar is not new.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+  - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+        Abby will be able to use a contact form and there should be a textbox
+        to submit a question. So, she'll know she is in the right page.
 
 **Subgoal # 2 : Fill out information under "Get in Touch"**
 
@@ -392,27 +396,30 @@ Task 2: Client can modify members' information on About page.
 **Subgoal # 1 : Go to About page**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
 
-        [Tell us why..]
+      Abby may not know that to upload an eboard image that she should
+      go to the About page, but using the navigation bar is not a new task.
 
 [Add as many actions as you need...]
-**Action # [action number] : [action name]**
+**Action # 1 : Click on About page in navigation bar**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [maybe]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+        Abby does not like to tinker but clicking on different pages in the
+        navigation bar does not produce any risk.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+        Once Abby arrives in About page, she will know that this is the page to
+        upload an eboard image since she will see a gallery with eboard members.
 
 **Subgoal # 2 : Log in**
 
@@ -542,6 +549,19 @@ Our current design does not make clear whether there will be a confirmation once
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
+![home final sketch](home_final.jpg)
+ Based on Cognitive Walkthrough, I added links to each page and description in home.
+About
+
+We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.
+
+This is what unlogged in users will see:
+![Final About Page](about_final.JPG)
+
+This is what logged in users will see:
+![Final About Page Logged In](about_final_logged_in.JPG)
+If the user clicks the "Modify" buttom, php will automatically fill out the "Add/Modify" form with the original information. The user just need to edit the category that he or she wants to modify, and click the "Add/Modify" buttom to update the information
+
 Events
 
 We made sure to clearly add a confirmation page so that  users who are less comfortable with computers understand that they have successfully submitted the form.
@@ -576,14 +596,14 @@ Table: about_images
 * ext: TEXT {Not}
 * description: TEXT {Not}
 
-Table: about_positions
+Table: about_branches
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* position: TEXT {Not}
+* branch: TEXT {Not}
 
-Table: about_img_position
+Table: about_img_branch
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
 * about_img_id: INTEGER {Not, U}
-* about_position_id: INTEGER {Not}
+* about_branch_id: INTEGER {Not}
 
 Table: resources_stores
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
@@ -617,7 +637,7 @@ Table: mail_list
 ```php
   $home_records = exec_sql_query(
     $db,
-    "SELECT * FROM images"
+    "SELECT * FROM home_images"
   )->fetchAll();
 
     $sql = "INSERT INTO images (user_id, filename, file_extention, description)
@@ -632,6 +652,7 @@ Table: mail_list
 ```
 
 ```php
+//add new event
 $sql = "INSERT INTO events (event_name, event_date, event_location, event_time) VALUES (:event_name, :event_date, :event_location, :event_time):";
 $params = array (
   ':event_name' => $event_name,
@@ -639,15 +660,22 @@ $params = array (
   ':event_location' => $event_location,
   ':event_time' => $event_time
 );
-
 $new_event = exec_sql_query($db, $sql, $params);
 
+//delete an event
 $sql = "DELETE FROM events WHERE event_name = :event_name;";
 $params = array (
-  'event_name' => $event_name
+  ':event_name' => $event_name
 );
-
 $delete_event = exec_sql_query($db, $sql, $params);
+
+//update an event (could be done this way with date, location or time)
+$sql = "UPDATE events SET event_date = :event_date WHERE event_name = :event_name;";
+$params = array (
+  ':event_name' => $event_name
+  ':event_date' => $event_date
+);
+$update_event = exec_sql_query($db, $sql, $params);
 ```
 
 ### Adding Contact Form Message to `messages`
@@ -666,22 +694,28 @@ $delete_event = exec_sql_query($db, $sql, $params);
 
 ```sql
   DELETE FROM about_images WHERE id = $img_id;
-  DELETE FROM about_img_position WHERE image_id = $img_id;
+  DELETE FROM about_img_branch WHERE image_id = $img_id;
 ```
 
 ### Add a member
 
 ```sql
   INSERT INTO about_images (name, ext, description) VALUES ($name, $ext, $description);
-  INSERT INTO about_positions (position) VALUES ($position);
-  INSERT INTO about_img_position (about_img_id, about_position_id);
+  INSERT INTO about_branches (branch) VALUES ($branch);
+  INSERT INTO about_img_branch (about_img_id, about_branch_id);
 ```
 
 ### Select a member
 
 ```sql
   SELECT name, ext, description FROM about_images WHERE id = $img_id;
-  SELECT position FROM about_positions INNER JOIN about_img_position ON about_position_id = about_positions.id WHERE about_images.id = $img_id
+  SELECT branch FROM about_branch INNER JOIN about_img_branch ON about_img_branch.about_branch_id = about_branch.id WHERE about_images.id = $img_id
+```
+
+### Select memebrs who belong to the same branch
+
+```sql
+SELECT id FROM about_images INNER JOIN about_img_branch INNER JOIN about_branches WHERE about_branches.id = about_img_branch.about_branch_id AND about_images.id = about_img_branch.about_image_id
 ```
 
 ## PHP File Structure
@@ -806,6 +840,81 @@ Pseudocode for index.php...
 include init.php
 
 TODO
+// display images in the slideshow
+   <div class="slideshow-box">
+      <div class="slideshow">
+        <?php
+        foreach ($records as $record) { ?>
+          <img alt="<?php echo $record["file_name"] ?>" src="uploads/home/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>">
+          <div class="home_img_cap"><?php echo $record["desc"]; ?></div>
+        <?php
+      }
+      ?>
+      </div>
+// need functions to make the slideshow
+function moveSlides ($image_id) {}
+function currentSlide ($image_id) {}
+function showSlides () {}
+
+```
+
+### about.php
+
+```
+About Page Pseudocode:
+
+function delete_member($img_id) {
+  Delete the image that has the id as $img_id
+  Delete the about_img_branch relation that has image_id as $img_id
+}
+
+function insert_new_member($name, $branch, $description){
+  Insert a new member using $name, $branch, $description
+  Get the id of the last inserted member
+  Select the id in the branches table where branch name = "$branch"
+  Insert a new row to about_img_branch table using the id of the last inserted member and the selected id from the branches table
+}
+
+function select_branch($branch){
+  Select id from branches table where branch name is $branch and store it in $branch_id
+  Select all about_image_id from about_img_branch table where about_branch_id is $branch_id and store it as an array in $branch_array
+  Display all images from about_image if their id is in $branch_array
+}
+```
+
+### events.php
+
+```
+include init.php
+
+include header.php
+
+for each element in events table {
+  <table>
+  <tr>
+  select * from events where event_name = element
+  </tr>
+  </table>
+}
+
+update form
+if update form is submitted
+  if date is not null
+    update date in table
+  if location is not null
+    update locaiton in table
+  if time is not null
+    update time in table
+
+delete form
+if delete form is submitted
+  delete entry where event_name = user_input
+
+add form
+if add form is submitted
+  insert entry to table
+
+include footer.php
 ```
 
 
