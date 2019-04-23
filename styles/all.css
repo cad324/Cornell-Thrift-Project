@@ -71,7 +71,17 @@ footer {
 }
 
 #copyright {
-    text-align: center;
+  text-align: center;
+}
+
+fieldset {
+  border-style: none;
+  width: 500px;
+}
+
+#update_events, #add_events {
+    display: flex;
+    flex-direction: column;
 }
 /*About Page*/
 #ad{
