@@ -73,3 +73,28 @@ footer {
 #copyright {
     text-align: center;
 }
+/*About Page*/
+#ad{
+    font-size: 30px;
+    text-align: center;
+}
+#about h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+#about img{
+    width:390px;
+    margin: 0 45px;
+}
+
+#about figcaption{
+    width:390px;
+    margin: 45px;
+}
+
+#about .row{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

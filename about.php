@@ -1,6 +1,8 @@
 <?php
  // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
+include("includes/header.php");
+include("includes/footer.php");
 $title = "ABOUT"
 ?>
 <!DOCTYPE html>
@@ -13,11 +15,84 @@ $title = "ABOUT"
   <title><?php echo $title; ?></title>
 </head>
 
-<body>
+<body id = "about">
 
   <!-- TODO: This should be your main page for your site. -->
-  <?php include("includes/header.php"); ?>
+  <p id = "ad">Meet Our Members!</p>
+  <h1>E-Board Members</h1>
+  <p>Description:</p>
+  <div class = "row">
+    <div>
+        <a><img src = "uploads/images/img-placeholder.jpg" alt = "placeholder image"/></a>
 
-  <?php include("includes/footer.php"); ?>
+        <figcaption>
+          <p>Name:</p>
+          <p>Position:</p>
+          <p>Description:</p>
+        </figcaption>
+
+    </div>
+
+    <div>
+        <a><img src = "uploads/images/img-placeholder.jpg" alt = "placeholder image"/></a>
+
+        <figcaption>
+          <p>Name:</p>
+          <p>Position:</p>
+          <p>Description:</p>
+        </figcaption>
+
+    </div>
+
+    <div>
+        <a><img src = "uploads/images/img-placeholder.jpg" alt = "placeholder image"/></a>
+
+        <figcaption>
+          <p>Name:</p>
+          <p>Position:</p>
+          <p>Description:</p>
+        </figcaption>
+
+    </div>
+  </div>
+
+  <h1>Committees</h1>
+  <p>Description:</p>
+  <div class = "row">
+    <div>
+        <a><img src = "uploads/images/img-placeholder.jpg" alt = "placeholder image"/></a>
+
+        <figcaption>
+          <p>Name:</p>
+          <p>Position:</p>
+          <p>Description:</p>
+        </figcaption>
+
+    </div>
+
+    <div>
+        <a><img src = "uploads/images/img-placeholder.jpg" alt = "placeholder image"/></a>
+
+        <figcaption>
+          <p>Name:</p>
+          <p>Position:</p>
+          <p>Description:</p>
+        </figcaption>
+
+    </div>
+
+    <div>
+        <a><img src = "uploads/images/img-placeholder.jpg" alt = "placeholder image"/></a>
+
+        <figcaption>
+          <p>Name:</p>
+          <p>Position:</p>
+          <p>Description:</p>
+        </figcaption>
+
+    </div>
+  </div>
+
+
 </body>
 </html>
