@@ -544,7 +544,7 @@ Table: events
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
 * event_name: TEXT {Not}
 * event_date: TEXT {}
-* event_location: TEXT {Not}
+* event_location: TEXT {}
 * event_time: TEXT {}
 
 Table: messages
