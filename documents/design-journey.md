@@ -614,6 +614,17 @@ $params = array (
 );
 
 $delete_event = exec_sql_query($db, $sql, $params);
+
+### Adding Contact Form Message to `messages`
+
+```
+  INSERT INTO messages (name, email, message) VALUES (:name, :email, :message);
+```
+
+### Adding Emails to `mail_list`
+
+```
+  INSERT INTO messages (email) VALUES (:email);
 ```
 
 ## PHP File Structure
@@ -666,11 +677,7 @@ function logout() {}
 ### header.php
 
 ```
-Pseudocode for index.php...
-
 include init.php
-
-TODO
 
   <nav id="nav">
     <?php
@@ -695,17 +702,44 @@ TODO
 
 ### footer.php
 
-```
-Pseudocode for index.php...
+#### collecting emails for mailing list
 
-include init.php
-
-TODO
-<footer>
-// facebook, instagram, email
-// mailing list form
-<footer>
 ```
+ if isset($_POST['mailing_list_submit'])
+    $email = sanitize($_POST['email'])
+    $sql = 'INSERT INTO mail_list (email) VALUES (:email);'
+    $params = array(:email => $email);
+    execute_sql($db, $sql, $params);
+```
+
+### contact.php
+
+#### storing user's messages
+
+```
+ if isset($_POST['contact_submit'])
+    $name = sanitize($_POST['name'])
+    $email = sanitize($_POST['email'])
+    $message = sanitize($_POST['message'])
+    $sql = 'INSERT INTO messages (name, email, message)
+            VALUES (:name, :email, :message);'
+    $params = array(:name => $name,
+                    :email => $email,
+                    :message => $message);
+    execute_sql($db, $sql, $params);
+```
+
+### login.php
+
+### check user login credentials
+
+```
+ if isset($_POST['login_submit']) and !user_logged_in
+    $username = sanitize($_POST['user'])
+    $password = sanitize($_POST['password'])
+    login($username, $password)
+```
+
 
 ### index.php
 
