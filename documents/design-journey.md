@@ -415,29 +415,49 @@ Task 2: Client can upload an image to About page.
         [Tell us why...]
 
 **Subgoal # 2 : Log in**
-	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? Abby is aware that in order to upload an image, she has to log in. Since logging in is a familiar task for Abby who uses technologies to accomplish her tasks, she will have formed this sub-goal as a step to their overall goal.
 
-        [Tell us why..]
+**Action # 1 : Select the input field labelled "Username"**
 
-[Add as many actions as you need...]
-**Action # [action number] : [action name]**
-	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she has to select the input field labelled "username". She feels comfortable using technologies that she uses on regular basis. It is clear that she needs to select the input field before typign down her username.
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she did the right thing because by selecting the input field she will be able to type down her username and eventually sign in. There is nothing unfamiliar about this action for Abby.
 
-        [Tell us why...]
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+**Action # 2 : Type persona's "Username"**
 
-        [Tell us why...]
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she has to type her username into the input field. She feels confident in using technologies that she feels comfortable with.
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? If Abby does the right thing, she will know that she is making progress towards her goal because username would be filled in the input field. There is nothing unfamiliar about this action, and she does not need to spend extra time using unfamilar techonologies.
+
+
+**Action # 3 : Repeat Action #1 and #2 for the input field labelled "Password"**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Same as above
+
+**Action # 4 : Click log-in button**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know what to do after she fills in username and password in each input field. Loggin in is a familiar job for Abby who works as an accountant. She does not need to tinker with software systems that are new to her.
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she made a progress towards her goal, because when she clicks the log-in button, she will be logged in and eventually be able to fill out form to upload an image. Although she feels not confident when using technologies that are not used to her, logging in is not a high-level skill. It won't take much time for her.
+
 
 **Subgoal # 3 : Fill out form to upload an image**
 	(e.g., "# 1 : Select the section of the document you want to print")
