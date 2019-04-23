@@ -507,7 +507,13 @@ Our current design does not make clear whether there will be a confirmation once
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
+Events
 
+We made sure to clearly add a confirmation page so that  users who are less comfortable with computers understand that they have successfully submitted the form.
+
+![Final Events Page](events_final_page.jpg)
+
+![Final Events Confirmation Page](events_final_confirmation.jpg)
 
 ## Database Schema
 
