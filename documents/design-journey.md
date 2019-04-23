@@ -597,6 +597,25 @@ Table: mail_list
     $new_record = exec_sql_query($db, $sql, $params);
 ```
 
+```php
+$sql = "INSERT INTO events (event_name, event_date, event_location, event_time) VALUES (:event_name, :event_date, :event_location, :event_time):";
+$params = array (
+  ':event_name' => $event_name,
+  ':event_date' => $event_date,
+  ':event_location' => $event_location,
+  ':event_time' => $event_time
+);
+
+$new_event = exec_sql_query($db, $sql, $params);
+
+$sql = "DELETE FROM events WHERE event_name = :event_name;";
+$params = array (
+  'event_name' => $event_name
+);
+
+$delete_event = exec_sql_query($db, $sql, $params);
+```
+
 ## PHP File Structure
 
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
