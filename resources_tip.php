@@ -1,7 +1,7 @@
 <?php
  // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
-$title = "HOME"
+$title = "RESOURCES TIP"
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,7 @@
 <?php
  // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
+$title = "ABOUT"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,17 +9,15 @@ include("includes/init.php");
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>About</title>
+  <link rel="stylesheet" type="text/css" href="styles/all.css">
+  <title><?php echo $title; ?></title>
 </head>
 
 <body>
 
-  <h2>Meet our Members!</h2>
+  <!-- TODO: This should be your main page for your site. -->
+  <?php include("includes/header.php"); ?>
 
-  <h3>E-Board Members</h3>
-
-  <p>Description of what the E-Board does</p>
-
+  <?php include("includes/footer.php"); ?>
 </body>
 </html>

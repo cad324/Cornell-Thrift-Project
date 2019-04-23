@@ -1,7 +1,7 @@
 <?php
  // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
-$title = "HOME"
+$title = "EVENTS"
 ?>
 <!DOCTYPE html>
 <html lang="en">
