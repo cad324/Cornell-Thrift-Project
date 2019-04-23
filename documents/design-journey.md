@@ -274,12 +274,12 @@ Task 1: Users wants to contact the club to ask a question.
   2. Fill out information under "Get in Touch"  -Clive
   3. Submit response   -Sam
 
-Task 2: Client can upload an image to About page.
+Task 2: Client can modify members' information on About page.
 
   1. Go to About page  -Susan
   2. Log in   -Grace
-  3. Fill out form to upload an image  -Yuyi
-  4. Submit an image  -Sam
+  3. Modify Members' information  -Yuyi
+  4. Submit the form  -Sam
 
 ### Cognitive Walkthrough
 
@@ -386,7 +386,7 @@ Task 2: Client can upload an image to About page.
 
 #### Task 2 - Cognitive Walkthrough
 
-**Task 2: Client can upload an image to About page.**
+**Task 2: Client can modify members' information on About page.**
 
 [Add as many subgoals as you needs]
 **Subgoal # 1 : Go to About page**
@@ -459,32 +459,47 @@ Task 2: Client can upload an image to About page.
     - Why? Abby will know that she made a progress towards her goal, because when she clicks the log-in button, she will be logged in and eventually be able to fill out form to upload an image. Although she feels not confident when using technologies that are not used to her, logging in is not a high-level skill. It won't take much time for her.
 
 
-**Subgoal # 3 : Fill out form to upload an image**
+**Subgoal # 3 : Modify Members' information**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
   - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
 
         [Tell us why..]
 
 [Add as many actions as you need...]
-**Action # [action number] : [action name]**
+**Action # 1 : Click on the "Click HERE to add New Members" link on the top page or click on the Delete or Modify link beneth each picture**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+    Abby doesn't like tinkering, but because there's a link at the top that tells her explicily where she needs to click if she wants to add a new member's information, she's less likely to get confused and more likely to complete this action successfully. The same reason goes with the "Delete" and "Modify" link below each picture. Abby doesn't need to tinker around at all to be able to find out the use of these links because they are so explicit.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+      Because after Abby clicks on one of the links, she will be brought to the form section of the page. Although Abby has low self-efficacy, she's pretty familiar with forms, so she will know that she did the right thing.
 
-**Subgoal # 4 : Submit an image**
+**Action # 2 : Fill out the form**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+    Abby is an accountant, so she should be pretty familiar with forms. And since Abby feels comfortable working with technologies that she is alredy familiar with, she should be able to complete this action successfully.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+      Abby is pretty familiar with the forms.
+
+**Subgoal # 4 : Submit the form**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
@@ -557,19 +572,18 @@ Table: home_images
 
 Table: about_images
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* users_id: INTEGER {Not, U}
-* filename: TEXT {Not}
-* file_extension: TEXT {Not}
+* name: TEXT {Not}
+* ext: TEXT {Not}
 * description: TEXT {Not}
 
-Table: about_tags
+Table: about_positions
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* tag: TEXT {Not, U}
+* position: TEXT {Not}
 
-Table: about_img_tags
+Table: about_img_position
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* about_img_id: INTEGER {Not}
-* about_tag_id: INTEGER {Not}
+* about_img_id: INTEGER {Not, U}
+* about_position_id: INTEGER {Not}
 
 Table: resources_stores
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
@@ -634,17 +648,40 @@ $params = array (
 );
 
 $delete_event = exec_sql_query($db, $sql, $params);
+```
 
 ### Adding Contact Form Message to `messages`
 
-```
+```sql
   INSERT INTO messages (name, email, message) VALUES (:name, :email, :message);
 ```
 
 ### Adding Emails to `mail_list`
 
-```
+```sql
   INSERT INTO messages (email) VALUES (:email);
+```
+
+### Delete a member
+
+```sql
+  DELETE FROM about_images WHERE id = $img_id;
+  DELETE FROM about_img_position WHERE image_id = $img_id;
+```
+
+### Add a member
+
+```sql
+  INSERT INTO about_images (name, ext, description) VALUES ($name, $ext, $description);
+  INSERT INTO about_positions (position) VALUES ($position);
+  INSERT INTO about_img_position (about_img_id, about_position_id);
+```
+
+### Select a member
+
+```sql
+  SELECT name, ext, description FROM about_images WHERE id = $img_id;
+  SELECT position FROM about_positions INNER JOIN about_img_position ON about_position_id = about_positions.id WHERE about_images.id = $img_id
 ```
 
 ## PHP File Structure
