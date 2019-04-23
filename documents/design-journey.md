@@ -120,7 +120,7 @@ Example:
 
 Our:
   - Home
-  - About(Mmebers & Committees)
+  - About(Members & Committees)
   - Our Events
   - Thrifting Resources
   - Contact Us
@@ -320,29 +320,42 @@ Task 2: Client can upload an image to About page.
         [Tell us why...]
 
 **Subgoal # 2 : Fill out information under "Get in Touch"**
-	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: Yes
+    - Why? (Especially consider Abby's Motivations/Strategies.)
 
-        [Tell us why..]
+        * Each input field (Name, Email, and Message) on the contact page is labelled. Given that Abby has general exposure to technology this form would likely be familiar to her. Since Abby prefers to use familiar technology, she would comfortably form this sub-goal.
 
-[Add as many actions as you need...]
-**Action # 1 : [action name]**
-	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+  **Action # 1 : Select the input field labelled "Name"**
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: Yes
+      - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+          Abby is an accountant, and since her job deals with keeping track of information she is probably familiar with input fields. This feature fits with Abby's low computer self-efficacy style since she does not have to go through unfamiliar processes.
+
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+      - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+          The cursor would show up inside the input field. Given her comprehensive information processing style, she will easily access what happened.
+
+  **Action # 2 : Type persona's "Name"**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: Yes
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+        The input field is labelled name. Abby gathers information comprehensively and she would realize that the name field is asking for her name for correspondence.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: Yes
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+        The name will show up in the field as she types. Given her comprehensive information processing style, she will easily access what happened.
+
+  **Action #3 : Repeat Action #1 and #2 for input fields "Email" and "Message"**
 
 **Subgoal # 3 : Submit response**
 	(e.g., "# 1 : Select the section of the document you want to print")
