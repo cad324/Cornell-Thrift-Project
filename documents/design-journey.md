@@ -772,6 +772,28 @@ TODO
 ```
 
 
+### resources_tips.php
+
+```
+Pseudocode for resources_tips.php...
+
+include init.php
+
+TODO
+```
+
+
+### resources_stores.php
+
+```
+Pseudocode for resources_stores.php...
+
+include init.php
+
+TODO
+```
+
+
 ## Additional Comments
 
 [Add any additional comments you have here.]
