@@ -570,6 +570,10 @@ We made sure to clearly add a confirmation page so that  users who are less comf
 
 ![Final Events Confirmation Page](events_final_confirmation.jpg)
 
+![Final Resources sketch](final_resources.jpg)
+Resources page was pretty straightforward, so I just changed the logo.
+
+
 ## Database Schema
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
