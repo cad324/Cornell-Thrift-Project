@@ -928,8 +928,12 @@ include footer.php
 Pseudocode for resources_tips.php...
 
 include init.php
+include header.php
 
-TODO
+just write down top 7 pro thrift tips.
+
+include footer.php
+
 ```
 
 
@@ -939,8 +943,11 @@ TODO
 Pseudocode for resources_stores.php...
 
 include init.php
+include header.php
 
-TODO
+insert table for each categorized thrift stores.
+
+include footer.php
 ```
 
 

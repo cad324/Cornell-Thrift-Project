@@ -37,9 +37,9 @@ See the course website for a detailed citation policy with more information on u
 
     Your assignment's **submission time** is the time of your **last push** and _not_ the time of your last commit (the dates next to commits in GitHub).
 
-- [] We am ready to have our assignment graded.
+- [x] We am ready to have our assignment graded.
 
 Each team member should sign their name and include today's date and time to submit **MILESTONE 2**.
 
-- Full Name of Each Contributing Team Member: Clive Duncan, Susan Tan, Samantha Lustig, Yuyi He
+- Full Name of Each Contributing Team Member: Clive Duncan, Susan Tan, Samantha Lustig, Yuyi He, Ha Yeon Shin
 - Date & Time: 4/23/19 15:30 PM
