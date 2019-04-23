@@ -120,7 +120,7 @@ Example:
 
 Our:
   - Home
-  - About(Mmebers & Committees)
+  - About(Members & Committees)
   - Our Events
   - Thrifting Resources
   - Contact Us
@@ -274,12 +274,12 @@ Task 1: Users wants to contact the club to ask a question.
   2. Fill out information under "Get in Touch"  -Clive
   3. Submit response   -Sam
 
-Task 2: Client can upload an image to About page.
+Task 2: Client can modify members' information on About page.
 
   1. Go to About page  -Susan
   2. Log in   -Grace
-  3. Fill out form to upload an image  -Yuyi
-  4. Submit an image  -Sam
+  3. Modify Members' information  -Yuyi
+  4. Submit the form  -Sam
 
 ### Cognitive Walkthrough
 
@@ -324,58 +324,73 @@ Task 2: Client can upload an image to About page.
         to submit a question. So, she'll know she is in the right page.
 
 **Subgoal # 2 : Fill out information under "Get in Touch"**
-	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: Yes
+    - Why? (Especially consider Abby's Motivations/Strategies.)
 
-        [Tell us why..]
+        * Each input field (Name, Email, and Message) on the contact page is labelled. Given that Abby has general exposure to technology this form would likely be familiar to her. Since Abby prefers to use familiar technology, she would comfortably form this sub-goal.
 
-[Add as many actions as you need...]
-**Action # 1 : [action name]**
-	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+  **Action # 1 : Select the input field labelled "Name"**
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: Yes
+      - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+          Abby is an accountant, and since her job deals with keeping track of information she is probably familiar with input fields. This feature fits with Abby's low computer self-efficacy style since she does not have to go through unfamiliar processes.
+
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+      - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+          The cursor would show up inside the input field. Given her comprehensive information processing style, she will easily access what happened.
+
+  **Action # 2 : Type persona's "Name"**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: Yes
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+        The input field is labelled name. Abby gathers information comprehensively and she would realize that the name field is asking for her name for correspondence.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: Yes
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+        The name will show up in the field as she types. Given her comprehensive information processing style, she will easily access what happened.
+
+  **Action #3 : Repeat Action #1 and #2 for input fields "Email" and "Message"**
 
 **Subgoal # 3 : Submit response**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
-
         [Tell us why..]
+      Abby will understand that once she has filled out the form she has to submit it. Although Abby does not like experimenting with new technology unnecessarily, submitting a form is a common feature across many websites that she will likely be familiar with.
 
 [Add as many actions as you need...]
-**Action # 1 : [action name]**
+**Action # 1 : Click submit button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
+      Submit buttons are a really common feature across a lot of different platforms, so despite Abby's limited comfort with computers, she will likely understand that she needs to click the button to submit her responses.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
+      Right now, the website design doesn't indicate any kind of confirmation page after the form is successfully submitted. If no confirmation page pops up after she clicks submit, since Abby has low self-efficacy she will likely believe she did something wrong. However, if a confirmation page is included, Abby would likely understand that she did the right thing because the page would say she successfully submitted her response.
 
 #### Task 2 - Cognitive Walkthrough
 
-**Task 2: Client can upload an image to About page.**
+**Task 2: Client can modify members' information on About page.**
 
 [Add as many subgoals as you needs]
 **Subgoal # 1 : Go to About page**
@@ -407,79 +422,118 @@ Task 2: Client can upload an image to About page.
         upload an eboard image since she will see a gallery with eboard members.
 
 **Subgoal # 2 : Log in**
+
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? Abby is aware that in order to upload an image, she has to log in. Since logging in is a familiar task for Abby who uses technologies to accomplish her tasks, she will have formed this sub-goal as a step to their overall goal.
+
+**Action # 1 : Select the input field labelled "Username"**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she has to select the input field labelled "username". She feels comfortable using technologies that she uses on regular basis. It is clear that she needs to select the input field before typign down her username.
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she did the right thing because by selecting the input field she will be able to type down her username and eventually sign in. There is nothing unfamiliar about this action for Abby.
+
+
+**Action # 2 : Type persona's "Username"**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she has to type her username into the input field. She feels confident in using technologies that she feels comfortable with.
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? If Abby does the right thing, she will know that she is making progress towards her goal because username would be filled in the input field. There is nothing unfamiliar about this action, and she does not need to spend extra time using unfamilar techonologies.
+
+
+**Action # 3 : Repeat Action #1 and #2 for the input field labelled "Password"**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Same as above
+
+**Action # 4 : Click log-in button**
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know what to do after she fills in username and password in each input field. Loggin in is a familiar job for Abby who works as an accountant. She does not need to tinker with software systems that are new to her.
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? Abby will know that she made a progress towards her goal, because when she clicks the log-in button, she will be logged in and eventually be able to fill out form to upload an image. Although she feels not confident when using technologies that are not used to her, logging in is not a high-level skill. It won't take much time for her.
+
+
+**Subgoal # 3 : Modify Members' information**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
   - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
 
         [Tell us why..]
 
 [Add as many actions as you need...]
-**Action # [action number] : [action name]**
+**Action # 1 : Click on the "Click HERE to add New Members" link on the top page or click on the Delete or Modify link beneth each picture**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+    Abby doesn't like tinkering, but because there's a link at the top that tells her explicily where she needs to click if she wants to add a new member's information, she's less likely to get confused and more likely to complete this action successfully. The same reason goes with the "Delete" and "Modify" link below each picture. Abby doesn't need to tinker around at all to be able to find out the use of these links because they are so explicit.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+      Because after Abby clicks on one of the links, she will be brought to the form section of the page. Although Abby has low self-efficacy, she's pretty familiar with forms, so she will know that she did the right thing.
 
-**Subgoal # 3 : Fill out form to upload an image**
+**Action # 2 : Fill out the form**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+    Abby is an accountant, so she should be pretty familiar with forms. And since Abby feels comfortable working with technologies that she is alredy familiar with, she should be able to complete this action successfully.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+      Abby is pretty familiar with the forms.
+
+**Subgoal # 4 : Submit the form**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
 
         [Tell us why..]
+     A common feature of forms across many websites is the need to submit them upon completion. Since there is a submit button present Abby will likely understand that to be an instruction and know she has to submit the form, despite her lack of comfort with computing tasks.
 
 [Add as many actions as you need...]
-**Action # [action number] : [action name]**
+**Action # 1 : Click the submit button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
+      While Abby is not very comfortable with computers, she will likely understand that she needs to click the button to submit her responses as submit buttons are a common feature on many websites and Abby should understand submit to be an instruction and upon comprehensively reviewing the form she will likely figure out she needs to click the button.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
-
-**Subgoal # 4 : Submit an image**
-	(e.g., "# 1 : Select the section of the document you want to print")
-
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
-
-        [Tell us why..]
-
-[Add as many actions as you need...]
-**Action # [action number] : [action name]**
-	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
-
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
-
-        [Tell us why...]
-
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-
-        [Tell us why...]
+    Abby will only know if she did the right thing if there is a confirmation page. Right now, it is unclear if there will be a confirmation form once it is submitted. If there is no confirmation page, Abby will likely believe she did something wrong because she has low computer self-efficacy. If there is a confirmation page, Abby would likely know that she did the right thing because the page confirm it for her.
 
 ### Cognitive Walk-though Results
 
@@ -487,18 +541,34 @@ Task 2: Client can upload an image to About page.
 
 [Your responses here should be **very** thorough and thoughtful.]
 
+Our current design does not make clear whether there will be a confirmation once the form is sucessfully submitted, or any corrective feedback should the user not fill in aspects of a form correctly. It is important that corrective feedback and a confirmation message are factored into the design as users with low self-efficacy may struggle with both understanding their mistakes and knowing if they submitted forms correctly because of a lack of feedback. Our final design should include a confirmation message for every form and corrective feedback when users submit invalid responses.
 
 ## Final Design
 
 [Include sketches of your finalized design.]
 
-![home_final_sketch](home_final.jpg)
-
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
-1. Home page
- - Based on Cognitive Walkthrough, I added links to each page and description in home.
+![home final sketch](home_final.jpg)
+ Based on Cognitive Walkthrough, I added links to each page and description in home.
+About
 
+We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.
+
+This is what unlogged in users will see:
+![Final About Page](about_final.JPG)
+
+This is what logged in users will see:
+![Final About Page Logged In](about_final_logged_in.JPG)
+If the user clicks the "Modify" buttom, php will automatically fill out the "Add/Modify" form with the original information. The user just need to edit the category that he or she wants to modify, and click the "Add/Modify" buttom to update the information
+
+Events
+
+We made sure to clearly add a confirmation page so that  users who are less comfortable with computers understand that they have successfully submitted the form.
+
+![Final Events Page](events_final_page.jpg)
+
+![Final Events Confirmation Page](events_final_confirmation.jpg)
 
 ## Database Schema
 
@@ -522,19 +592,18 @@ Table: home_images
 
 Table: about_images
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* users_id: INTEGER {Not, U}
-* filename: TEXT {Not}
-* file_extension: TEXT {Not}
+* name: TEXT {Not}
+* ext: TEXT {Not}
 * description: TEXT {Not}
 
-Table: about_tags
+Table: about_branches
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* tag: TEXT {Not, U}
+* branch: TEXT {Not}
 
-Table: about_img_tags
+Table: about_img_branch
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* about_img_id: INTEGER {Not}
-* about_tag_id: INTEGER {Not}
+* about_img_id: INTEGER {Not, U}
+* about_branch_id: INTEGER {Not}
 
 Table: resources_stores
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
@@ -548,7 +617,7 @@ Table: events
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
 * event_name: TEXT {Not}
 * event_date: TEXT {}
-* event_location: TEXT {Not}
+* event_location: TEXT {}
 * event_time: TEXT {}
 
 Table: messages
@@ -580,6 +649,73 @@ Table: mail_list
       ':description' => $description
     );
     $new_record = exec_sql_query($db, $sql, $params);
+```
+
+```php
+//add new event
+$sql = "INSERT INTO events (event_name, event_date, event_location, event_time) VALUES (:event_name, :event_date, :event_location, :event_time):";
+$params = array (
+  ':event_name' => $event_name,
+  ':event_date' => $event_date,
+  ':event_location' => $event_location,
+  ':event_time' => $event_time
+);
+$new_event = exec_sql_query($db, $sql, $params);
+
+//delete an event
+$sql = "DELETE FROM events WHERE event_name = :event_name;";
+$params = array (
+  ':event_name' => $event_name
+);
+$delete_event = exec_sql_query($db, $sql, $params);
+
+//update an event (could be done this way with date, location or time)
+$sql = "UPDATE events SET event_date = :event_date WHERE event_name = :event_name;";
+$params = array (
+  ':event_name' => $event_name
+  ':event_date' => $event_date
+);
+$update_event = exec_sql_query($db, $sql, $params);
+```
+
+### Adding Contact Form Message to `messages`
+
+```sql
+  INSERT INTO messages (name, email, message) VALUES (:name, :email, :message);
+```
+
+### Adding Emails to `mail_list`
+
+```sql
+  INSERT INTO messages (email) VALUES (:email);
+```
+
+### Delete a member
+
+```sql
+  DELETE FROM about_images WHERE id = $img_id;
+  DELETE FROM about_img_branch WHERE image_id = $img_id;
+```
+
+### Add a member
+
+```sql
+  INSERT INTO about_images (name, ext, description) VALUES ($name, $ext, $description);
+  INSERT INTO about_branches (branch) VALUES ($branch);
+  INSERT INTO about_img_branch (about_img_id, about_branch_id);
+```
+
+### Select a member
+
+```sql
+  SELECT name, ext, description FROM about_images WHERE id = $img_id;
+  SELECT branch FROM about_branch INNER JOIN about_img_branch ON about_img_branch.about_branch_id = about_branch.id WHERE about_images.id = $img_id
+```
+
+### Select memebrs who belong to the same branch
+
+```sql
+SELECT id FROM about_images INNER JOIN about_img_branch INNER JOIN about_branches WHERE about_branches.id = about_img_branch.about_branch_id AND about_images.id = about_img_branch.about_image_id
 ```
 
 ## PHP File Structure
@@ -632,11 +768,7 @@ function logout() {}
 ### header.php
 
 ```
-Pseudocode for index.php...
-
 include init.php
-
-TODO
 
   <nav id="nav">
     <?php
@@ -661,17 +793,44 @@ TODO
 
 ### footer.php
 
-```
-Pseudocode for index.php...
+#### collecting emails for mailing list
 
-include init.php
-
-TODO
-<footer>
-// facebook, instagram, email
-// mailing list form
-<footer>
 ```
+ if isset($_POST['mailing_list_submit'])
+    $email = sanitize($_POST['email'])
+    $sql = 'INSERT INTO mail_list (email) VALUES (:email);'
+    $params = array(:email => $email);
+    execute_sql($db, $sql, $params);
+```
+
+### contact.php
+
+#### storing user's messages
+
+```
+ if isset($_POST['contact_submit'])
+    $name = sanitize($_POST['name'])
+    $email = sanitize($_POST['email'])
+    $message = sanitize($_POST['message'])
+    $sql = 'INSERT INTO messages (name, email, message)
+            VALUES (:name, :email, :message);'
+    $params = array(:name => $name,
+                    :email => $email,
+                    :message => $message);
+    execute_sql($db, $sql, $params);
+```
+
+### login.php
+
+### check user login credentials
+
+```
+ if isset($_POST['login_submit']) and !user_logged_in
+    $username = sanitize($_POST['user'])
+    $password = sanitize($_POST['password'])
+    login($username, $password)
+```
+
 
 ### index.php
 
@@ -697,6 +856,63 @@ function moveSlides ($image_id) {}
 function currentSlide ($image_id) {}
 function showSlides () {}
 
+```
+
+### about.php
+
+```
+About Page Pseudocode:
+
+function delete_member($img_id) {
+  Delete the image that has the id as $img_id
+  Delete the about_img_branch relation that has image_id as $img_id
+}
+
+function insert_new_member($name, $branch, $description){
+  Insert a new member using $name, $branch, $description
+  Get the id of the last inserted member
+  Select the id in the branches table where branch name = "$branch"
+  Insert a new row to about_img_branch table using the id of the last inserted member and the selected id from the branches table
+}
+
+function select_branch($branch){
+  Select id from branches table where branch name is $branch and store it in $branch_id
+  Select all about_image_id from about_img_branch table where about_branch_id is $branch_id and store it as an array in $branch_array
+  Display all images from about_image if their id is in $branch_array
+}
+### events.php
+
+```
+include init.php
+
+include header.php
+
+for each element in events table {
+  <table>
+  <tr>
+  select * from events where event_name = element
+  </tr>
+  </table>
+}
+
+update form
+if update form is submitted
+  if date is not null
+    update date in table
+  if location is not null
+    update locaiton in table
+  if time is not null
+    update time in table
+
+delete form
+if delete form is submitted
+  delete entry where event_name = user_input
+
+add form
+if add form is submitted
+  insert entry to table
+
+include footer.php
 ```
 
 
