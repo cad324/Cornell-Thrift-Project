@@ -587,14 +587,14 @@ Table: about_images
 * ext: TEXT {Not}
 * description: TEXT {Not}
 
-Table: about_positions
+Table: about_branches
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* position: TEXT {Not}
+* branch: TEXT {Not}
 
-Table: about_img_position
+Table: about_img_branch
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
 * about_img_id: INTEGER {Not, U}
-* about_position_id: INTEGER {Not}
+* about_branch_id: INTEGER {Not}
 
 Table: resources_stores
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
@@ -677,22 +677,28 @@ $delete_event = exec_sql_query($db, $sql, $params);
 
 ```sql
   DELETE FROM about_images WHERE id = $img_id;
-  DELETE FROM about_img_position WHERE image_id = $img_id;
+  DELETE FROM about_img_branch WHERE image_id = $img_id;
 ```
 
 ### Add a member
 
 ```sql
   INSERT INTO about_images (name, ext, description) VALUES ($name, $ext, $description);
-  INSERT INTO about_positions (position) VALUES ($position);
-  INSERT INTO about_img_position (about_img_id, about_position_id);
+  INSERT INTO about_branches (branch) VALUES ($branch);
+  INSERT INTO about_img_branch (about_img_id, about_branch_id);
 ```
 
 ### Select a member
 
 ```sql
   SELECT name, ext, description FROM about_images WHERE id = $img_id;
-  SELECT position FROM about_positions INNER JOIN about_img_position ON about_position_id = about_positions.id WHERE about_images.id = $img_id
+  SELECT branch FROM about_branch INNER JOIN about_img_branch ON about_img_branch.about_branch_id = about_branch.id WHERE about_images.id = $img_id
+```
+
+### Select memebrs who belong to the same branch
+
+```sql
+SELECT id FROM about_images INNER JOIN about_img_branch INNER JOIN about_branches WHERE about_branches.id = about_img_branch.about_branch_id AND about_images.id = about_img_branch.about_image_id
 ```
 
 ## PHP File Structure
@@ -817,6 +823,30 @@ Pseudocode for index.php...
 include init.php
 
 TODO
+```
+
+### about.php
+
+```
+About Page Pseudocode:
+
+function delete_member($img_id) {
+  Delete the image that has the id as $img_id
+  Delete the about_img_branch relation that has image_id as $img_id
+}
+
+function insert_new_member($name, $branch, $description){
+  Insert a new member using $name, $branch, $description
+  Get the id of the last inserted member
+  Select the id in the branches table where branch name = "$branch"
+  Insert a new row to about_img_branch table using the id of the last inserted member and the selected id from the branches table
+}
+
+function select_branch($branch){
+  Select id from branches table where branch name is $branch and store it in $branch_id
+  Select all about_image_id from about_img_branch table where about_branch_id is $branch_id and store it as an array in $branch_array
+  Display all images from about_image if their id is in $branch_array
+}
 ```
 
 
