@@ -16,6 +16,7 @@
                 }
             }
             ?>
+            <button id="login_btn"><a href="login.php">LOGIN</a></button>
         </ul>
     </nav>
 </header>
