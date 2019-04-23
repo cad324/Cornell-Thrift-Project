@@ -1,7 +1,7 @@
 <?php
  // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
-$title = "EVENTS"
+$title = "RESOURCES TIP"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,16 +17,6 @@ $title = "EVENTS"
 
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php"); ?>
-
-  <!--Form to add events -->
-  <fieldset>
-    <form id = "add_events" action = "events.php" method = "post">
-      <label for = "image_file">Add an image: </label>
-      <input id = "image_file" type = "file" name = "image_file">
-      <button name = "upload_image" type = "submit">Upload</button>
-    </form>
-  </fieldset>
-  <?php include("includes/footer.php"); ?>
 
   <?php include("includes/footer.php"); ?>
 </body>
