@@ -44,11 +44,11 @@ nav ul li a {
     margin: auto;
 }
 
-#contact_wrapper form div {
+#contact_wrapper form div, #login_wrapper form div {
     margin: 15px 0;
 }
 
-#contact_wrapper label {
+#contact_wrapper label, #login_wrapper label {
     display: inline-block;
     width: 70px;
     text-align: right;

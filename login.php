@@ -24,15 +24,15 @@ $title = "LOGIN"
     <div id="login_wrapper">
       <form>
         <div>
-          <label for="contact_name">Name: </label>
-          <input type="text" id="contact_name"/>
+          <label for="username">Username: </label>
+          <input type="text" name="username" id="username"/>
         </div>
         <div>
           <label for="contact_email">Email: </label>
-          <input type="email" id="contact_email"/>
+          <input type="email" name="email" id="email"/>
         </div>
         <div>
-          <input type="submit" id="msg_submit" value="LOGIN"/>
+          <input type="submit" name="login" id="login_submit" value="LOGIN"/>
         </div>
       </form>
     </div>
