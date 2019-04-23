@@ -542,6 +542,17 @@ Our current design does not make clear whether there will be a confirmation once
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
+About
+
+We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.
+
+This is what unlogged in users will see:
+![Final About Page](about_final.JPG)
+
+This is what logged in users will see:
+![Final About Page Logged In](about_final_logged_in.JPG)
+If the user clicks the "Modify" buttom, php will automatically fill out the "Add/Modify" form with the original information. The user just need to edit the category that he or she wants to modify, and click the "Add/Modify" buttom to update the information
+
 Events
 
 We made sure to clearly add a confirmation page so that  users who are less comfortable with computers understand that they have successfully submitted the form.
