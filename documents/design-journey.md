@@ -880,6 +880,8 @@ function select_branch($branch){
   Select all about_image_id from about_img_branch table where about_branch_id is $branch_id and store it as an array in $branch_array
   Display all images from about_image if their id is in $branch_array
 }
+```
+
 ### events.php
 
 ```
