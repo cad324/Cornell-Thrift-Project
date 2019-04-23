@@ -360,27 +360,29 @@ Task 2: Client can upload an image to About page.
 **Subgoal # 3 : Submit response**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
-
         [Tell us why..]
+      Abby will understand that once she has filled out the form she has to submit it. Although Abby does not like experimenting with new technology unnecessarily, submitting a form is a common feature across many websites that she will likely be familiar with.
 
 [Add as many actions as you need...]
-**Action # 1 : [action name]**
+**Action # 1 : Click submit button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
+      Submit buttons are a really common feature across a lot of different platforms, so despite Abby's limited comfort with computers, she will likely understand that she needs to click the button to submit her responses.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
+      Right now, the website design doesn't indicate any kind of confirmation page after the form is successfully submitted. If no confirmation page pops up after she clicks submit, since Abby has low self-efficacy she will likely believe she did something wrong. However, if a confirmation page is included, Abby would likely understand that she did the right thing because the page would say she successfully submitted her response.
 
 #### Task 2 - Cognitive Walkthrough
 
@@ -465,27 +467,31 @@ Task 2: Client can upload an image to About page.
 **Subgoal # 4 : Submit an image**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
 
         [Tell us why..]
+     A common feature of forms across many websites is the need to submit them upon completion. Since there is a submit button present Abby will likely understand that to be an instruction and know she has to submit the form, despite her lack of comfort with computing tasks.
 
 [Add as many actions as you need...]
-**Action # [action number] : [action name]**
+**Action # 1 : Click the submit button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
+      While Abby is not very comfortable with computers, she will likely understand that she needs to click the button to submit her responses as submit buttons are a common feature on many websites and Abby should understand submit to be an instruction and upon comprehensively reviewing the form she will likely figure out she needs to click the button.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
+    Abby will only know if she did the right thing if there is a confirmation page. Right now, it is unclear if there will be a confirmation form once it is submitted. If there is no confirmation page, Abby will likely believe she did something wrong because she has low computer self-efficacy. If there is a confirmation page, Abby would likely know that she did the right thing because the page confirm it for her.
 
 ### Cognitive Walk-though Results
 
@@ -493,6 +499,7 @@ Task 2: Client can upload an image to About page.
 
 [Your responses here should be **very** thorough and thoughtful.]
 
+Our current design does not make clear whether there will be a confirmation once the form is sucessfully submitted, or any corrective feedback should the user not fill in aspects of a form correctly. It is important that corrective feedback and a confirmation message are factored into the design as users with low self-efficacy may struggle with both understanding their mistakes and knowing if they submitted forms correctly because of a lack of feedback. Our final design should include a confirmation message for every form and corrective feedback when users submit invalid responses.
 
 ## Final Design
 
