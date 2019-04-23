@@ -1,6 +1,12 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     margin: 0;
     padding:0;
+    padding-bottom: 150px;
 }
 
 header {
@@ -61,7 +67,7 @@ nav ul li a {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
