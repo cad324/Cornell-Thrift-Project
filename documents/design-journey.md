@@ -297,27 +297,31 @@ Task 2: Client can upload an image to About page.
 **Subgoal # 1 : Go to Contact page**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
 
-        [Tell us why..]
+        Abby will be able to go to the Contact page because Abby has used
+        technologies before and this task is not new. "Contact" is also
+        a clear heading for the page.
 
 [Add as many actions as you need...]
 **Action # 1 : Click on Contact in navigation bar**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+        Abby is not comfortable with new technology but clicking on
+        a page in the navigation bar is not new.
 
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+  - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+        Abby will be able to use a contact form and there should be a textbox
+        to submit a question. So, she'll know she is in the right page.
 
 **Subgoal # 2 : Fill out information under "Get in Touch"**
 	(e.g., "# 1 : Select the section of the document you want to print")
@@ -377,27 +381,30 @@ Task 2: Client can upload an image to About page.
 **Subgoal # 1 : Go to About page**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [persona name] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [yes/maybe/no]
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
 
-        [Tell us why..]
+      Abby may not know that to upload an eboard image that she should
+      go to the About page, but using the navigation bar is not a new task.
 
 [Add as many actions as you need...]
-**Action # [action number] : [action name]**
+**Action # 1 : Click on About page in navigation bar**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
-  - Will [persona name] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [maybe]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-        [Tell us why...]
+        Abby does not like to tinker but clicking on different pages in the
+        navigation bar does not produce any risk.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-        [Tell us why...]
+        Once Abby arrives in About page, she will know that this is the page to
+        upload an eboard image since she will see a gallery with eboard members.
 
 **Subgoal # 2 : Log in**
 	(e.g., "# 1 : Select the section of the document you want to print")
@@ -485,8 +492,12 @@ Task 2: Client can upload an image to About page.
 
 [Include sketches of your finalized design.]
 
+![home_final_sketch](home_final.jpg)
+
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
+1. Home page
+ - Based on Cognitive Walkthrough, I added links to each page and description in home.
 
 
 ## Database Schema
@@ -557,7 +568,7 @@ Table: mail_list
 ```php
   $home_records = exec_sql_query(
     $db,
-    "SELECT * FROM images"
+    "SELECT * FROM home_images"
   )->fetchAll();
 
     $sql = "INSERT INTO images (user_id, filename, file_extention, description)
@@ -670,6 +681,22 @@ Pseudocode for index.php...
 include init.php
 
 TODO
+// display images in the slideshow
+   <div class="slideshow-box">
+      <div class="slideshow">
+        <?php
+        foreach ($records as $record) { ?>
+          <img alt="<?php echo $record["file_name"] ?>" src="uploads/home/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>">
+          <div class="home_img_cap"><?php echo $record["desc"]; ?></div>
+        <?php
+      }
+      ?>
+      </div>
+// need functions to make the slideshow
+function moveSlides ($image_id) {}
+function currentSlide ($image_id) {}
+function showSlides () {}
+
 ```
 
 
