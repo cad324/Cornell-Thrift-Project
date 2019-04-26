@@ -11,7 +11,7 @@
     </button>
     <div class="dropdown-content">
       <a href="resources_stores.php">Thrift Stores</a>
-      <a href="resources_tip">Thrift Tips</a>
+      <a href="resources_tip.php">Thrift Tips</a>
     </div>
   </div>
   <a href="contact.php">Contact</a>
