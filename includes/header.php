@@ -1,22 +1,20 @@
-<?php $pages = [
-        ["index.php", "HOME"], ["about.php", "ABOUT"], ["events.php", "EVENTS"],
-        ["resources_tip.php", "RESOURCE TIP"], ["resources_stores.php", "RESOURCE STORES"],
-        ["contact.php", "CONTACT"]
-        ]; ?>
 
 <header>
-    <nav>
-        <ul>
-            <?php foreach($pages as $page) {
-                $current = trim($_SERVER['PHP_SELF'], "/");
-                if ($current === $page[0]) {
-                    echo "<li><a class='current' href=$page[0]>$page[1]</a></li>";
-                } else {
-                    echo "<li><a href=$page[0]>$page[1]</a></li>";
-                }
-            }
-            ?>
-            <button id="login_btn"><a href="login.php">LOGIN</a></button>
-        </ul>
-    </nav>
+
+<div class="navbar">
+  <a href="index.php">Home</a>
+  <a href="about.php">About</a>
+  <a href="events.php">Events</a>
+  <div class="dropdown">
+    <button class="dropbtn">Resources
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="resources_stores.php">Thrift Stores</a>
+      <a href="resources_tip">Thrift Tips</a>
+    </div>
+  </div>
+  <a href="contact.php">Contact</a>
+</div>
+
 </header>

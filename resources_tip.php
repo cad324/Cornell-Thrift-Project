@@ -1,7 +1,7 @@
 <?php
  // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
-$title = "RESOURCES TIP"
+$title = "THRIFT TIPS"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +17,9 @@ $title = "RESOURCES TIP"
 
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php"); ?>
+
+  <h1>Top 7 Pro Thrift Tips</h1>
+  <p>Description:</p>
 
   <?php include("includes/footer.php"); ?>
 </body>
