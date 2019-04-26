@@ -79,10 +79,26 @@ footer {
 #copyright {
   text-align: center;
 }
-
+/* Events Page */
 fieldset {
   border-style: none;
   width: 500px;
+}
+
+#events_main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.events_row {
+    display: flex;
+    flex-direction: row;
+}
+
+#thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
+    display: flex;
+    flex-direction: column;
 }
 
 #update_events, #add_events {
