@@ -64,4 +64,5 @@ function exec_sql_query($db, $sql, $params = array())
 
 // You may place any of your code here.
 
-?>
+// open connection to database
+$db = open_or_init_sqlite_db('secure/gallery.sqlite', 'secure/init.sql');
