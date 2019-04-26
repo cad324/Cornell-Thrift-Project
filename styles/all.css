@@ -1,31 +1,15 @@
-html {
-    min-height: 100%;
-    position: relative;
-}
-
-body {
+html,body {
+    height: 100%;
     margin: 0;
-    padding:0;
-    padding-bottom: 150px;
 }
 
-header {
-    width: 100%;
-    margin:0;
-    padding:0;
-    text-align: center;
-}
-
-nav {
-    width: 80%;
-    margin:auto
-}
-
+/* ----------- This nav is being overwrittin!! ----  */
+/*
 nav ul {
-    margin: 0;
+    margin: 10px;
+    padding: 40px;
     display: flex;
     flex-direction: row;
-    padding: 15px 0;
 }
 
 nav ul li {
@@ -35,8 +19,9 @@ nav ul li {
 
 nav ul li a {
     text-decoration: underline;
-    color: #000;
 }
+*/
+/* -------------------------------------------- */
 
 .current {
     color: #800d80;
@@ -67,13 +52,11 @@ nav ul li a {
 }
 
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  margin: 10px 0 0 0;
   width: 100%;
-  background-color: #000;
+  background-color:#333;
   color: #fff;
-  padding-left: 15px;
+  padding: 20px;
 }
 
 #copyright {
@@ -155,13 +138,17 @@ label{
     margin-bottom: 10px;
     font-size:20px;
 }
+
+/* ------------- Nav stuff ------------- */
 /* Navbar container */
 .navbar {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
+    padding: 10px;
   }
 
+  /* Adjusted this code  - Susan */
   /* Links inside the navbar */
   .navbar a {
     float: left;
@@ -169,6 +156,7 @@ label{
     color: white;
     text-align: center;
     padding: 14px 16px;
+    margin: 0 80px 0 80px;
     text-decoration: none;
   }
 
@@ -176,15 +164,16 @@ label{
   .dropdown {
     float: left;
     overflow: hidden;
+    margin: 0 50px 0 50px;
   }
 
   /* Dropdown button */
   .dropdown .dropbtn {
     font-size: 16px;
+    padding: 14px 16px;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -192,7 +181,7 @@ label{
 
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(183, 178, 178);
   }
 
   /* Dropdown content (hidden by default) */
@@ -215,7 +204,7 @@ label{
     text-align: left;
   }
 
-  /* Add a grey background color to dropdown links on hover */
+  /* Add a grey background color to dropdown links on hover
   .dropdown-content a:hover {
     background-color: #ddd;
   }
@@ -224,3 +213,79 @@ label{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  /* taken from w3school for now*/
+* {box-sizing:border-box}
+
+
+/* --------- slideshow stuff ----------- */
+/* Slideshow container*/
+.slideshow-container {
+  height: 400px;
+  width: 100%;
+  overflow: auto;
+}
+
+.h_img{
+  /* Full height */
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:black;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+}
+/* ------------------------------------- */
+
+/* ---------- sticky header ------------- */
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* -------------------------------------- */
+
+#mission {
+  color: #525353;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 150px 0 150px;
+  padding: 10px;
+}

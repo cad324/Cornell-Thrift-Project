@@ -1,5 +1,5 @@
 <?php
- // INCLUDE ON EVERY TOP-LEVEL PAGE!
+// INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
 $title = "CONTACT"
 ?>
@@ -26,18 +26,18 @@ $title = "CONTACT"
       <form>
         <div>
           <label for="contact_name">Name: </label>
-          <input type="text" id="contact_name"/>
+          <input type="text" id="contact_name" />
         </div>
         <div>
           <label for="contact_email">Email: </label>
-          <input type="email" id="contact_email"/>
+          <input type="email" id="contact_email" />
         </div>
         <div>
           <label for="contact_message">Message: </label>
           <textarea id="contact_message"></textarea>
         </div>
         <div>
-          <input type="submit" id="msg_submit" value="Send"/>
+          <input type="submit" id="msg_submit" value="Send" />
         </div>
       </form>
     </div>
@@ -45,4 +45,5 @@ $title = "CONTACT"
 
   <?php include("includes/footer.php"); ?>
 </body>
+
 </html>
