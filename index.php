@@ -51,6 +51,7 @@ $title = "CONTACT"
   <script src="slideshow.js"></script>
   <script src="stickyheader.js"></script>
 
+  <?php include("includes/footer.php"); ?>
 </body>
 
 </html>

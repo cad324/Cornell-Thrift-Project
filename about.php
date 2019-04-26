@@ -2,7 +2,6 @@
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
 include("includes/header.php");
-include("includes/footer.php");
 $title = "ABOUT"
 ?>
 <!DOCTYPE html>
@@ -127,6 +126,10 @@ $title = "ABOUT"
   </div>
 
   <script src="stickyheader.js"></script>
+  <?php
+  // INCLUDE ON EVERY TOP-LEVEL PAGE!
+  include("includes/footer.php");
+  ?>
 </body>
 
 </html>
