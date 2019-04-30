@@ -94,6 +94,7 @@ function log_in($username, $password) {
         } else {
           array_push($session_messages, "Log in failed.");
         }
+        redirect("index.php");
       } else {
         array_push($session_messages, "Invalid user credentials");
       }
@@ -148,11 +149,8 @@ function session_login() {
   return NULL;
 }
 function is_user_logged_in() {
-  return True;
-/*
   global $current_user;
   return ($current_user != NULL);
-  */
 }
 
 function log_out() {
