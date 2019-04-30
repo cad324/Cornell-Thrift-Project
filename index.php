@@ -1,7 +1,8 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
-$title = "CONTACT"
+$title = "CONTACT";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
