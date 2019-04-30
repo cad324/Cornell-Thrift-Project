@@ -9,6 +9,14 @@ CREATE TABLE `users` (
     `eboard` TEXT
 );
 
+CREATE TABLE `about_images` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+ 	`image_name`	TEXT NOT NULL UNIQUE,
+	`ext`    TEXT NOT NULL,
+    `job`   TEXT NOT NULL
+);
+
+
 CREATE TABLE `messages` (
     `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     `name` TEXT NOT NULL,
@@ -61,5 +69,16 @@ CREATE TABLE images (
 INSERT INTO images (id, file_name, file_ext, desc) VALUES (1,"1","jpg","none");
 INSERT INTO images (id, file_name, file_ext, desc) VALUES (2,"2","jpg","none");
 INSERT INTO images (id, file_name, file_ext, desc) VALUES (3,"3","jpg","none");
+
+
+INSERT INTO about_images (image_name, ext, job) VALUES ('becky.jpg', 'jpg', 'becky job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('chelsea.jpg', 'jpg', 'chelsea job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('clara.jpg', 'jpg', 'clara job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('dana.jpg', 'jpg', 'dana job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('jakie.jpg', 'jpg', 'jakie job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('kemba.jpg', 'jpg', 'kemba job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('meghan.jpg', 'jpg', 'meghan job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('sharon.jpg', 'jpg', 'sharon job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('stephanie.jpg', 'jpg', 'stephanie job');
 
 COMMIT;

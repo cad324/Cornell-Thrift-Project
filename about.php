@@ -97,12 +97,9 @@ $title = "ABOUT"
 
     <form id="members" method="post" action="add_tag.php">
 
-      <div class="textbox">
-        <label for="category_branch">Branch:</label>
-        <select name="category_branch">
-          <option value="E-Board">E-Board</option>
-          <option value="Commitees">Commitees</option>
-        </select>
+      <div class = "textbox">
+        <label for="input">Profile: </label>
+        <input type="file" name="file_input"/>
       </div>
 
       <div class="textbox">

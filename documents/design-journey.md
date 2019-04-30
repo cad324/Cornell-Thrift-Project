@@ -598,16 +598,7 @@ Table: about_images
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
 * name: TEXT {Not}
 * ext: TEXT {Not}
-* description: TEXT {Not}
-
-Table: about_branches
-* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* branch: TEXT {Not}
-
-Table: about_img_branch
-* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* about_img_id: INTEGER {Not, U}
-* about_branch_id: INTEGER {Not}
+* job: TEXT {Not}
 
 Table: resources_stores
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
