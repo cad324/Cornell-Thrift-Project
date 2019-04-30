@@ -106,8 +106,13 @@ fieldset {
 }
 
 #about img{
-    width:390px;
+    width:300px;
     margin: 0 45px;
+}
+
+#about figure{
+    width:390px;
+    margin: 45px;
 }
 
 #about figcaption{
@@ -133,7 +138,7 @@ label{
     width:100px;
 }
 
-#add_buttom{
+.add_buttom{
     margin-left: 750px;
     margin-bottom: 10px;
     font-size:20px;

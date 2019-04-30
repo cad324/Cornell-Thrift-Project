@@ -71,14 +71,14 @@ INSERT INTO images (id, file_name, file_ext, desc) VALUES (2,"2","jpg","none");
 INSERT INTO images (id, file_name, file_ext, desc) VALUES (3,"3","jpg","none");
 
 
-INSERT INTO about_images (image_name, ext, job) VALUES ('becky.jpg', 'jpg', 'becky job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('chelsea.jpg', 'jpg', 'chelsea job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('clara.jpg', 'jpg', 'clara job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('dana.jpg', 'jpg', 'dana job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('jakie.jpg', 'jpg', 'jakie job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('kemba.jpg', 'jpg', 'kemba job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('meghan.jpg', 'jpg', 'meghan job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('sharon.jpg', 'jpg', 'sharon job');
-INSERT INTO about_images (image_name, ext, job) VALUES ('stephanie.jpg', 'jpg', 'stephanie job');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Becky', 'jpg', 'Event Planner');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Chelsea', 'jpg', 'Treasurer');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Clara', 'jpg', 'Executive Director');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Dana', 'jpg', 'Operations Managers of West Campus');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Jakie', 'jpg', 'Operations Managers of Greek Houses');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Kemba', 'jpg', 'Graphics Designer');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Meghan', 'jpg', 'Executive Director');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Sharon', 'jpg', 'Publicity Director');
+INSERT INTO about_images (image_name, ext, job) VALUES ('Stephanie', 'jpg', 'Collaboration Coordinates in the Programming Committee');
 
 COMMIT;

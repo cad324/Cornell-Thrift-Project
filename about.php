@@ -15,111 +15,66 @@ $title = "ABOUT"
 </head>
 
 <body id="about">
-
   <!-- TODO: This should be your main page for your site. -->
-  <p id="ad">Meet Our Members!</p>
-  <h1>E-Board Members</h1>
-  <p>Description:</p>
-  <div class="row">
-    <div>
-      <a><img src="uploads/images/img-placeholder.jpg" alt="placeholder image" /></a>
+  <h1>Meet Our Members!</h1>
 
-      <figcaption>
-        <p>Name:</p>
-        <p>Position:</p>
-        <p>Description:</p>
-      </figcaption>
+  <?php
+  if (is_user_logged_in()){
+    ?>
+    <p id = "ad">Click <a href = "add_member.php">Here</a> to add a new member to the Eboard!</p>
+  <?php
+  }
+  ?>
 
-    </div>
+  <div class = "row">
+  <?php
+  if (isset($_GET['delete_image']) || isset($_POST['delete_image'])){
+    delete_image($_GET['delete_image']);
+  }
 
-    <div>
-      <a><img src="uploads/images/img-placeholder.jpg" alt="placeholder image" /></a>
+  $sql = "SELECT id, image_name, ext, job from about_images";
+  $params = array();
+  $records = exec_sql_query($db, $sql, $params)->fetchAll();
+  if ($records) {
+    foreach ($records as $record){
+      $image_id = $record['id'];
+      $src = "uploads/images/".$image_id.".".$record['ext'];
+      $name = $record['image_name'];
+      $job = $record['job'];
 
-      <figcaption>
-        <p>Name:</p>
-        <p>Position:</p>
-        <p>Description:</p>
-      </figcaption>
+      ?>
+      <figure>
+        <a href = <?php echo($src);?>><img src = <?php echo($src);?> alt = <?php echo($name);?>/></a>
 
-    </div>
+        <figcaption>
+          <p>Name: <?php echo($name);?></p>
+          <p>Position: <?php echo($job);?></p>
 
-    <div>
-      <a><img src="uploads/images/img-placeholder.jpg" alt="placeholder image" /></a>
+          <div>
+            <?php
+            if (is_user_logged_in()){
+              $delete_image = htmlspecialchars( $_SERVER['PHP_SELF'] ) . '?' . http_build_query(array('delete_image' => $record['id']) );
+            ?>
+            <a href = <?php echo($delete_image)?>>Delete Image</a>
+            <?php }
+            ?>
+          </div>
 
-      <figcaption>
-        <p>Name:</p>
-        <p>Position:</p>
-        <p>Description:</p>
-      </figcaption>
-
-    </div>
-  </div>
-
-  <h1>Committees</h1>
-  <p>Description:</p>
-  <div class="row">
-    <div>
-      <a><img src="uploads/images/img-placeholder.jpg" alt="placeholder image" /></a>
-
-      <figcaption>
-        <p>Name:</p>
-        <p>Position:</p>
-        <p>Description:</p>
-      </figcaption>
-
-    </div>
-
-    <div>
-      <a><img src="uploads/images/img-placeholder.jpg" alt="placeholder image" /></a>
-
-      <figcaption>
-        <p>Name:</p>
-        <p>Position:</p>
-        <p>Description:</p>
-      </figcaption>
-
-    </div>
-
-    <div>
-      <a><img src="uploads/images/img-placeholder.jpg" alt="placeholder image" /></a>
-
-      <figcaption>
-        <p>Name:</p>
-        <p>Position:</p>
-        <p>Description:</p>
-      </figcaption>
-
-    </div>
-  </div>
-
-  <div>
-    <h2>Add/Modify Members</h2>
-
-    <form id="members" method="post" action="add_tag.php">
-
-      <div class = "textbox">
-        <label for="input">Profile: </label>
-        <input type="file" name="file_input"/>
-      </div>
-
-      <div class="textbox">
-        <label for="name">Name: </label>
-        <input type="text" name="name" />
-      </div>
-
-      <div class="textbox">
-        <label for="position">Position: </label>
-        <input type="text" name="position" />
-      </div>
-
-      <div class="textbox">
-        <label for="intro">Description: </label>
-        <input type="textfield" name="intro" />
-      </div>
-
-      <div id="add_buttom">
-        <input type="submit" name="addmodify" value="Add/Modify " class="submit" />
-      </div>
+          <div>
+            <?php
+            if (is_user_logged_in()){
+              $modify_member = 'modify_member.php?' . http_build_query(array('modify' => $image_id) );
+            ?>
+            <a class = "<?php echo $modify_memberactive; ?>" href = <?php echo($modify_member)?>>Modify Image/Information</a>
+            <?php }
+            ?>
+          </div>
+          </figcaption>
+      </figure>
+    <?php
+    }
+  }
+  ?>
   </div>
 
   <script src="stickyheader.js"></script>
