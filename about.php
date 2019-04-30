@@ -55,7 +55,7 @@ $title = "ABOUT"
             if (is_user_logged_in()){
               $delete_image = htmlspecialchars( $_SERVER['PHP_SELF'] ) . '?' . http_build_query(array('delete_image' => $record['id']) );
             ?>
-            <a href = <?php echo($delete_image)?>>Delete Image</a>
+            <a href = <?php echo($delete_image)?>>Delete Memeber</a>
             <?php }
             ?>
           </div>
@@ -65,7 +65,7 @@ $title = "ABOUT"
             if (is_user_logged_in()){
               $modify_member = 'modify_member.php?' . http_build_query(array('modify' => $image_id) );
             ?>
-            <a class = "<?php echo $modify_memberactive; ?>" href = <?php echo($modify_member)?>>Modify Image/Information</a>
+            <a class = "<?php echo $modify_memberactive; ?>" href = <?php echo($modify_member)?>>Modify Member's Information</a>
             <?php }
             ?>
           </div>
