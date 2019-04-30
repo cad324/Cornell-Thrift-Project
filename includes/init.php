@@ -171,3 +171,14 @@ if ( isset($_POST['login']) && isset($_POST['user']) && isset($_POST['password']
 if ( isset($current_user) && ( isset($_GET['logout']) || isset($_POST['logout']) ) ) {
   log_out();
 }
+
+//Member Page code:
+function delete_image($img_id) {
+  global $db;
+
+  $sql = "DELETE FROM about_images WHERE id = :img_id;";
+  $params = array(
+    ':img_id' => $img_id
+  );
+  exec_sql_query($db, $sql, $params);
+}
