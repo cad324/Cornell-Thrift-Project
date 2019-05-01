@@ -35,6 +35,14 @@ CREATE TABLE `sessions` (
 	`session` TEXT NOT NULL UNIQUE
 );
 
+CREATE TABLE 'events' (
+    'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    'type' INTEGER NOT NULL,
+    'name' TEXT NOT NULL,
+    'date' TEXT,
+    'location' TEXT,
+    'time' TEXT
+);
 
 -- TODO: initial seed data
 
@@ -80,5 +88,12 @@ INSERT INTO about_images (image_name, ext, job) VALUES ('Kemba', 'jpg', 'Graphic
 INSERT INTO about_images (image_name, ext, job) VALUES ('Meghan', 'jpg', 'Executive Director');
 INSERT INTO about_images (image_name, ext, job) VALUES ('Sharon', 'jpg', 'Publicity Director');
 INSERT INTO about_images (image_name, ext, job) VALUES ('Stephanie', 'jpg', 'Collaboration Coordinates in the Programming Committee');
+
+-- Events table seed data
+INSERT INTO events (type, name, location) VALUES (1, 'Thrift Exchange Closets', 'Williard Straight Hall Browsing Library');
+INSERT INTO events (type, name, location) VALUES (1,'Thrift Exchange Closets', 'Carl Becker House Lobby');
+INSERT INTO events (type, name, date, time, location) VALUES (2, 'Spring Cleaning Pop-Up Thrift Store', '2019-03-04', '5-8pm', 'Williard Straight Hall');
+INSERT INTO events (type, name, date, time, location) VALUES (2, 'Pop-Up Shop', '2018-11-29', '5-7pm', 'Williard Straight Hall');
+INSERT INTO events (type, name, date, time, location) VALUES (3, 'Thrift Exchange Closets', 'Carl Becker House Lobby');
 
 COMMIT;
