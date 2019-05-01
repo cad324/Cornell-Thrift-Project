@@ -35,7 +35,9 @@ if (isset($_POST["uploadHome"])) {
 
     // Move uploaded file to uploads/images
     if ($new_record) {
+      var_dump("is it getting the database?");
       $input_id = $db->lastInsertId();
+      var_dump("what is the last id?" . $input_id);
       $new_path = "uploads/home/" . $input_id . "." . $upload_ext;
       move_uploaded_file($upload_info["tmp_name"], $new_path);
     } else {
