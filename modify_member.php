@@ -19,23 +19,45 @@ $title = "Modify Member"
     $image_job = get_image_job($image_id);
     $image_ext = get_image_ext($image_id);
     $link = "uploads/images/".$image_id.".".$image_ext;
+    $success = TRUE;
 
     if ( isset($_POST["modify"]) && is_user_logged_in() ) {
         $upload_name= $_POST['name_input'];
         $upload_position= $_POST['position_input'];
         $upload_info = $_FILES["file_input"];
-
-    if ($upload_info['error'] == UPLOAD_ERR_OK){
-
-        $upload_name = filter_input(INPUT_POST, 'name_input', FILTER_SANITIZE_STRING);
-        $upload_ext = strtolower(pathinfo($upload_info["name"], PATHINFO_EXTENSION));
-        $upload_position = filter_input(INPUT_POST, 'position_input', FILTER_SANITIZE_STRING);
-        if ($image_name != $upload_name){
-            update_name($image_id);
+        if ($upload_name == NULL){
+            $message = "Modify unsuccessful! Please enter the name of the new member";
+            $success = FALSE;
         }
-        if ($image_name != $upload_name){
-        update_name($image_id);
+        else if ($upload_position == NULL){
+            $message = "Modify unsuccessful! Please enter the position of the new member";
+            $success = FALSE;
         }
+        else{
+            update_name($image_id,$upload_name);
+            update_position($image_id,$upload_position);
+        }
+
+        if ($upload_info['error'] == UPLOAD_ERR_OK){
+            $upload_info = $_FILES["file_input"];
+            $upload_ext = strtolower(pathinfo($upload_info["name"], PATHINFO_EXTENSION));
+            update_ext($image_id,$upload_ext);
+            $new_path = "uploads/images/".$image_id.".".$upload_ext;
+            move_uploaded_file($upload_info['tmp_name'], $new_path);
+        }
+        else if($upload_info['error'] == UPLOAD_ERR_INI_SIZE || $upload_info['error'] == UPLOAD_ERR_FORM_SIZE){
+            $message = "Sorry! Your file exceeds the maximum filesize for uploads. Please select a smaller file and try again!";
+            $success = FALSE;
+        }
+        else if($upload_info['error'] == UPLOAD_ERR_PARTIAL){
+            $message = "Sorry! Your file was uploaded partially. Please try again!";
+            $success = FALSE;
+        }
+
+        if ($success){
+            $message = "Upload successful!";
+        }
+    }
 
       ?>
 
@@ -68,6 +90,14 @@ $title = "Modify Member"
             <input type="submit" name="modify" value="Modify " class="submit" />
         </div>
     </div>
+
+    <?php if ($message){
+    ?>
+    <p class = "message"><?php echo ($message);?></p>
+    <?php
+  }
+  ?>
+  <p class = "message">*Back to <a href = "about.php#footor">Members</a> Page</p>
 
     </body>
 </html>
