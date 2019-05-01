@@ -91,7 +91,7 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
     <?php
   }
   ?>
-  <p class = "message">*Back to <a href = "about.php">Members</a> Page</p>
+  <p class = "message">*Back to <a href = "about.php#footor">Members</a> Page</p>
 
     </body>
 </html>

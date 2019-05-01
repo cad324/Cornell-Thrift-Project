@@ -25,8 +25,8 @@
             <p id="footer_contact">Contact Us</p>
             <a href="mailto:cornellthrift@gmail.com">cornellthrift@gmail.com</a>
             <p>Social</p>
-            <a href="#"><img width="25" src="images/facebook.png" alt="facebook icon" /></a>
-            <a href="#"><img width="25" src="images/instagram.png" alt="instagram icon" /></a>
+            <a href="https://www.facebook.com/cornellthrift/"><img width="25" src="images/facebook.png" alt="facebook icon" /></a>
+            <a href="https://www.instagram.com/cornellthrift/?hl=en"><img width="25" src="images/instagram.png" alt="instagram icon" /></a>
         </div>
     </div>
     <p id="copyright">Copyright &copy <?php echo date("Y");?>
