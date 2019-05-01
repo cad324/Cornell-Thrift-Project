@@ -610,10 +610,11 @@ Table: resources_stores
 
 Table: events
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* event_name: TEXT {Not}
-* event_date: TEXT {}
-* event_location: TEXT {}
-* event_time: TEXT {}
+* type: INTEGER {Not}
+* name: TEXT {Not}
+* date: TEXT {}
+* location: TEXT {}
+* time: TEXT {}
 
 Table: messages
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key

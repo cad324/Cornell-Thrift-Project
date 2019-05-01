@@ -234,8 +234,8 @@ label{
 /* Slideshow container*/
 .slideshow {
   width: 100%;
-  height: 375px;
-  margin: 50px 0 50px 0;
+  margin: 1000px 0 50px 0;
+
 
 }
 
@@ -248,6 +248,7 @@ label{
   font-weight: 100;
   line-height: 25px;
   text-align: center;
+  margin: 0 0 30px 0;
 }
 
 .column {
@@ -262,9 +263,17 @@ label{
   clear: both;
 }
 
-#colm {
+#colm1, #colm2 {
   float: left;
   width: 50%;
+}
+
+#colm1{
+  background-color: #3CB371;
+}
+
+#colm2{
+  background-color: #F5FFFA;
 }
 
 /* Clear floats after the columns */
@@ -273,17 +282,48 @@ label{
   clear: both;
 }
 
-#colm h4 {
-  text-align: center;
-}
-
 .static_img {
-width: 300px;
-height: 300px;
-float: center;
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.homebox{
+  padding: 0 0 40px 0;
+}
+
+.homebox a {
+  text-decoration: none;
+}
 /* --------------------------------- */
 .success {
 color: lightgreen;
+}
+.resource_body{
+  margin-left: 50px;
+  margin-right: 200px;
+}
+.heavy_text {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Table Stylings */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: 60px;
+  margin-right: 10px;
+
+}
+
+td,th {
+  border: 2px solid;
+  border-color: black;
+  text-align: center;
+  padding: 10px;
+  width: 10%;
 }
