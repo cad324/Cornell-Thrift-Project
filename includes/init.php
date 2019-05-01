@@ -180,3 +180,33 @@ function delete_image($img_id) {
   );
   exec_sql_query($db, $sql, $params);
 }
+
+function get_image_name($img_id){
+  global $db;
+  $sql = "SELECT image_name FROM about_images WHERE about_images.id = :img_id;";
+  $params = array(
+    ':img_id' => $img_id
+  );
+  $records = exec_sql_query($db, $sql, $params)->fetchAll();
+  return $records[0]['image_name'];
+}
+
+function get_image_job($img_id){
+  global $db;
+  $sql = "SELECT job FROM about_images WHERE about_images.id = :img_id;";
+  $params = array(
+    ':img_id' => $img_id
+  );
+  $records = exec_sql_query($db, $sql, $params)->fetchAll();
+  return $records[0]['job'];
+}
+
+function get_image_ext($img_id){
+  global $db;
+  $sql = "SELECT ext FROM about_images WHERE about_images.id = :img_id;";
+  $params = array(
+    ':img_id' => $img_id
+  );
+  $records = exec_sql_query($db, $sql, $params)->fetchAll();
+  return $records[0]['ext'];
+}

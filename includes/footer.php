@@ -1,3 +1,4 @@
+<div id = "footor">
 <?php
  if (isset($_POST["join"])) {
     $email = filter_var($_GET["email"], FILTER_SANITIZE_EMAIL);
@@ -20,3 +21,4 @@
     </form>
     <p id="copyright">Copyright &copy <?php echo date("Y");?>
 </footer>
+</div>
