@@ -11,12 +11,23 @@
 ?>
 
 <footer>
-    <p>Sign up for our mailing list</p>
-    <?php echo "<p class='success'>$msg_to_user</p>";?>
-    <form method="post" action="">
-        <label for="email_list">Email: </label>
-        <input name="email" type="email" id="email_list"/>
-        <input type="submit" name="join" value="Subscribe"/>
-    </form>
+    <div id="footer_content">
+        <div>
+            <p>Sign up for our mailing list</p>
+            <?php echo "<p class='success'>$msg_to_user</p>";?>
+            <form method="post" action="">
+                <label for="email_list">Email: </label>
+                <input name="email" type="email" id="email_list"/>
+                <input type="submit" name="join" value="Subscribe"/>
+            </form>
+        </div>
+        <div>
+            <p id="footer_contact">Contact Us</p>
+            <a href="mailto:cornellthrift@gmail.com">cornellthrift@gmail.com</a>
+            <p>Social</p>
+            <a href="#"><img width="25" src="images/facebook.png" alt="facebook icon" /></a>
+            <a href="#"><img width="25" src="images/instagram.png" alt="instagram icon" /></a>
+        </div>
+    </div>
     <p id="copyright">Copyright &copy <?php echo date("Y");?>
 </footer>

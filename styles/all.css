@@ -34,27 +34,45 @@ html,body {
 }
 
 #login_btn a {
-text-decoration: none;
-color: #000;
-margin: 0;
-padding: 3px;
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+  padding: 3px;
 }
 
 footer {
-margin: 10px 0 0 0;
-width: 100%;
-background-color:#333;
-color: #fff;
-padding: 20px;
+  margin: 10px 0 0 0;
+  width: 100%;
+  background-color:#333;
+  color: #fff;
+  padding: 20px;
+}
+
+#footer_content {
+  display: flex;
+  flex-direction: row;
+}
+
+#footer_content div {
+  flex-grow: 1;
+}
+
+#footer_contact {
+  margin-bottom: 3px;
+}
+
+footer a {
+  color: #7f6fc4;
 }
 
 #copyright {
-text-align: center;
+  text-align: center;
 }
+
 /* Events Page */
 fieldset {
-border-style: none;
-width: 500px;
+  border-style: none;
+  width: 500px;
 }
 
 #events_main {
