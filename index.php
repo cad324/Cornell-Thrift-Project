@@ -14,10 +14,12 @@ if (isset($_POST["uploadHome"])) {
 
   // Filtering
   $upload_info = $_FILES["file_data"];
+  var_dump($upload_info);
 
   //if upload sucessful then get filename and file extension
   if ($upload_info['error'] == UPLOAD_ERR_OK) {
     $filename = basename($upload_info["name"]);
+    var_dump("the filename is " . $filename);
     $upload_ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
 
@@ -68,35 +70,31 @@ if (isset($_POST["uploadHome"])) {
 
     <div id="row">
 
-      <div id="colm">
+      <div id="colm1">
         <figure class="homebox">
-          <a href="about.php">
-            <h4>Do you want to be part of Cornell Thrift?</h4>
-          </a>
-          <p> Join our team! Get to know the eboard and how you can help out.</p>
-          <img src="images/r3.jpg" alt="team" class="static_img" />
+          <h3>OUR EVENTS</h3>
+          <p> Find out how you can donate unused items and make a difference to the Ithaca community! </p>
+          <a href="events.php"><img src="images/r2.jpg" alt="team" class="static_img" /></a>
         </figure>
 
         <figure class="homebox">
-          <a href="resources.php">
-            <h4>Resources & Other Thrift Activities</h4>
-          </a>
-          <p>Resources for thrifting.</p>
-          <a href="events.php"><img src="images/r2.jpg" alt="team" class="static_img" /></a>
+          <h3>JOIN US</h3>
+          <p> Join our team! Get to know the eboard and how you can help out.</p>
+          <a href="about.php"><img src="images/r3.jpg" alt="team" class="static_img" /> </a>
         </figure>
       </div>
 
-      <div id="colm">
-        <figure>
-          <h4>Paritcipate in Cornell Thrift events!</h4>
-          <p> Find out how you can donate unused items and make a difference to the Ithaca community! </p>
-          <a href="events.php"><img src="images/r2.jpg" alt="team" class="static_img" /></a>
+      <div id="colm2">
+        <figure class="homebox">
+          <h3>OTHER THRIFT ACTVITIES</h3>
+          <p> There are many more ways to help out! Cornell is surrounded by thrift stores. </p>
+          <a href="resources_stores.php"><img src="images/r4.jpg" alt="team" class="static_img" /></a>
         </figure>
 
-        <figure>
-          <h4>Paritcipate in Cornell Thrift events!</h4>
-          <p> Find out how you can donate unused items and make a difference to the Ithaca community! </p>
-          <a href="events.php"><img src="images/r2.jpg" alt="team" class="static_img" /></a>
+        <figure class="homebox">
+          <h3>CONTACT US/FAQS</h3>
+          <p> Have any more questions? Join our mailing list in the footer below or ask us a question! </p>
+          <a href="contact.php"><img src="images/r2.jpg" alt="team" class="static_img" /></a>
         </figure>
       </div>
     </div>
