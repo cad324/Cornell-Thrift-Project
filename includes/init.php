@@ -187,3 +187,5 @@ function delete_image($img_id)
   );
   exec_sql_query($db, $sql, $params);
 }
+
+;
