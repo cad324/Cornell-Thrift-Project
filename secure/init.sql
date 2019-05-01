@@ -93,8 +93,11 @@ INSERT INTO events (type, name, location) VALUES (1, 'Thrift Exchange Closets', 
 INSERT INTO events (type, name, location) VALUES (1,'Thrift Exchange Closets', 'Carl Becker House Lobby');
 INSERT INTO events (type, name, date, time, location) VALUES (2, 'Spring Cleaning Pop-Up Thrift Store', '2019-03-04', '5-8pm', 'Williard Straight Hall');
 INSERT INTO events (type, name, date, time, location) VALUES (2, 'Pop-Up Shop', '2018-11-29', '5-7pm', 'Williard Straight Hall');
+INSERT INTO events (type, name, date, time, location) VALUES (2, 'The Liberation Thrift Shop', '2018-04-13', '8pm-1am', 'Risley Hall');
 INSERT INTO events (type, name, date, time, location) VALUES (3, 'Cornell Thrift Mending Workshop: Napkin Making Edition!', '2019-05-01', '5-7pm', 'Makerspace, Mann Library');
 INSERT INTO events (type, name, date, time, location) VALUES (3, 'Spring Mending Workshop', '2019-03-27', '5-7pm', 'Makerspace, Mann Library');
-INSERT INTO events (type, name, date, time, location) VALUES (3, 'Mend It! Cornell Thrift x DSCC', '2019-05-01', '5-7pm', 'Makerspace, Mann Library');
+INSERT INTO events (type, name, date, time, location) VALUES (3, 'Mend It! Cornell Thrift x DSCC', '2018-11-29', '5-7pm', 'Williard Straight Hall');
+INSERT INTO events (type, name, date, time, location) VALUES (3, 'Mending Workshop: November Edition', '2018-11-08', '5-7pm', 'Mann Library');
+INSERT INTO events (type, name, date, time, location) VALUES (3, 'Halloween Mending Workshop', '2018-10-18', '5-7pm', 'Mann Library');
 
 COMMIT;
