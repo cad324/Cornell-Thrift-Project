@@ -3,12 +3,6 @@
 include("includes/init.php");
 $title = "LOGIN";
 
-if ( isset($_POST["login"]) ) {
-  $username = filter_var($_POST["username"], FILTER_SANITIZE_STRING);
-  $password = filter_var($_POST["password"], FILTER_SANITIZE_STRING);
-  log_in($username, $password);
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +23,7 @@ if ( isset($_POST["login"]) ) {
     <h1>Login</h1>
 
     <div id="login_wrapper">
+      <?php if (!is_user_logged_in()) { ?>
       <form method="post" action="login.php">
         <div>
           <label for="username">Username: </label>
@@ -41,7 +36,10 @@ if ( isset($_POST["login"]) ) {
         <div>
           <input type="submit" name="login" id="login_submit" value="LOGIN"/>
         </div>
-      </form>
+      </form> <?php }  else { ?>
+        <p>You are logged in as <?php echo $current_user["username"]; ?></p>
+        <button><a href="index.php">Go to Homepage</a></button>
+      <?php } ?>
     </div>
   </div>
   <?php

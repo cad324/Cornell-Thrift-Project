@@ -16,5 +16,10 @@
       </div>
       <a href="contact.php">Contact</a>
     </nav>
+    <?php if (!is_user_logged_in()) { ?>
+      <button id="login_btn"><a href="login.php">Login</a></button>
+    <?php } else { ?>
+      <button id="login_btn"><a href='index.php?logout'>Logout</a></button>
+    <?php } ?>
   </div>
 </header>

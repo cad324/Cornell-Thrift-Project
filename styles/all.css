@@ -47,8 +47,10 @@ nav ul li a {
 }
 
 #login_btn a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+  padding: 3px;
 }
 
 footer {
@@ -293,4 +295,8 @@ label{
   text-align: center;
   margin: 0 150px 0 150px;
   padding: 10px;
+}
+
+.success {
+  color: lightgreen;
 }
