@@ -283,3 +283,29 @@ label{
 .success {
 color: lightgreen;
 }
+.resource_body{
+  margin-left: 50px;
+  margin-right: 200px;
+}
+.heavy_text {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Table Stylings */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: 60px;
+  margin-right: 10px;
+
+}
+
+td,th {
+  border: 2px solid;
+  border-color: black;
+  text-align: center;
+  padding: 10px;
+  width: 10%;
+}
