@@ -66,9 +66,17 @@ CREATE TABLE images (
 	desc TEXT
 );
 
-INSERT INTO images (id, file_name, file_ext, desc) VALUES (1,"1","jpg","none");
-INSERT INTO images (id, file_name, file_ext, desc) VALUES (2,"2","jpg","none");
-INSERT INTO images (id, file_name, file_ext, desc) VALUES (3,"3","jpg","none");
+INSERT INTO images (file_name, file_ext, desc) VALUES ("1","jpg","none");
+INSERT INTO images (file_name, file_ext, desc) VALUES ("2","jpg","none");
+
+CREATE TABLE icons (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	file_name TEXT NOT NULL,
+	file_ext TEXT NOT NULL,
+);
+
+INSERT INTO images (file_name, file_ext, desc) VALUES ("r2","jpg","none");
+INSERT INTO images (file_name, file_ext, desc) VALUES ("r3","jpg","none");
 
 
 INSERT INTO about_images (image_name, ext, job) VALUES ('Becky', 'jpg', 'Event Planner');

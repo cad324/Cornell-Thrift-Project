@@ -65,13 +65,14 @@ function exec_sql_query($db, $sql, $params = array())
 // You may place any of your code here.
 $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 
-define('SESSION_COOKIE_DURATION', 60*60*3);
+define('SESSION_COOKIE_DURATION', 60 * 60 * 3);
 $session_messages = array();
-function log_in($username, $password) {
+function log_in($username, $password)
+{
   global $db;
   global $current_user;
   global $session_messages;
-  if ( isset($username) && isset($password) ) {
+  if (isset($username) && isset($password)) {
     $sql = "SELECT * FROM users WHERE username = :username";
     $params = array(
       ':username' => $username
@@ -79,7 +80,7 @@ function log_in($username, $password) {
     $records = exec_sql_query($db, $sql, $params)->fetchAll();
     if ($records) {
       $account = $records[0];
-      if ( password_verify($password, $account['password']) ) {
+      if (password_verify($password, $account['password'])) {
         $session = session_create_id();
         $sql = "INSERT INTO sessions (user_id, session) VALUES (:user_id, :session);";
         $params = array(
@@ -107,7 +108,8 @@ function log_in($username, $password) {
   $current_user = NULL;
   return NULL;
 }
-function find_user($user_id) {
+function find_user($user_id)
+{
   global $db;
   $sql = "SELECT * FROM users WHERE id = :user_id;";
   $params = array(
@@ -119,7 +121,8 @@ function find_user($user_id) {
   }
   return NULL;
 }
-function find_session($session) {
+function find_session($session)
+{
   global $db;
   if (isset($session)) {
     $sql = "SELECT * FROM sessions WHERE session = :session;";
@@ -133,13 +136,14 @@ function find_session($session) {
   }
   return NULL;
 }
-function session_login() {
+function session_login()
+{
   global $db;
   global $current_user;
   if (isset($_COOKIE["session"])) {
     $session = $_COOKIE["session"];
     $session_record = find_session($session);
-    if ( isset($session_record) ) {
+    if (isset($session_record)) {
       $current_user = find_user($session_record['user_id']);
       setcookie("session", $session, time() + SESSION_COOKIE_DURATION);
       return $current_user;
@@ -148,30 +152,33 @@ function session_login() {
   $current_user = NULL;
   return NULL;
 }
-function is_user_logged_in() {
+function is_user_logged_in()
+{
   global $current_user;
   return ($current_user != NULL);
 }
 
-function log_out() {
+function log_out()
+{
   global $current_user;
   setcookie('session', '', time() - SESSION_COOKIE_DURATION);
   $current_user = NULL;
 }
-if ( isset($_POST['login']) && isset($_POST['user']) && isset($_POST['password']) ) {
-  $username = trim( $_POST['user'] );
-  $password = trim( $_POST['password'] );
+if (isset($_POST['login']) && isset($_POST['user']) && isset($_POST['password'])) {
+  $username = trim($_POST['user']);
+  $password = trim($_POST['password']);
   global $username;
   log_in($username, $password);
 } else {
   session_login();
 }
-if ( isset($current_user) && ( isset($_GET['logout']) || isset($_POST['logout']) ) ) {
+if (isset($current_user) && (isset($_GET['logout']) || isset($_POST['logout']))) {
   log_out();
 }
 
 //Member Page code:
-function delete_image($img_id) {
+function delete_image($img_id)
+{
   global $db;
 
   $sql = "DELETE FROM about_images WHERE id = :img_id;";
