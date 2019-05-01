@@ -125,7 +125,7 @@ if (isset($_POST["uploadHome"])) {
 
   </div>
 
-
+  <?php include("includes/footer.php"); ?>
 
 
 </body>

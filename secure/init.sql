@@ -74,9 +74,8 @@ CREATE TABLE images (
 	desc TEXT
 );
 
-INSERT INTO images (id, file_name, file_ext, desc) VALUES (1,"1","jpg","none");
-INSERT INTO images (id, file_name, file_ext, desc) VALUES (2,"2","jpg","none");
-INSERT INTO images (id, file_name, file_ext, desc) VALUES (3,"3","jpg","none");
+INSERT INTO images (file_name, file_ext, desc) VALUES ("1","jpg","none");
+INSERT INTO images (file_name, file_ext, desc) VALUES ("2","png","none");
 
 
 INSERT INTO about_images (image_name, ext, job) VALUES ('Becky', 'jpg', 'Event Planner');
