@@ -3,6 +3,11 @@
 include("includes/init.php");
 $title = "LOGIN";
 
+if (is_user_logged_in()) {
+  header("Location: index.php");
+  exit;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,10 +41,7 @@ $title = "LOGIN";
         <div>
           <input type="submit" name="login" id="login_submit" value="LOGIN"/>
         </div>
-      </form> <?php }  else { ?>
-        <p>You are logged in as <?php echo $current_user["username"]; ?></p>
-        <button><a href="index.php">Go to Homepage</a></button>
-      <?php } ?>
+      </form> <?php } ?>
     </div>
   </div>
   <?php
