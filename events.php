@@ -5,32 +5,27 @@ $title = "EVENTS";
 
 //handling submissions for the update events form
 if (isset($_POST["update_event"]) && is_user_logged_in()) {
-  $update_name = FALSE;
-  $update_date = FALSE;
-  $update_time = FALSE;
-  $update_location = FALSE;
+  $update_event = TRUE;
 
-  $original = filter_input(INPUT_POST, 'event_options', FILTER_SANITIZE_STRING);
+  $original = filter_input(INPUT_POST, 'event_options', FILTER_VALIDATE_INT);
   $name = filter_input(INPUT_POST, 'update_name', FILTER_SANITIZE_STRING);
   $date = filter_input(INPUT_POST, 'update_date', FILTER_SANITIZE_STRING);
   $time = filter_input(INPUT_POST, 'update_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'update_location', FILTER_SANITIZE_STRING);
 
   if ($name != '') {
-    $update_name == TRUE;
-    $sql = "UPDATE events SET name = :name WHERE name = :original;";
+    $sql = "UPDATE events SET name = :name WHERE id = :original;";
 
     $params = array(
       ':name' => $name,
       ':original' => $original
     );
-    $names = exec_sql_query($db, $sql, $params);
+    $names = exec_sql_query($db, $sql, $params)->fetchAll();
 
   }
 
   if ($date != '') {
-    $update_date = TRUE;
-    $sql = "UPDATE events SET date = :date WHERE name = :original;";
+    $sql = "UPDATE events SET date = :date WHERE id = :original;";
 
     $params = array(
       ':date' => $date,
@@ -41,8 +36,7 @@ if (isset($_POST["update_event"]) && is_user_logged_in()) {
   }
 
   if ($time != '') {
-    $update_name = TRUE;
-    $sql = "UPDATE events SET time = :time WHERE name = :original;";
+    $sql = "UPDATE events SET time = :time WHERE id = :original;";
 
     $params = array(
       ':time' => $time,
@@ -53,8 +47,7 @@ if (isset($_POST["update_event"]) && is_user_logged_in()) {
   }
 
   if ($location != '') {
-    $update_location = TRUE;
-    $sql = "UPDATE events SET location = :location WHERE name = :original;";
+    $sql = "UPDATE events SET location = :location WHERE id = :original;";
 
     $params = array(
       ':location' => $location,
@@ -62,6 +55,10 @@ if (isset($_POST["update_event"]) && is_user_logged_in()) {
     );
     $locations = exec_sql_query($db, $sql, $params);
 
+  }
+
+  if ($name == '' && $date == "" && $time == "" && $location == ""){
+    $update_event = FALSE;
   }
 }
 
@@ -240,6 +237,11 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
           <!-- Form to update events -->
           <fieldset>
             <h2>Update an Event?</h2>
+            <?php
+            if (isset($_POST["update_event"])&& $update_event == TRUE) {
+              echo "<p> You have successfully updated your event! Please click on the Events tab in the navigation bar above if you would like to update another event.</p>";
+            } else {
+            ?>
             <form id="update_events" action="events.php" method="post">
 
               <label for="update_event">Select an Event: </label>
@@ -251,11 +253,15 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
                 $events = exec_sql_query($db, $sql, $params) -> fetchAll();
 
                 foreach ($events as $event) {
-                  echo "<option value = '" . $event["type"] . "'>" . $event["name"] . "</option>";
+                  echo "<option value = '" . $event["id"] . "'>" . $event["name"] . "</option>";
                 }
                 ?>
               </select>
-
+              <?php
+              if (isset($_POST["update_event"])&& $update_event == FALSE) {
+                echo "<p> Please add a change to at least one field before submitting the form</p>";
+              }
+              ?>
               <label for="update_name">Change Name: </label>
               <input id="update_name" type="text" name="update_name">
 
@@ -271,6 +277,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
               <button name="update_event" type="submit">Update</button>
 
             </form>
+            <?php } ?>
           </fieldset>
         </div>
         <div id="delete_add">
