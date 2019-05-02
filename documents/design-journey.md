@@ -953,6 +953,9 @@ include footer.php
 ## Issues & Challenges
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
+  * Bringing the site together as a whole
+  * CSS conflicts and overwritten code
+  * queries sometimes not running
 
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
