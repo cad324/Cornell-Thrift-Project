@@ -3,7 +3,7 @@
     <a id="logo_a" href="index.php"><img class="logo" src="images/logo.png" alt="logo" /></a>
     <nav id="nav">
       <a class="home_link" href="index.php">Home</a>
-      <a href="about.php">About</a>
+      <a href="about.php">Members</a>
       <a href="events.php">Events</a>
       <div class="dropdown">
         <button class="dropbtn">Resources

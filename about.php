@@ -17,8 +17,13 @@ $title = "ABOUT"
     ?>
     <p id="ad">Click <a href="add_member.php">Here</a> to add a new member to the Eboard!</p>
   <?php
-}
-?>
+  }
+  else{
+  ?>
+    <p id="note">*Login to modify the Members Page if you are an Eboard member.</p>
+  <?php
+  }
+  ?>
 
   <div class="row">
     <?php
@@ -35,9 +40,11 @@ $title = "ABOUT"
         $src = "uploads/images/" . $image_id . "." . $record['ext'];
         $name = $record['image_name'];
         $job = $record['job'];
+        $div_id = "img".$image_id;
+        $div_link = "about.php#img".$image_id;
 
         ?>
-        <figure>
+        <figure id = "<?php echo($div_id) ?>">
           <a href=<?php echo ($src); ?>><img src=<?php echo ($src); ?> class="eboard" alt=<?php echo ($name); ?> /></a>
 
           <figcaption>
@@ -59,7 +66,7 @@ $title = "ABOUT"
               if (is_user_logged_in()) {
                 $modify_member = 'modify_member.php?' . http_build_query(array('modify' => $image_id));
                 ?>
-                <a class="<?php echo $modify_memberactive; ?>" href=<?php echo ($modify_member) ?>>Modify Member's Information</a>
+                <a href=<?php echo ($modify_member) ?>>Modify Member's Information</a>
               <?php }
             ?>
             </div>
@@ -69,6 +76,9 @@ $title = "ABOUT"
     }
   }
   ?>
+  </div>
+
+  <div id = "end">
   </div>
 
   <script src="stickyheader.js"></script>

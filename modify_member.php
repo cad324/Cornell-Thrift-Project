@@ -21,6 +21,7 @@ $title = "Modify Member"
     $link = "uploads/images/".$image_id.".".$image_ext;
     $success = TRUE;
     $modify_member = 'modify_member.php?' . http_build_query(array('modify' => $image_id) );
+    $div_link = "about.php#img".$image_id;
 
     if ( isset($_POST["modify"]) && is_user_logged_in() ) {
         $upload_name= $_POST['name'];
@@ -73,7 +74,7 @@ $title = "Modify Member"
         <form id="members" method="post" action="<?php $modify_member ?>" enctype="multipart/form-data">
 
         <div class = "textbox">
-            <a href = <?php echo($link);?>><img id = "pic" src = <?php echo($link);?> alt = <?php echo($image_name);?>/></a>
+            <a href = <?php echo($link);?>><img class = "pic" src = <?php echo($link);?> alt = <?php echo($image_name);?>/></a>
         </div>
 
         <div class = "textbox">
@@ -102,7 +103,7 @@ $title = "Modify Member"
     <?php
   }
   ?>
-  <p class = "message">*Back to <a href = "about.php#footor">Members</a> Page</p>
+  <p class = "message">*Back to <a href = <?php echo($div_link) ?>>Members</a> Page</p>
 
     </body>
 </html>

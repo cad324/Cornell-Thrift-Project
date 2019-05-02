@@ -245,6 +245,10 @@ fieldset {
   font-size: 30px;
   text-align: center;
 }
+#note{
+  font-size: 20px;
+  text-align: center;
+}
 #about h1,h2{
   text-align: center;
 }
@@ -296,7 +300,7 @@ label{
   font-size:20px;
 }
 
-#pic{
+.pic{
   display: block;
   width:200px;
   margin: 0 45px;
@@ -312,6 +316,12 @@ color: lightgreen;
 .heavy_text {
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.message{
+  text-align: center;
+  color:brown;
+  font-size:20px;
 }
 
 /* ------------Table Stylings --------------*/

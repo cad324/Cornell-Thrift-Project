@@ -63,6 +63,16 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
     <div>
         <h2>Add Members</h2>
 
+        <?php
+        if (isset($new_path)){
+        ?>
+            <div class = "textbox">
+            <a href = <?php echo($new_path);?>><img class = "pic" src = <?php echo($new_path);?> alt = <?php echo($upload_name);?>/></a>
+            </div>
+        <?php
+        }
+        ?>
+
         <form id="members" method="post" action="add_member.php" enctype="multipart/form-data">
 
         <div class = "textbox">
@@ -91,7 +101,7 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
     <?php
   }
   ?>
-  <p class = "message">*Back to <a href = "about.php#footor">Members</a> Page</p>
+  <p class = "message">*Back to <a href = "about.php#end">Members</a> Page</p>
 
     </body>
 </html>
