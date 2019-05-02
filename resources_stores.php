@@ -41,7 +41,8 @@ function print_record($record) {
   <?php include("includes/header.php"); ?>
   <div id="content-wrap">
     <h1>Thrift Stores in Ithaca</h1>
-
+    <p><a target="_blank" href="http://reusetompkins.com/">http://reusetompkins.com/</a></p>
+    <p>A comprehensive directory for used furniture, clothing, books & music, computers & electronics, sports & outdoor equipment, art & sewing materials, and antiques for all of Ithaca and Tompkins County.</p>
     <ul>
       <li><a href="/resources_stores.php">All Stores</a></li>
       <li><a href="/resources_stores.php?category=Classic Thrift Stores">Classic Thrift Stores</a></li>
@@ -82,11 +83,11 @@ function print_record($record) {
       ?>
       <table>
         <tr>
-          <th>Name</th>
-          <th>Address</th>
-          <th>Description</th>
-          <th>Hours</th>
-          <th>Price</th>
+          <th width = "20%">Name</th>
+          <th width = "20%">Address</th>
+          <th width = "40%">Description</th>
+          <th width = "12%">Hours</th>
+          <th width = "8%">Price</th>
         </tr>
         <?php
 
@@ -105,5 +106,3 @@ function print_record($record) {
   <?php include("includes/footer.php"); ?>
 </body>
 </html>
-
-
