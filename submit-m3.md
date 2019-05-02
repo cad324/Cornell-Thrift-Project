@@ -41,5 +41,5 @@ See the course website for a detailed citation policy with more information on u
 
 Each team member should sign their name and include today's date and time to submit **MILESTONE 3**.
 
-- Full Name of Each Contributing Team Member: Susan Tan
+- Full Name of Each Contributing Team Member: Susan Tan, Samantha Lustig
 - Date & Time: 5/2/19 15:30 PM

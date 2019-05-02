@@ -84,29 +84,100 @@ if (isset($_POST["delete_event"]) && is_user_logged_in()) {
 }
 //handling submissions for the add events form
 if (isset($_POST["add_event"]) && is_user_logged_in()) {
-  $type = filter_input(INPUT_POST, 'pick_type', FILTER_VALIDATE_INT);
-  $other = filter_input(INPUT_POST, 'other', FILTER_VALIDATE_INT);
+  $valid_add = TRUE;
+
+  $type = filter_input(INPUT_POST, 'type', FILTER_VALIDATE_INT);
+  $other = filter_input(INPUT_POST, 'new_type', FILTER_VALIDATE_INT);
   $name = filter_input(INPUT_POST, 'new_name', FILTER_SANITIZE_STRING);
-  $date = 'new_date'; //will work on filtering date input later
+  $date = filter_input(INPUT_POST, 'new_date', FILTER_SANITIZE_STRING);
   $time = filter_input(INPUT_POST, 'new_time', FILTER_SANITIZE_STRING);
   $location = filter_input(INPUT_POST, 'new_location', FILTER_SANITIZE_STRING);
 
-  if ($other != "") {
-    //make array of all the other existing type values and compare
-    //probably should dynamically render type categories
-  }
-
-  $sql = "INSERT INTO events (type, name, date, time, location) VALUES (:type, :name, :date, :time, :location)";
-
-  $params = array(
-    ':type' => $type,
+  $sql = "INSERT INTO events (name, date, time, location) VALUES (:name, :date, :time, :location)";
+  $params = array (
     ':name' => $name,
     ':date' => $date,
     ':time' => $time,
     ':location' => $location
   );
 
-  $result = exec_sql_query($db, $sql, $params);
+  $new_event = exec_sql_query($db, $sql, $params);
+
+  if ($type == "other" && $other == '') {
+    $need_new_category = TRUE;
+    $valid_add = FALSE;
+    //tell the user below that they must name this new category if they wish to select other
+  }
+
+  //add the new category, add the new event and make its category equal to this new category
+  if ($type == "other" && $other != '') {
+    //add a new category to the categories table
+    $sql = "INSERT INTO categories (category) VALUES (:category)";
+    $params = array (
+      ':category' => $other
+    );
+    $result = exec_sql_query($db, $sql, $params);
+
+    //access id of new cateory
+    $sql = "SELECT id FROM categories WHERE category IS :category";
+    $params = array (
+      ':category' => $other
+    );
+    $category_result = exec_sql_query($db, $sql, $params) -> fetchAll();
+    $category_result = $category_result[0];
+    $category_result = $category_result['id'];
+
+
+    //access id of new event
+    $sql = "SELECT id FROM events WHERE name IS :name";
+    $params = array (
+      ':name' => $name
+    );
+    $event_result = exec_sql_query($db, $sql, $params) -> fetchAll();
+    $event_result = $event_result[0];
+    $event_result = $event_result['id'];
+
+    //insert new category id into event_categories table
+    $sql = "INSERT INTO event_categories (event_id, category_id) VALUES (:event_id, :category_id)";
+    $params = array(
+      ':event_id' => $event_result,
+      ':category_id' => $category_result
+    );
+    $result = exec_sql_query($db, $sql, $params);
+  }
+
+  if ($type != "other" && $type != NULL) {
+  //access event id of this new event
+    $sql = "SELECT id FROM events WHERE name IS :name";
+    $params = array (
+      ':name' => $name
+    );
+    $event_result = exec_sql_query($db, $sql, $params) -> fetchAll();
+    $event_result = $event_result[0];
+    $event_result = $event_result['id'];
+  //add this event to the event_categories table
+    $sql = "INSERT INTO event_categories (event_id, category_id) VALUES (:event_id, :category_id)";
+    $params = array (
+      ':event_id' => $event_result,
+      ':category_id' => $type
+    );
+    $new_event = exec_sql_query($db, $sql, $params);
+  }
+
+  if ($name == "") {
+    //create an error message below so the user knows that every event needs at least a name
+    $need_name = TRUE;
+    $valid_add = FALSE;
+  }
+
+  if ($type == "") {
+    //create an error message below so the user knows that every event needs a category
+    $need_category = TRUE;
+    $valid_add = FALSE;
+  }
+
+} else {
+  $valid_add = FALSE;
 }
 
 ?>
@@ -279,7 +350,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
               </select>
               <?php
               if (isset($_POST["update_event"])&& $update_event == FALSE) {
-                echo "<p> Please add a change to at least one field before submitting the form</p>";
+                echo "<p class = 'error'> Please add a change to at least one field before submitting the form</p>";
               }
               ?>
               <label for="update_name">Change Name: </label>
@@ -331,6 +402,11 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
           <fieldset>
             <!--Form to add events -->
             <h2>Add an Event?</h2>
+            <?php
+            if (isset($_POST["add_event"])&& $valid_add == TRUE) {
+              echo "<p> You have successfully added an event! Please click on the Events tab in the navigation bar above if you would like to add another event.</p>";
+            } else {
+            ?>
             <form id="add_events" action="events.php" method="post">
 
               <label for="pick_type">Categorize this event as a: </label>
@@ -341,15 +417,33 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
                 $categories = exec_sql_query($db, $sql, $params) -> fetchAll();
 
                 foreach ($categories as $category) {
-                  echo "<input id = 'pick_type' type = 'radio' name='type' value = '". $category['id'] . "'>" . $category['category'] . "<br>";
+                  echo "<input type = 'radio' name='type' value = '". $category['id'] . "'>" . $category['category'] . "<br>";
                 }
               ?>
 
-                <input id="pick_type" type = "radio" name = "type" value = "other"> Other:<br>
+                <input type = "radio" name = "type" value = "other"> Other:<br>
                 <input id="other" type="text" name="new_type">
+
+                <?php
+                  if (isset($_POST["add_event"])&& $need_category == TRUE) {
+                    echo "<p class = 'error'> You must select a category or add one of your own.</p>";
+                  }
+                ?>
+
+                <?php
+                  if (isset($_POST["add_event"])&& $need_new_category == TRUE) {
+                    echo "<p class = 'error'> If you wish to select Other, you must name this new category.</p>";
+                  }
+                ?>
 
                 <label for="new_name"> Event Name: </label>
                 <input id="new_name" type="text" name="new_name">
+
+                <?php
+                  if (isset($_POST["add_event"])&& $need_name == TRUE) {
+                    echo "<p class = 'error'> You must provide a name for this event.</p>";
+                  }
+                ?>
 
                 <label for="new_date">Date: </label>
                 <input id="new_date" type="date" name="new_date">
@@ -363,6 +457,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
                 <button name="add_event" type="submit">Add</button>
 
             </form>
+            <?php } ?>
           </fieldset>
         </div>
       <?php

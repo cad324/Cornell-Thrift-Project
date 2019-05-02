@@ -236,6 +236,10 @@ fieldset {
   display: flex;
   flex-direction: column;
 }
+
+.error {
+  color: rgb(145, 22, 22);
+}
 /*About Page*/
 #ad{
   font-size: 30px;

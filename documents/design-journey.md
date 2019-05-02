@@ -959,6 +959,8 @@ include footer.php
 
 * Realized that the way the events table was set up was not going to be sufficient for the website so how to completely restructure it can create 3 tables (similar to the images, tags, and image_tags tables from Project 3). This created a lot of complications and required me to redo and rethink how to do the SQL queries for the events page.
 
+* Still struggling with the CSS layout of events page. There are a lot of parts involved and it has been difficult to make it look the way I want it to.
+
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
 
