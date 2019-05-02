@@ -154,13 +154,19 @@ fieldset {
 label{
   display:inline-block;
   text-align: right;
-  width:100px;
+  width:150px;
 }
 
 .add_buttom{
   margin-left: 750px;
   margin-bottom: 10px;
   font-size:20px;
+}
+
+#pic{
+  display: block;
+  width:200px;
+  margin: 0 45px;
 }
 
 /* ------------- Nav stuff ------------- */
