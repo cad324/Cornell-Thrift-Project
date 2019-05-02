@@ -14,7 +14,7 @@
           <a href="resources_tip.php">Thrift Tips</a>
         </div>
       </div>
-      <a href="contact.php">Contact</a>
+      <a href="contact.php">Contact Us</a>
     </nav>
     <?php if (!is_user_logged_in()) { ?>
       <button id="login_btn"><a href="login.php">Login</a></button>
