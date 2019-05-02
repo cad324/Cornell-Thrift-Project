@@ -62,6 +62,26 @@ if (isset($_POST["update_event"]) && is_user_logged_in()) {
   }
 }
 
+//handling submissions for the delete events form
+if (isset($_POST["delete_event"]) && is_user_logged_in()) {
+  $valid_delete = TRUE;
+  $events = filter_input(INPUT_POST, 'delete_events', FILTER_VALIDATE_INT);
+
+  $sql = "DELETE FROM events WHERE id = :events";
+  $params = array(
+    ':events'=> $events
+  );
+  $deleting_events = exec_sql_query($db, $sql, $params);
+
+  $sql = "DELETE FROM event_categories WHERE event_id = :events";
+  $params = array(
+    ':events'=> $events
+  );
+  $deleting_event_categories = exec_sql_query($db, $sql, $params);
+
+} else {
+  $valid_delete = FALSE;
+}
 //handling submissions for the add events form
 if (isset($_POST["add_event"]) && is_user_logged_in()) {
   $type = filter_input(INPUT_POST, 'pick_type', FILTER_VALIDATE_INT);
@@ -244,7 +264,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
             ?>
             <form id="update_events" action="events.php" method="post">
 
-              <label for="update_event">Select an Event: </label>
+              <label for="event_options">Select an Event: </label>
               <!-- Will change this to a drop down later-->
               <select id = "event_options" name = "event_options">
                 <?php
@@ -284,12 +304,28 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
           <fieldset>
             <!--Form to remove events -->
             <h2>Delete an Event?</h2>
+            <?php
+            if (isset($_POST["delete_event"])&& $valid_delete == TRUE) {
+              echo "<p> You have successfully deleted your event! Please click on the Events tab in the navigation bar above if you would like to delete another event.</p>";
+            } else {
+            ?>
             <form id="delete_events" action="events.php" method="post">
-              <label for="delete_event">Select an Event: </label>
+              <label for="delete_events">Select an Event: </label>
               <!-- Will change this to a drop down later-->
-              <input id="delete_event" type="text" name="delete_event">
+              <select id = "delete_events" name = "delete_events">
+                <?php
+                $sql = "SELECT * FROM events";
+                $params = array();
+                $events = exec_sql_query($db, $sql, $params) -> fetchAll();
+
+                foreach ($events as $event) {
+                  echo "<option value = '" . $event["id"] . "'>" . $event["name"] . "</option>";
+                }
+                ?>
+              </select>
               <button name="delete_event" type="submit">Delete</button>
             </form>
+            <?php } ?>
           </fieldset>
 
           <fieldset>
