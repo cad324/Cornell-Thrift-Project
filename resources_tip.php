@@ -18,7 +18,7 @@ $title = "THRIFT TIPS"
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php"); ?>
   <div class= "resource_body">
-  <h1>Top 7 Pro Thrift Tips</h1>
+  <h1><u>Top 7 Pro Thrift Tips</u></h1>
   <p>#1 Go in with an open mind! Stores are full of gems you may not have been looking for.</p>
   <p>#2 Never rule out a size or length. Sizes have changed over time and hemming, and remember alterations are always an option.</p>
   <p>#3 Shop off-season. Less people buy off-season and more people get rid of off-season items.</p>
@@ -30,4 +30,3 @@ $title = "THRIFT TIPS"
   <?php include("includes/footer.php"); ?>
 </body>
 </html>
-
