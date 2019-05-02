@@ -954,6 +954,8 @@ include footer.php
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
 
+* Realized that the way the events table was set up was not going to be sufficient for the website so how to completely restructure it can create 3 tables (similar to the images, tags, and image_tags tables from Project 3). This created a lot of complications and required me to redo and rethink how to do the SQL queries for the events page.
+
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
 

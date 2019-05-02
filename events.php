@@ -3,6 +3,69 @@
 include("includes/init.php");
 $title = "EVENTS";
 
+//handling submissions for the update events form
+if (isset($_POST["update_event"]) && is_user_logged_in()) {
+  $update_name = FALSE;
+  $update_date = FALSE;
+  $update_time = FALSE;
+  $update_location = FALSE;
+
+  $original = filter_input(INPUT_POST, 'event_options', FILTER_SANITIZE_STRING);
+  $name = filter_input(INPUT_POST, 'update_name', FILTER_SANITIZE_STRING);
+  $date = filter_input(INPUT_POST, 'update_date', FILTER_SANITIZE_STRING);
+  $time = filter_input(INPUT_POST, 'update_time', FILTER_SANITIZE_STRING);
+  $location = filter_input(INPUT_POST, 'update_location', FILTER_SANITIZE_STRING);
+
+  if ($name != '') {
+    $update_name == TRUE;
+    $sql = "UPDATE events SET name = :name WHERE name = :original;";
+
+    $params = array(
+      ':name' => $name,
+      ':original' => $original
+    );
+    $names = exec_sql_query($db, $sql, $params);
+
+  }
+
+  if ($date != '') {
+    $update_date = TRUE;
+    $sql = "UPDATE events SET date = :date WHERE name = :original;";
+
+    $params = array(
+      ':date' => $date,
+      ':original' => $original
+    );
+    $dates = exec_sql_query($db, $sql, $params);
+
+  }
+
+  if ($time != '') {
+    $update_name = TRUE;
+    $sql = "UPDATE events SET time = :time WHERE name = :original;";
+
+    $params = array(
+      ':time' => $time,
+      ':original' => $original
+    );
+    $times = exec_sql_query($db, $sql, $params);
+
+  }
+
+  if ($location != '') {
+    $update_location = TRUE;
+    $sql = "UPDATE events SET location = :location WHERE name = :original;";
+
+    $params = array(
+      ':location' => $location,
+      ':original' => $original
+    );
+    $locations = exec_sql_query($db, $sql, $params);
+
+  }
+}
+
+//handling submissions for the add events form
 if (isset($_POST["add_event"]) && is_user_logged_in()) {
   $type = filter_input(INPUT_POST, 'pick_type', FILTER_VALIDATE_INT);
   $other = filter_input(INPUT_POST, 'other', FILTER_VALIDATE_INT);
@@ -63,7 +126,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
           <!-- Insert database info here-->
           <table>
             <?php
-            $sql = "SELECT * FROM events WHERE type = 1;";
+            $sql = "SELECT events.location FROM events INNER JOIN event_categories ON events.id = event_categories.event_id WHERE event_categories.category_id = 1;";
             $params = array();
             $closets = exec_sql_query($db, $sql, $params)->fetchAll();
 
@@ -102,7 +165,8 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
             </thead>
 
             <?php
-            $sql = "SELECT * FROM events WHERE type = 2 ORDER BY date DESC;";
+            $sql = "SELECT events.name, events.date, events.time, events.location FROM events INNER JOIN event_categories ON events.id = event_categories.event_id WHERE event_categories.category_id = 2 ORDER BY events.date DESC;";
+
             $params = array();
             $popups = exec_sql_query($db, $sql, $params)->fetchAll();
 
@@ -152,7 +216,8 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
           </thead>
 
           <?php
-          $sql = "SELECT * FROM events WHERE type = 3 ORDER BY date DESC;";
+          $sql = "SELECT events.name, events.date, events.time, events.location FROM events INNER JOIN event_categories ON events.id = event_categories.event_id WHERE event_categories.category_id = 3 ORDER BY events.date DESC;";
+
           $params = array();
           $workshops = exec_sql_query($db, $sql, $params)->fetchAll();
 
@@ -179,7 +244,20 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
 
               <label for="update_event">Select an Event: </label>
               <!-- Will change this to a drop down later-->
-              <input id="update_event" type="text" name="update_event">
+              <select id = "event_options" name = "event_options">
+                <?php
+                $sql = "SELECT * FROM events";
+                $params = array();
+                $events = exec_sql_query($db, $sql, $params) -> fetchAll();
+
+                foreach ($events as $event) {
+                  echo "<option value = '" . $event["type"] . "'>" . $event["name"] . "</option>";
+                }
+                ?>
+              </select>
+
+              <label for="update_name">Change Name: </label>
+              <input id="update_name" type="text" name="update_name">
 
               <label for="update_date">Change Date: </label>
               <input id="update_date" type="date" name="update_date">
@@ -213,10 +291,18 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
             <form id="add_events" action="events.php" method="post">
 
               <label for="pick_type">Categorize this event as a: </label>
-              <input id="pick_type" type="radio" name="type" value="1" checked>Thrift Exchange Closet<br>
-              <input id="pick_type" type="radio" name="type" value="2">Pop-Up Shop<br>
-              <input id="pick_type" type="radio" name="type" value="3">Sewing Workshop<br>
-              <label for="other"> Other:
+
+              <?php
+                $sql = "SELECT * FROM categories";
+                $params = array();
+                $categories = exec_sql_query($db, $sql, $params) -> fetchAll();
+
+                foreach ($categories as $category) {
+                  echo "<input id = 'pick_type' type = 'radio' name='type' value = '". $category['id'] . "'>" . $category['category'] . "<br>";
+                }
+              ?>
+
+                <input id="pick_type" type = "radio" name = "type" value = "other"> Other:<br>
                 <input id="other" type="text" name="new_type">
 
                 <label for="new_name"> Event Name: </label>
