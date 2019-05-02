@@ -6,7 +6,7 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  padding-bottom: 400px;
+  padding-bottom: 200px;
   color: #525353;
   font-size: 18px;
 }
@@ -254,7 +254,7 @@ fieldset {
   font-size: 30px;
 }
 
-#about #eboard{
+#about .eboard{
   width:300px;
   margin: 0 45px;
 }
@@ -311,7 +311,7 @@ color: lightgreen;
   margin-right: 5%;
 }
 
-/* Table Stylings */
+/* ------------Table Stylings --------------*/
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -333,8 +333,10 @@ td,th {
   margin: 0 !important;
 }
 
+/* --------------logo?? ------------------*/
 .logo {
-  width: 75px;
+  width: 100px;
+  height: 100px;
 }
 
 #logo_a {

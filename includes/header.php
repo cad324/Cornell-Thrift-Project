@@ -1,6 +1,6 @@
 <header>
   <div class="navbar" id="myHeader">
-    <a id="logo_a" href="index.php"><img class="logo" src="images/logo.png" alt="logo"/></a>
+    <a id="logo_a" href="index.php"><img class="logo" src="images/logo.png" alt="logo" /></a>
     <nav id="nav">
       <a class="home_link" href="index.php">Home</a>
       <a href="about.php">About</a>
@@ -15,11 +15,11 @@
         </div>
       </div>
       <a href="contact.php">Contact Us</a>
+      <?php if (!is_user_logged_in()) { ?>
+        <button id="login_btn"><a href="login.php">Login</a></button>
+      <?php } else { ?>
+        <button id="login_btn"><a href='index.php?logout'>Logout</a></button>
+      <?php } ?>
     </nav>
-    <?php if (!is_user_logged_in()) { ?>
-      <button id="login_btn"><a href="login.php">Login</a></button>
-    <?php } else { ?>
-      <button id="login_btn"><a href='index.php?logout'>Logout</a></button>
-    <?php } ?>
   </div>
 </header>
