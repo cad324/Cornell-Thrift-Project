@@ -39,7 +39,7 @@ CREATE TABLE 'events' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'type' INTEGER NOT NULL,
     'name' TEXT NOT NULL,
-    'date' TEXT,
+    'date' DATE,
     'location' TEXT,
     'time' TEXT
 );
