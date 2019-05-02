@@ -344,3 +344,19 @@ td,th {
   width: 25px !important;
   margin: 0 !important;
 }
+
+.logo {
+  width: 75px;
+}
+
+#logo_a {
+  margin: 0 0 0 60px;
+}
+
+.home_link {
+  margin-left: 0 !important;
+}
+
+#logo_a:hover {
+  background-color:inherit !important;
+}

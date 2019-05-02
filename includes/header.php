@@ -1,8 +1,8 @@
 <header>
-
   <div class="navbar" id="myHeader">
+    <a id="logo_a" href="index.php"><img class="logo" src="images/logo.png" alt="logo"/></a>
     <nav id="nav">
-      <a href="index.php">Home</a>
+      <a class="home_link" href="index.php">Home</a>
       <a href="about.php">About</a>
       <a href="events.php">Events</a>
       <div class="dropdown">
