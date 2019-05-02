@@ -25,8 +25,7 @@ $title = "Modify Member"
     if ( isset($_POST["modify"]) && is_user_logged_in() ) {
         $upload_name= $_POST['name'];
         $upload_position= $_POST['position'];
-        $upload_info = $_FILES["file_input"];
-        var_dump($upload_info);
+        $upload_info = $_FILES["file_new"];
         $image_name = $upload_name;
         $image_job = $upload_position;
 
@@ -43,7 +42,9 @@ $title = "Modify Member"
             update_position($image_id,$upload_position);
         }
 
-        if($upload_info['error'] == UPLOAD_ERR_INI_SIZE || $upload_info['error'] == UPLOAD_ERR_FORM_SIZE){
+        if ($upload_info == NULL){
+        }
+        else if($upload_info['error'] == UPLOAD_ERR_INI_SIZE || $upload_info['error'] == UPLOAD_ERR_FORM_SIZE){
             $message = "Sorry! Your file exceeds the maximum filesize for uploads. Please select a smaller file and try again!";
             $success = FALSE;
         }
@@ -51,10 +52,8 @@ $title = "Modify Member"
             $message = "Sorry! Your file was uploaded partially. Please try again!";
             $success = FALSE;
         }
-        else if ($upload_info != NULL){
-            $upload_info = $_FILES["file_input"];
+        else if ($upload_info['error'] == UPLOAD_ERR_OK){
             $upload_ext = strtolower(pathinfo($upload_info["name"], PATHINFO_EXTENSION));
-            var_dump($upload);
             update_ext($image_id,$upload_ext);
             $new_path = "uploads/images/".$image_id.".".$upload_ext;
             move_uploaded_file($upload_info['tmp_name'], $new_path);
@@ -71,7 +70,7 @@ $title = "Modify Member"
     <div>
         <h2>Modify Members</h2>
 
-        <form id="members" method="post" action="<?php $modify_member ?>">
+        <form id="members" method="post" action="<?php $modify_member ?>" enctype="multipart/form-data">
 
         <div class = "textbox">
             <a href = <?php echo($link);?>><img id = "pic" src = <?php echo($link);?> alt = <?php echo($image_name);?>/></a>
@@ -79,7 +78,7 @@ $title = "Modify Member"
 
         <div class = "textbox">
             <label for="input">Profile(Optional): </label>
-            <input type="file" name="file_input"/>
+            <input type="file" name="file_new" />
         </div>
 
         <div class="textbox">

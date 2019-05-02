@@ -6,7 +6,6 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  padding-bottom: 200px;
   color: #525353;
   font-size: 18px;
 }
@@ -103,8 +102,8 @@ footer {
   color: #fff;
   padding: 20px;
   position: absolute;
-  bottom:0;
-  right:0;
+  right: 0px;
+  left: 0px;
 }
 
 #footer_content {

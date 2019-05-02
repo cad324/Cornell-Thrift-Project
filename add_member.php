@@ -67,7 +67,7 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
 
         <div class = "textbox">
             <label for="input">Profile: </label>
-            <input type="file" name="file_input" value="<?php echo $upload_info;?>"/>
+            <input type="file" name="file_input"/>
         </div>
 
         <div class="textbox">
