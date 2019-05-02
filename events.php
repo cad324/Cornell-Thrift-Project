@@ -1,7 +1,34 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
-$title = "EVENTS"
+$title = "EVENTS";
+
+if (isset($_POST["add_event"]) && is_user_logged_in()) {
+  $type = filter_input(INPUT_POST, 'pick_type', FILTER_VALIDATE_INT);
+  $other = filter_input(INPUT_POST, 'other', FILTER_VALIDATE_INT);
+  $name = filter_input(INPUT_POST, 'new_name', FILTER_SANITIZE_STRING);
+  $date = 'new_date'; //will work on filtering date input later
+  $time = filter_input(INPUT_POST, 'new_time', FILTER_SANITIZE_STRING);
+  $location = filter_input(INPUT_POST, 'new_location', FILTER_SANITIZE_STRING);
+
+  if ($other != "") {
+    //make array of all the other existing type values and compare
+    //probably should dynamically render type categories
+  }
+
+  $sql = "INSERT INTO events (type, name, date, time, location) VALUES (:type, :name, :date, :time, :location)";
+
+  $params = array(
+    ':type' => $type,
+    ':name' => $name,
+    ':date' => $date,
+    ':time' => $time,
+    ':location' => $location
+  );
+
+  $result = exec_sql_query($db, $sql, $params);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -155,7 +182,7 @@ $title = "EVENTS"
               <input id="update_event" type="text" name="update_event">
 
               <label for="update_date">Change Date: </label>
-              <input id="update_date" type="text" name="update_date">
+              <input id="update_date" type="date" name="update_date">
 
               <label for="update_time"> Change Time: </label>
               <input id="update_time" type="text" name="update_time">
@@ -185,30 +212,36 @@ $title = "EVENTS"
             <h2>Add an Event?</h2>
             <form id="add_events" action="events.php" method="post">
 
-              <label for="new_name"> Event Name: </label>
-              <input id="new_name" type="text" name="new_name">
+              <label for="pick_type">Categorize this event as a: </label>
+              <input id="pick_type" type="radio" name="type" value="1" checked>Thrift Exchange Closet<br>
+              <input id="pick_type" type="radio" name="type" value="2">Pop-Up Shop<br>
+              <input id="pick_type" type="radio" name="type" value="3">Sewing Workshop<br>
+              <label for="other"> Other:
+                <input id="other" type="text" name="new_type">
 
-              <label for="new_date">Date: </label>
-              <input id="new_date" type="text" name="new_date">
+                <label for="new_name"> Event Name: </label>
+                <input id="new_name" type="text" name="new_name">
 
-              <label for="new_time">Time: </label>
-              <input id="new_time" type="text" name="new_time">
+                <label for="new_date">Date: </label>
+                <input id="new_date" type="date" name="new_date">
 
-              <label for="new_location">Location: </label>
-              <input id="new_location" type="text" name="new_location">
+                <label for="new_time">Time: </label>
+                <input id="new_time" type="text" name="new_time">
 
-              <button name="add_event" type="submit">Add</button>
+                <label for="new_location">Location: </label>
+                <input id="new_location" type="text" name="new_location">
+
+                <button name="add_event" type="submit">Add</button>
 
             </form>
           </fieldset>
         </div>
-      </div>
-    <?php
-  }
-  ?>
-  </div>
+      <?php
+    }
+    ?>
+    </div>
 
-  <?php include("includes/footer.php"); ?>
+    <?php include("includes/footer.php"); ?>
 </body>
 
 </html>
