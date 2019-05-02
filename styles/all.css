@@ -340,7 +340,7 @@ table {
 
 td,th {
   border: 2px solid;
-  border-color: black;
+  border-color: rgb(241, 241, 0);
   text-align: center;
   padding: 10px;
 }
