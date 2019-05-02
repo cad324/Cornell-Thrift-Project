@@ -220,3 +220,33 @@ function get_image_ext($img_id)
   $records = exec_sql_query($db, $sql, $params)->fetchAll();
   return $records[0]['ext'];
 }
+
+function update_name($img_id,$new_name){
+  global $db;
+  $sql = "UPDATE about_images SET image_name = :new_name WHERE id = :img_id;";
+  $params = array(
+    ':img_id' => $img_id,
+    ':new_name' => $new_name
+  );
+  exec_sql_query($db, $sql, $params);
+}
+
+function update_position($img_id,$new_position){
+  global $db;
+  $sql = "UPDATE about_images SET job = :new_position WHERE id = :img_id;";
+  $params = array(
+    ':img_id' => $img_id,
+    ':new_position' => $new_position
+  );
+  exec_sql_query($db, $sql, $params);
+}
+
+function update_ext($img_id,$new_ext){
+  global $db;
+  $sql = "UPDATE about_images SET ext = :new_ext WHERE id = :img_id;";
+  $params = array(
+    ':img_id' => $img_id,
+    ':new_ext' => $new_ext
+  );
+  exec_sql_query($db, $sql, $params);
+}

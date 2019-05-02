@@ -1,8 +1,8 @@
 <header>
-
   <div class="navbar" id="myHeader">
+    <a id="logo_a" href="index.php"><img class="logo" src="images/logo.png" alt="logo"/></a>
     <nav id="nav">
-      <a href="index.php">Home</a>
+      <a class="home_link" href="index.php">Home</a>
       <a href="about.php">About</a>
       <a href="events.php">Events</a>
       <div class="dropdown">
@@ -14,7 +14,7 @@
           <a href="resources_tip.php">Thrift Tips</a>
         </div>
       </div>
-      <a href="contact.php">Contact</a>
+      <a href="contact.php">Contact Us</a>
     </nav>
     <?php if (!is_user_logged_in()) { ?>
       <button id="login_btn"><a href="login.php">Login</a></button>
