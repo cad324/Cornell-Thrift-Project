@@ -29,18 +29,40 @@ $title = "EVENTS"
         </div>
 
         <div>
+          <img src = "images/exchangeclosets.jpg" alt = "WSH exchange closet" class = "static_img">
+        </div>
+
+        <div>
         <p>Insert description here</p>
         </div>
 
         <div>
         <h3>Locations</h3>
          <!-- Insert database info here-->
+         <table>
+            <?php
+            $sql = "SELECT * FROM events WHERE type = 1;";
+            $params = array ();
+            $closets = exec_sql_query($db, $sql, $params)->fetchAll();
+
+            foreach($closets as $closet) {
+              echo "<tr>";
+              echo "<td>";
+              echo $closet["location"];
+              echo "</td>";
+              echo "</tr>";
+            }
+          ?>
         </div>
 
       </div>
       <div id = "pop_up">
         <div>
           <h2> Pop-Up Shops</h2>
+        </div>
+
+        <div>
+          <img src = "images/popup_shop.jpg" alt = "scene of a pop-up shop" class = "static_img">
         </div>
 
         <div>
@@ -67,12 +89,19 @@ $title = "EVENTS"
         </div>
 
         <div>
+          <img src = "images/behindtheseams.png" alt = "behind the seams logo" class = "static_img">
+        </div>
+
+        <div>
         <p>Behind the Seams is a photo campaign to get people thinking about the value of clothes by sharing the stories they hold. We're hoping to reduce waste by having people rethink the way they see their clothes. We hold an open photo shoot every other Friday from 12 - 2pm at Temple of Zeus, and new photos go up on our Behind the Seams Facebook page every Tuesday and Friday. </p>
         </div>
-        <!-- Update description and get instagram link from client-->
+
       </div>
       <div id = "sewing_workshops">
         <h2> Sewing Workshops</h2>
+
+          <img src = "images/sewingworkshop.png" alt = "sewing workshop pic" class = "static_img">
+
         <p>We'll teach you how to sew on that missing button, fix a tear, or hem your dress! Come find us in the Willard Straight Hall International Lounge from 4:30 - 6:30pm every other Wednesday.</p>
         <!--Ask client about updating description-->
         <table>
@@ -84,7 +113,8 @@ $title = "EVENTS"
         <table>
       </div>
     </div>
-
+    <?php
+    if (is_user_logged_in()) { ?>
     <div class = "events_row">
       <div id = "updating_events">
          <!-- Form to update events -->
@@ -145,6 +175,9 @@ $title = "EVENTS"
         </fieldset>
       </div>
     </div>
+    <?php
+        }
+        ?>
   </div>
 
   <?php include("includes/footer.php"); ?>
