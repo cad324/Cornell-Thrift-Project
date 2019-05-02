@@ -9,6 +9,11 @@ $messages = array();
 // Max file size is 1 MB = 1000000 bytes
 const MAX_FILE_SIZE = 1000000;
 
+$records = exec_sql_query(
+  $db,
+  "SELECT * FROM images"
+)->fetchAll();
+
 // User must be logged in to upload
 if (isset($_POST["uploadHome"])) {
 
@@ -18,9 +23,11 @@ if (isset($_POST["uploadHome"])) {
 
   //if upload sucessful then get filename and file extension
   if ($upload_info['error'] == UPLOAD_ERR_OK) {
-    $filename = basename($upload_info["name"]);
+    $filename = trim(filter_var(basename($upload_info["name"]), FILTER_SANITIZE_STRING));
     var_dump("the filename is " . $filename);
-    $upload_ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+    $upload_ext = trim(filter_var(strtolower(pathinfo($filename, PATHINFO_EXTENSION)), FILTER_SANITIZE_STRING));
+
+    $character_name = filter_input(INPUT_POST, 'character_name', FILTER_SANITIZE_STRING);
 
 
     // Upload sucessful!
@@ -38,11 +45,21 @@ if (isset($_POST["uploadHome"])) {
       var_dump("is it getting the database?");
       $input_id = $db->lastInsertId();
       var_dump("what is the last id?" . $input_id);
-      $new_path = "uploads/home/" . $input_id . "." . $upload_ext;
+      $new_path = "uploads/slideshow/" . $input_id . "." . $upload_ext;
       move_uploaded_file($upload_info["tmp_name"], $new_path);
     } else {
       array_push($messages, "Not new record.");
     }
+
+    $sql2 = "UPDATE images SET file_name = :input_id WHERE id = :input_id";
+    $new_record = exec_sql_query(
+      $db,
+      $sql2,
+      $params2 = array(
+        ':filename' => $filename,
+        ':upload_ext' => $upload_ext,
+      )
+    );
 
     // upload is not successful
   } else {
@@ -54,16 +71,11 @@ if (isset($_POST["uploadHome"])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="styles/all.css">
-  <title><?php echo $title; ?></title>
-</head>
+<?php include("includes/heads.php"); ?>
 
 <body>
   <?php include("includes/header.php"); ?>
-  <div class=wrapper>
+  <div class="wrapper">
 
     <div id="mission">
       <h2> WHAT WE DO </h2>
@@ -105,24 +117,24 @@ if (isset($_POST["uploadHome"])) {
     <div class="slideshow">
       <h2> Upcoming Event </h2>
       <?php
-      $records = exec_sql_query(
-        $db,
-        "SELECT * FROM images"
-      )->fetchAll();
-
-
       foreach ($records as $record) { ?>
         <img alt="<?php echo $record["file_name"] ?>" src="uploads/slideshow/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>" class="slides">
       <?php
     }
     ?>
-      <form id="home_form" action="index.php" method="post" enctype="multipart/form-data">
+      <form id="home_upload_form" action="index.php" method="post" enctype="multipart/form-data">
         <!-- Image cannot excede MAX_FILE_SIZE  -->
         <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
         <label for="file_data">Upload</label>
         <input id="file_data" type="file" name="file_data">
         <button name="uploadHome" type="submit">Upload to Slideshow</button>
       </form>
+
+      <form id="home_delete_form" action="home_delt.php" method="post" enctype="multipart/form-data">
+        <label name="delete_lab">Delete from Slideshow</label>
+        <button name="delete_butn" type="submit">Click here to delete</button>
+      </form>
+
     </div>
 
   </div>

@@ -6,19 +6,14 @@ $title = "CONTACT"
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="styles/all.css">
-  <title><?php echo $title; ?></title>
-</head>
+<?php include("includes/heads.php"); ?>
 
 <body>
 
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php"); ?>
 
-  <div id="contact_main">
+  <div class="wrapper">
     <h1>Get In Touch</h1>
     <p>Write us a message and someone on our team will get back to you as soon as possible.</p>
 

@@ -1,174 +1,22 @@
 html {
+  font-family: 'Average Sans';
   position: relative;
 }
 
-html,body {
+body {
   min-height: 100%;
   margin: 0;
-  padding:0;
+  padding-bottom: 400px;
   color: #525353;
   font-size: 18px;
 }
 
-body {
-  padding-bottom: 400px;
-}
-
 .wrapper {
-  margin: 0 120px 0 120px;
+  margin: 0 50px 0 50px;
   padding: 20px;
 }
 
-.current {
-  color: #800d80;
-}
-
-#contact_main, #login_main {
-  margin: 50px 0 0 100px;
-}
-
-#contact_wrapper, #login_wrapper {
-  margin: auto;
-}
-
-#contact_wrapper form div, #login_wrapper form div {
-  margin: 15px 0;
-}
-
-#contact_wrapper label, #login_wrapper label {
-  display: inline-block;
-  width: 70px;
-  text-align: right;
-  vertical-align: top;
-}
-
-#login_btn a {
-  text-decoration: none;
-  color: #000;
-  margin: 0;
-  padding: 3px;
-}
-
-footer {
-  margin: 10px 0 0 0;
-  width: 100%;
-  background-color:#333;
-  color: #fff;
-  padding: 20px;
-  position: absolute;
-  bottom:0;
-  right:0;
-}
-
-#footer_content {
-  display: flex;
-  flex-direction: row;
-}
-
-#footer_content div {
-  flex-grow: 1;
-}
-
-#footer_contact {
-  margin-bottom: 3px;
-}
-
-footer a {
-  color: #7f6fc4;
-}
-
-#copyright {
-  text-align: center;
-}
-
-/* Events Page */
-fieldset {
-  border-style: none;
-  width: 500px;
-}
-
-#events_main {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.events_row {
-  display: flex;
-  flex-direction: row;
-}
-
-#thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
-  display: flex;
-  flex-direction: column;
-}
-
-#update_events, #add_events {
-  display: flex;
-  flex-direction: column;
-}
-/*About Page*/
-#ad{
-  font-size: 30px;
-  text-align: center;
-}
-#about h1,h2{
-  text-align: center;
-}
-
-#about h1{
-  font-size: 40px;
-}
-
-#about h2{
-  font-size: 30px;
-}
-
-#about img{
-  width:300px;
-  margin: 0 45px;
-}
-
-#about figure{
-  width:390px;
-  margin: 45px;
-}
-
-#about figcaption{
-  width:390px;
-  margin: 45px;
-}
-
-#about .row{
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.textbox{
-  margin-left: 40.3%;
-  margin-bottom: 10px;
-  font-size:20px;
-}
-
-label{
-  display:inline-block;
-  text-align: right;
-  width:150px;
-}
-
-.add_buttom{
-  margin-left: 750px;
-  margin-bottom: 10px;
-  font-size:20px;
-}
-
-#pic{
-  display: block;
-  width:200px;
-  margin: 0 45px;
-}
-
+/* ----------------- header ------------------- */
 /* ------------- Nav stuff ------------- */
 /* Navbar container */
 .navbar {
@@ -247,8 +95,40 @@ label{
 /* taken from w3school for now*/
 * {box-sizing:border-box}
 
+/* ------------------ footer ---------------------- */
+footer {
+  margin: 10px 0 0 0;
+  width: 100%;
+  background-color:#333;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom:0;
+  right:0;
+}
 
-/* --------- home page ----------- */
+#footer_content {
+  display: flex;
+  flex-direction: row;
+}
+
+#footer_content div {
+  flex-grow: 1;
+}
+
+#footer_contact {
+  margin-bottom: 3px;
+}
+
+footer a {
+  color: #7f6fc4;
+}
+
+#copyright {
+  text-align: center;
+}
+
+/* ------------------ home page ------------------- */
 /* Slideshow container*/
 .slideshow {
   width: 100%;
@@ -269,21 +149,15 @@ label{
   margin: 0 0 30px 0;
 }
 
-.column {
+#colm1, #colm2 {
   float: left;
   width: 50%;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
-
-#colm1, #colm2 {
-  float: left;
-  width: 50%;
 }
 
 #colm1{
@@ -292,12 +166,6 @@ label{
 
 #colm2{
   background-color: #F5FFFA;
-}
-
-/* Clear floats after the columns */
-#row:after {
-  display: table;
-  clear: both;
 }
 
 .static_img {
@@ -315,7 +183,122 @@ label{
 .homebox a {
   text-decoration: none;
 }
-/* --------------------------------- */
+/* --------------- Contact us page------------------ */
+
+#login_main {
+  margin: 50px 0 0 100px;
+}
+
+#contact_wrapper, #login_wrapper {
+  margin: auto;
+}
+
+#contact_wrapper form div, #login_wrapper form div {
+  margin: 15px 0;
+}
+
+#contact_wrapper label, #login_wrapper label {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  vertical-align: top;
+}
+
+#login_btn a {
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+  padding: 3px;
+}
+
+/* -------------- Events Page ----------------- */
+fieldset {
+  border-style: none;
+  width: 500px;
+}
+
+#events_main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.events_row {
+  display: flex;
+  flex-direction: row;
+}
+
+#thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
+  display: flex;
+  flex-direction: column;
+}
+
+#update_events, #add_events {
+  display: flex;
+  flex-direction: column;
+}
+/*About Page*/
+#ad{
+  font-size: 30px;
+  text-align: center;
+}
+#about h1,h2{
+  text-align: center;
+}
+
+#about h1{
+  font-size: 40px;
+}
+
+#about h2{
+  font-size: 30px;
+}
+
+#about #eboard{
+  width:300px;
+  margin: 0 45px;
+}
+
+#about figure{
+  width:390px;
+  margin: 45px;
+}
+
+#about figcaption{
+  width:390px;
+  margin: 45px;
+}
+
+#about .row{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.textbox{
+  margin-left: 40.3%;
+  margin-bottom: 10px;
+  font-size:20px;
+}
+
+label{
+  display:inline-block;
+  text-align: right;
+  width:150px;
+}
+
+.add_buttom{
+  margin-left: 750px;
+  margin-bottom: 10px;
+  font-size:20px;
+}
+
+#pic{
+  display: block;
+  width:200px;
+  margin: 0 45px;
+}
+
 .success {
 color: lightgreen;
 }
