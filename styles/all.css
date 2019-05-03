@@ -262,23 +262,27 @@ fieldset {
 }
 
 #about .eboard{
-  width:300px;
+  width:90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-#about figure{
-  width:300px;
-  margin: 0 5%;
+.three{
+  width:33%;
 }
 
 #about figcaption{
   margin-bottom: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #about .row{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 5%;
+  flex-grow: 1;
+  margin: 0 4%;
 }
 
 .textbox{
