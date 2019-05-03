@@ -54,6 +54,16 @@ CREATE TABLE 'event_categories' (
     'category_id' INTEGER NOT NULL
 );
 
+CREATE TABLE 'stores' (
+    'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    'Category' TEXT NOT NULL,
+    'Name' TEXT NOT NULL,
+    'Adress' TEXT NOT NULL,
+    'Description' INTEGER,
+    'Hours' TEXT,
+    'Price' INTEGER
+);
+
 -- TODO: initial seed data
 
 -- USERS
