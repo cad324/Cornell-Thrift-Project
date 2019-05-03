@@ -18,11 +18,6 @@ $title = "ABOUT"
     <p id="ad">Click <a href="add_member.php">Here</a> to add a new member to the Eboard!</p>
   <?php
   }
-  else{
-  ?>
-    <p id="note">*Login to modify the Members Page if you are an Eboard member.</p>
-  <?php
-  }
   ?>
 
   <div class="row">
