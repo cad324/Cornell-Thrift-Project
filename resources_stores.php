@@ -3,17 +3,22 @@
 
 $title = "THRIFT STORES";
 // open connection to database
-$db = new PDO('sqlite:resource.sqlite');
+$db = new PDO('sqlite:secure/site.sqlite');
 // Throw an exception for incorrect SQL
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+if (isset($_GET['category'])) {
+  $category = filter_input(INPUT_GET, 'category', FILTER_SANITIZE_STRING);
+} else {
+  // No search provided, so set the category to query to NULL
+  $category = NULL;
+}
 
 function print_record($record)
 {
   ?>
   <tr>
     <td><?php echo htmlspecialchars($record["Name"]); ?></td>
-    <td><?php echo htmlspecialchars($record["Category"]); ?></td>
     <td><?php echo htmlspecialchars($record["Address"]); ?></td>
     <td><?php echo htmlspecialchars($record["Description"]); ?></td>
     <td><?php echo htmlspecialchars($record["Hours"]); ?></td>
@@ -39,13 +44,34 @@ function print_record($record)
       <p><a target="_blank" href="http://reusetompkins.com/">http://reusetompkins.com/</a></p>
       <p>A comprehensive directory for used furniture, clothing, books & music, computers & electronics, sports & outdoor equipment, art & sewing materials, and antiques for all of Ithaca and Tompkins County.</p>
 
+      <ul>
+      <li><a href="/resources_stores.php">All Stores </a></li>
+      <li><a href="/resources_stores.php?category=Classic Thrift Stores">Classic Thrift Stores</a></li>
+      <li><a href="/resources_stores.php?category=Specialty Clothing">Specialty Clothing</a></li>
+      <li><a href="/resources_stores.php?category=Furniture/Books/Other">Furniture/Books/Other</a></li>
+      <li><a href="/resources_stores.php?category=Sewing and Alteration Supplies">Sewing and Alteration Supplies</a></li>
+
+    </ul>
+
+    <?php
+    if ( is_null($category) ) {
+      // No store to query, so return everything!
+      ?>
         <h2>All Stores</h2>
         <?php
-
-
       $sql = "SELECT * FROM stores";
       $params = array();
       $result = exec_sql_query($db, $sql, $params);
+      } else {
+
+      ?>
+      <h2> <?php echo htmlspecialchars($category) ?></h2>
+      <?php
+
+      $sql = "SELECT * FROM stores WHERE Category LIKE '%' || :category || '%'";
+      $params = array(':category' => $category);
+    }
+
 
 
       $query = $db->prepare($sql);
@@ -58,7 +84,6 @@ function print_record($record)
         <table>
           <tr>
             <th width="20%">Name</th>
-            <th width="20%">Category</th>
             <th width="20%">Address</th>
             <th width="40%">Description</th>
             <th width="12%">Hours</th>
