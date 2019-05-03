@@ -27,8 +27,6 @@ $title = "Modify Member"
         $upload_name= $_POST['name'];
         $upload_position= $_POST['position'];
         $upload_info = $_FILES["file_new"];
-        $image_name = $upload_name;
-        $image_job = $upload_position;
 
         if ($upload_name == NULL){
             $message = "Modify unsuccessful! Please enter the name of the new member";
@@ -39,6 +37,10 @@ $title = "Modify Member"
             $success = FALSE;
         }
         else {
+            $upload_name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+            $upload_position = filter_input(INPUT_POST, 'position', FILTER_SANITIZE_STRING);
+            $image_name = $upload_name;
+            $image_job = $upload_position;
             update_name($image_id,$upload_name);
             update_position($image_id,$upload_position);
         }
@@ -61,7 +63,7 @@ $title = "Modify Member"
         }
 
         if ($success){
-            $message = "Upload successful!";
+            $message = "Modify successful!";
         }
     }
 

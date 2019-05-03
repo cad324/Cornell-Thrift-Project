@@ -690,28 +690,18 @@ $update_event = exec_sql_query($db, $sql, $params);
 
 ```sql
   DELETE FROM about_images WHERE id = $img_id;
-  DELETE FROM about_img_branch WHERE image_id = $img_id;
 ```
 
 ### Add a member
 
 ```sql
   INSERT INTO about_images (name, ext, description) VALUES ($name, $ext, $description);
-  INSERT INTO about_branches (branch) VALUES ($branch);
-  INSERT INTO about_img_branch (about_img_id, about_branch_id);
 ```
 
 ### Select a member
 
 ```sql
   SELECT name, ext, description FROM about_images WHERE id = $img_id;
-  SELECT branch FROM about_branch INNER JOIN about_img_branch ON about_img_branch.about_branch_id = about_branch.id WHERE about_images.id = $img_id
-```
-
-### Select memebrs who belong to the same branch
-
-```sql
-SELECT id FROM about_images INNER JOIN about_img_branch INNER JOIN about_branches WHERE about_branches.id = about_img_branch.about_branch_id AND about_images.id = about_img_branch.about_image_id
 ```
 
 ## PHP File Structure
@@ -723,6 +713,8 @@ SELECT id FROM about_images INNER JOIN about_img_branch INNER JOIN about_branche
 * includes/header.php - the header for every page
 * includes/footer.php - the footer for every page
 * about.php - members and committees
+* add_member.php - add member form
+* modify_member.php - modify member form
 * events.php - events page
 * resources_tips.php - Cornell Thrift resources: thrift tips
 * resources_stores.php - Cornell Thrift resources: near by thrift stores
@@ -861,21 +853,70 @@ About Page Pseudocode:
 
 function delete_member($img_id) {
   Delete the image that has the id as $img_id
-  Delete the about_img_branch relation that has image_id as $img_id
 }
 
 function insert_new_member($name, $branch, $description){
   Insert a new member using $name, $branch, $description
-  Get the id of the last inserted member
-  Select the id in the branches table where branch name = "$branch"
-  Insert a new row to about_img_branch table using the id of the last inserted member and the selected id from the branches table
 }
 
-function select_branch($branch){
-  Select id from branches table where branch name is $branch and store it in $branch_id
-  Select all about_image_id from about_img_branch table where about_branch_id is $branch_id and store it as an array in $branch_array
-  Display all images from about_image if their id is in $branch_array
+//add a new member
+if the user is logged in and clicks on the "add button"{
+  get the input name, position and profile
+
+  if there's no upload error{
+    fiter the input name, position and profile
+    get the file extension
+    check whether or not any of them is null
+    if any of them is null{
+      display an error message
+      don't insert into the database
+    }
+    else{
+      insert input name, extention and position into the database
+      get the last inserted image id and create a path for the newly uploaded profile
+      move the newly uploaded profile into the correct path for display
+      show upload successful message
+    }
+  }
 }
+
+//modify a current member
+get the current image id using http parameters
+use this id to get the member's name, extention and position
+make a sticky form using these values
+success is TRUE
+
+if the user is logged in and clicks on the "modify button"{
+  get the input name, position and profile
+  if name or position is NULL{
+    success is FALSE
+    display an error message
+  }
+  else{
+    filter input and set the original name, position and profile equal to the new input
+  }
+  if no image is uploaded{
+    do nothing
+  }
+  else if there's an error{
+    display the error accordingly
+  }
+  else if there's no error{
+    sanitize the file and update the image extension
+    move the new file to the original file's path to replace it
+  }
+
+  if success is TRUE{
+    display successful message
+  }
+}
+
+//delete a member
+if the user is logged in and clicked on the "delete" button{
+  get the image id using http parameters
+  call function delete_member and send over the image id
+}
+
 ```
 
 ### events.php
