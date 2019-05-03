@@ -1,8 +1,10 @@
 <?php
-// INCLUDE ON EVERY TOP-LEVEL PAGE!
-include("includes/init.php");
+ include("includes/init.php");
+
 $title = "THRIFT STORES";
+// open connection to database
 $db = new PDO('sqlite:resource.sqlite');
+// Throw an exception for incorrect SQL
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if (isset($_GET['category'])) {
