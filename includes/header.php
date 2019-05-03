@@ -16,9 +16,13 @@
       </div>
       <a href="contact.php">Contact Us</a>
       <?php if (!is_user_logged_in()) { ?>
-        <button id="login_btn"><a href="login.php">Login</a></button>
+        <form action="login.php" >
+          <input type="submit" id="login_btn" value="Login">
+        </form>
       <?php } else { ?>
-        <button id="login_btn"><a href='index.php?logout'>Logout</a></button>
+        <form method="get" action="index.php" >
+          <input type="submit" name="logout" id="login_btn" value="Logout"/>
+        </form>
       <?php } ?>
     </nav>
   </div>
