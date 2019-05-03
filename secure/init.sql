@@ -58,7 +58,7 @@ CREATE TABLE 'stores' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'Category' TEXT NOT NULL,
     'Name' TEXT NOT NULL,
-    'Adress' TEXT NOT NULL,
+    'Address' TEXT NOT NULL,
     'Description' INTEGER,
     'Hours' TEXT,
     'Price' INTEGER
@@ -134,5 +134,7 @@ INSERT INTO event_categories (event_id, category_id) VALUES (7, 3);
 INSERT INTO event_categories (event_id, category_id) VALUES (8, 3);
 INSERT INTO event_categories (event_id, category_id) VALUES (9, 3);
 INSERT INTO event_categories (event_id, category_id) VALUES (10, 3);
+
+INSERT INTO stores (id, Category, Name, Address, Description, Hours, Price) VALUES (1, 'Classic Thrift Stores','Trader Ks', 'Ithaca Commons, 119 E State St', 'A more selective thrift store that buys, sells, and trades used women, men, and children clothing, shoes, accessories, and toys. A great option for students looking for a classic thrift store closer to campus.', 'Mon-Sat 10AM-9PM. Sun 11AM-7PM.', '$$');
 
 COMMIT;
