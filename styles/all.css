@@ -26,6 +26,12 @@ body {
   box-shadow: 0px 15px 10px -15px;
 }
 
+nav {
+  display: block;
+  margin:auto;
+  width: 80%;
+}
+
 /* Adjusted this code  - Susan */
 /* Links inside the navbar */
 .navbar a {
@@ -36,17 +42,18 @@ body {
   padding: 14px 16px;
   margin: 30px 50px 5px 50px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover {
-  color: rgb(183, 178, 178);
+  color:rgb(16, 125, 139);
   animation: fadeIn 0.6s;
 }
 
 @keyframes fadeIn {
-  from {color: #fff}
-  to {color:rgb(183, 178, 178)}
+  from {color: green}
+  to {color:rgb(16, 125, 139)}
 }
 
 
