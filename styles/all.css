@@ -33,13 +33,13 @@ body {
   color: white;
   text-align: center;
   padding: 14px 16px;
-  margin: 0 50px 0 50px;
+  margin: 30px 50px 30px 50px;
   text-decoration: none;
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(183, 178, 178);
+.navbar a:hover {
+  color: rgb(183, 178, 178);
 }
 
 /* Dropdown content (hidden by default) */
