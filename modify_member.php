@@ -69,9 +69,10 @@ $title = "Modify Member"
 
       ?>
 
-<body>
+<body id="modify">
     <div>
-        <h2>Modify Members</h2>
+        <?php $title = "Modify ".$image_name."'s Information"; ?>
+        <h2><?php echo($title) ?></h2>
 
         <form id="members" method="post" action="<?php $modify_member ?>" enctype="multipart/form-data">
 
@@ -80,7 +81,7 @@ $title = "Modify Member"
         </div>
 
         <div class = "textbox">
-            <label for="input">Profile(Optional): </label>
+            <label for="input">Profile Picture (Optional): </label>
             <input type="file" name="file_new" />
         </div>
 

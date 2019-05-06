@@ -219,12 +219,12 @@ fieldset {
 #events_main {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 100px;
 }
 
 .events_row {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  /* flex-direction: row; */
 }
 
 #thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
@@ -262,24 +262,27 @@ fieldset {
 }
 
 #about .eboard{
-  width:300px;
-  margin: 0 45px;
+  width:90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-#about figure{
-  width:390px;
-  margin: 45px;
+.three{
+  width:33%;
 }
 
 #about figcaption{
-  width:390px;
-  margin: 45px;
+  margin-bottom: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #about .row{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-grow: 1;
+  margin: 0 4%;
 }
 
 .textbox{
@@ -291,7 +294,14 @@ fieldset {
 label{
   display:inline-block;
   text-align: right;
-  width:150px;
+}
+
+#modify label{
+  width:115px;
+}
+
+#add_mem label{
+  width:130px;
 }
 
 .add_buttom{

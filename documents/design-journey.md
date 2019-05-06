@@ -82,7 +82,7 @@ We decided that the client (i.e. E-Board members) should be considered a second 
 [Include exploratory idea sketches of your website.]
 
 ### **Home Page**
-![Initial Design - About](home_page.jpg)
+![Initial Design - Home](home_page.jpg)
 
 ### **About Page**
 ![Initial Design - About](about_page.jpg)
@@ -120,7 +120,7 @@ Example:
 
 Our:
   - Home
-  - About(Members & Committees)
+  - Members(Add Members & Modify Members)
   - Our Events
   - Thrifting Resources
   - Contact Us
@@ -188,7 +188,7 @@ Milestone 1
 
 Initial Sketches
 - Home - Susan
-- About - Yuyi
+- Memebers - Yuyi
 - Our Events - Samantha
 - Thrifting Resources - Ha Yeon
 - Contact Us, Header/Footer, Login - Clive
@@ -268,18 +268,41 @@ like Abby can navigate the site and accomplish their tasks.
 
 [For each task, list the ideal set of actions that you would like your users to take when working towards the task.]
 
-Task 1: Users wants to contact the club to ask a question.
+__Scenario 1:__
+
+Abby is a freshman at Cornell who is passionate about sustainability. A friend tells her she should check out Cornell Thrift and she decides to go on the club's website. She learns about the Thrift Exchange Closets that the club runs, but is disappointed to see that there are no closets on North Campus, where Abby lives. Abby wants to ask the club if they have any plans to put a closet somewhere on North Campus.
+
+__Task 1:__ Abby wants to ask the club if they plan to add a Thrift Exchange Closet on North Campus.
 
   1. Go to Contact page   -Susan
+    * a) Click on Contact in navigation bar
   2. Fill out information under "Get in Touch"  -Clive
-  3. Submit response   -Sam
+    * a) Select the input field labelled "Name"
+    * b) Type her name
+    * c) Repeat Action #1 and #2 for input fields "Email" and "Message"
+  3. Submit response  -Sam
+    * a) Click send button
 
-Task 2: Client can modify members' information on About page.
+__Scenario 2:__
 
-  1. Go to About page  -Susan
-  2. Log in   -Grace
-  3. Modify Members' information  -Yuyi
-  4. Submit the form  -Sam
+Abby is the treasurer of Cornell Thrift. Her photo on the webiste was taken when she was a freshman and had dyed her hair blue. Abby is now a junior and is trying to get an internship in finance for the summer. She includes her work as treasurer on her resume and wants to make sure her photo on the website is professional in case any firms decide to look her up online. She just took a professional headshot a week ago and would like to make that her picture on the website.
+
+__Task 2:__ Abby wants to change her photo on the website to her new headshot.
+
+  1. Log in - Grace
+    * a) Select the input field labelled "Username"
+    * b) Type her "Username"
+    * c) Repeat Action #1 and #2 for the input field labelled "Password"
+    * d) Click log-in button
+  2. Go to Members page  -Susan
+    * a) Click on Members page in navigation bar
+  3. Navigate to the link to modify her profile -Yuyi
+    * a) Find her profile on the members page
+    * b) Click the "Modify Member's Information" link
+  4. Upload her new profile picture -Sam
+    * a) Click the browse button
+    * b) Select the picture file she wants to upload
+    * c) Click the "Modify" button
 
 ### Cognitive Walkthrough
 
@@ -371,7 +394,7 @@ Task 2: Client can modify members' information on About page.
       Abby will understand that once she has filled out the form she has to submit it. Although Abby does not like experimenting with new technology unnecessarily, submitting a form is a common feature across many websites that she will likely be familiar with.
 
 [Add as many actions as you need...]
-**Action # 1 : Click submit button**
+**Action # 1 : Click send button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will Abby know what to do at this step?
@@ -390,38 +413,11 @@ Task 2: Client can modify members' information on About page.
 
 #### Task 2 - Cognitive Walkthrough
 
-**Task 2: Client can modify members' information on About page.**
+**Task 2: Client can modify members' information on Members page.**
 
 [Add as many subgoals as you needs]
-**Subgoal # 1 : Go to About page**
-	(e.g., "# 1 : Select the section of the document you want to print")
 
-  - Will [Abby] have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: [maybe]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
-
-      Abby may not know that to upload an eboard image that she should
-      go to the About page, but using the navigation bar is not a new task.
-
-[Add as many actions as you need...]
-**Action # 1 : Click on About page in navigation bar**
-	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
-
-  - Will [Abby] know what to do at this step?
-    - Yes, maybe or no: [maybe]
-    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
-
-        Abby does not like to tinker but clicking on different pages in the
-        navigation bar does not produce any risk.
-
-  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes]
-    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-
-        Once Abby arrives in About page, she will know that this is the page to
-        upload an eboard image since she will see a gallery with eboard members.
-
-**Subgoal # 2 : Log in**
+**Subgoal # 1 : Log in**
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: [yes]
@@ -438,7 +434,7 @@ Task 2: Client can modify members' information on About page.
     - Why? Abby will know that she did the right thing because by selecting the input field she will be able to type down her username and eventually sign in. There is nothing unfamiliar about this action for Abby.
 
 
-**Action # 2 : Type persona's "Username"**
+**Action # 2 : Type her "Username"**
 
   - Will Abby know what to do at this step?
     - Yes, maybe or no: [yes]
@@ -465,8 +461,35 @@ Task 2: Client can modify members' information on About page.
     - Yes, maybe or no: [yes]
     - Why? Abby will know that she made a progress towards her goal, because when she clicks the log-in button, she will be logged in and eventually be able to fill out form to upload an image. Although she feels not confident when using technologies that are not used to her, logging in is not a high-level skill. It won't take much time for her.
 
+**Subgoal # 2 : Go to Members page**
+	(e.g., "# 1 : Select the section of the document you want to print")
 
-**Subgoal # 3 : Modify Members' information**
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [maybe]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+      Abby may not know that to upload an eboard image that she should
+      go to the Members page, but using the navigation bar is not a new task.
+
+[Add as many actions as you need...]
+**Action # 1 : Click on Members page in navigation bar**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [maybe]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        Abby does not like to tinker but clicking on different pages in the
+        navigation bar does not produce any risk.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        Once Abby arrives in Members page, she will know that this is the page to
+        upload an eboard image since she will see a gallery with eboard members.
+
+**Subgoal # 3 : Navigate to the link to modify her profile**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
   - Will [persona name] have formed this sub-goal as a step to their overall goal?
@@ -476,48 +499,66 @@ Task 2: Client can modify members' information on About page.
         [Tell us why..]
 
 [Add as many actions as you need...]
-**Action # 1 : Click on the "Click HERE to add New Members" link on the top page or click on the Delete or Modify link beneth each picture**
+**Action # 1 : Find her profile on the members page**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will [persona name] know what to do at this step?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-    Abby doesn't like tinkering, but because there's a link at the top that tells her explicily where she needs to click if she wants to add a new member's information, she's less likely to get confused and more likely to complete this action successfully. The same reason goes with the "Delete" and "Modify" link below each picture. Abby doesn't need to tinker around at all to be able to find out the use of these links because they are so explicit.
+    Abby doesn't like tinkering, but there's no tinkering needed on this page. On the top of the Members page it clearly says "Meet Our E-Board Members" so Abby knows that all she needs to do to find her profile is to scroll down. Since there aren't that many E-board members, it wouldn't take Abby much time to find her own.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-      Because after Abby clicks on one of the links, she will be brought to the form section of the page. Although Abby has low self-efficacy, she's pretty familiar with forms, so she will know that she did the right thing.
+      She will recognize her own profile.
 
-**Action # 2 : Fill out the form**
+**Action # 2 : Click the "Modify Member's Information" link**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will [persona name] know what to do at this step?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-    Abby is an accountant, so she should be pretty familiar with forms. And since Abby feels comfortable working with technologies that she is alredy familiar with, she should be able to complete this action successfully.
+    Abby has low self-efficacy and doesn't like tinkering, but since there's a link that says "Modify Member's Information" directly below her profile, she will know that that's the link she needs to click to modify her profile without any tinkering.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-      Abby is pretty familiar with the forms.
+     After clicking on the "Modify Member's Information" link, Abby will be brought to a seperate page that says "Modify Abby's Information" with her existing profile and information there. Although Abby tends to have low self-efficacy, with the clear title and her existing profile, Abby will know that she did the right thing and has been brought to the right place.
 
-**Subgoal # 4 : Submit the form**
+**Subgoal # 4 : Upload her new profile picture**
 	(e.g., "# 1 : Select the section of the document you want to print")
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: [Yes]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+    - Why? (Especially consider [Abby's]'s Motivations/Strategies.)
 
         [Tell us why..]
-     A common feature of forms across many websites is the need to submit them upon completion. Since there is a submit button present Abby will likely understand that to be an instruction and know she has to submit the form, despite her lack of comfort with computing tasks.
+     In order for her profile picture to be changed, Abby will have to upload it to the site. The most essential step to altering a picture on a website is uploading a new one. This is a feature that is common across many popular social networking sites that include profile pictures, like Facebook, Instagram, and LinkedIn. It is likely that Abby would be familiar with these sites and thus recognize that she has to upload a photo in order for it to change on the website, so this would be in line with her strategy to use familiar technological methods to accomplish her tasks.
 
 [Add as many actions as you need...]
-**Action # 1 : Click the submit button**
+**Action # 1 : Click the browse button**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [maybe]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+      Abby is not very comfortable with computers, so since the button does not explicitly say the word "upload" and the label only says "Profile" and not "Profile Picture" or "Upload profile picture," she may be unsure if that is the correct button to click. However, the text next to it saying "no file selected" may hint that she needs to click the button to upload a file from her computer. She also may assume that the profile label refers to the photo and understand she needs to click the browse button to upload a new photo from her computer. However, since the labels don't explicitly identify the task, it is hard to say whether Abby will know what to do.
+
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [Maybe]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+    Once she clicks the browse button, she will see her Finder or My Computer page appear giving her the option to select a file, so she will understand that she is supposed to upload a file, and may then conclude that she has done the right thing. However, because she is so risk averse and uncomfortable with technology, she may doubt herself and believe that this file upload button is for a different file and not for the profile picture due to a lack of clear labeling on the form.
+
+**Action # 2 : Select the picture file she wants to upload and click the open/upload button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will Abby know what to do at this step?
@@ -525,15 +566,32 @@ Task 2: Client can modify members' information on About page.
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
-      While Abby is not very comfortable with computers, she will likely understand that she needs to click the button to submit her responses as submit buttons are a common feature on many websites and Abby should understand submit to be an instruction and upon comprehensively reviewing the form she will likely figure out she needs to click the button.
+      While Abby is not very comfortable with computers, she will likely understand that she needs to select the appropriate image file and click the open/upload button in order to upload it.
 
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [maybe]
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
-    Abby will only know if she did the right thing if there is a confirmation page. Right now, it is unclear if there will be a confirmation form once it is submitted. If there is no confirmation page, Abby will likely believe she did something wrong because she has low computer self-efficacy. If there is a confirmation page, Abby would likely know that she did the right thing because the page confirm it for her.
+    Abby will know that she did the right thing because she will see the file name that she selected appear on the screen, so despite her lack of confidence in her computer skills, she will know that she selected and uploaded the picture that she wanted to upload.
+
+**Action # 3 : Click the "Modify" button**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will Abby know what to do at this step?
+    - Yes, maybe or no: [no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+      Abby may thing she has done all she needed to do by hitting the upload button. Since she is not particularly knowledgeable about technology and not interested in tinkering around with it, she may not understand that she needs to click the modify button in order to actually change the photo. She may think she has done everything she needed to do and click the link to return to the members page instead. Only then would she realize she had not done the right thing and potentially figure out she needed to click the modify button to solidify the changes.
+
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [Maybe]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+    If she returns to the members page, she will immediately see the change in the image and know she did the right thing. If she does not return to the members page immediately, she may not know whether she successfully changed the image and because of her low self-efficacy, she may not believe she completed her goal.
 
 ### Cognitive Walk-though Results
 
@@ -543,6 +601,8 @@ Task 2: Client can modify members' information on About page.
 
 Our current design does not make clear whether there will be a confirmation once the form is sucessfully submitted, or any corrective feedback should the user not fill in aspects of a form correctly. It is important that corrective feedback and a confirmation message are factored into the design as users with low self-efficacy may struggle with both understanding their mistakes and knowing if they submitted forms correctly because of a lack of feedback. Our final design should include a confirmation message for every form and corrective feedback when users submit invalid responses.
 
+We also do not always label our forms appropriately so that it is super clear what a user has to do, particularly when it comes to uploading a profile picture to the members page. Users who are less comfortable with technology or who don't like tinkering may be left unsure of what to do when attempting to do things like upload a new profile picture.
+
 ## Final Design
 
 [Include sketches of your finalized design.]
@@ -551,7 +611,7 @@ Our current design does not make clear whether there will be a confirmation once
 
 ![home final sketch](home_final.jpg)
  Based on Cognitive Walkthrough, I added links to each page and description in home.
-About
+Members
 
 We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.
 
@@ -849,7 +909,7 @@ function showSlides () {}
 ### about.php
 
 ```
-About Page Pseudocode:
+Members Page Pseudocode:
 
 function delete_member($img_id) {
   Delete the image that has the id as $img_id

@@ -1,14 +1,16 @@
 <?php
-// INCLUDE ON EVERY TOP-LEVEL PAGE!
-include("includes/init.php");
+ include("includes/init.php");
+
 $title = "THRIFT STORES";
-$db = new PDO('sqlite:resource.sqlite');
+// open connection to database
+$db = new PDO('sqlite:secure/site.sqlite');
+// Throw an exception for incorrect SQL
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if (isset($_GET['category'])) {
   $category = filter_input(INPUT_GET, 'category', FILTER_SANITIZE_STRING);
 } else {
-  // No search provided, so set the product to query to NULL
+  // No search provided, so set the category to query to NULL
   $category = NULL;
 }
 
@@ -41,40 +43,40 @@ function print_record($record)
       <h1><u>Thrift Stores in Ithaca</u></h1>
       <p><a target="_blank" href="http://reusetompkins.com/">http://reusetompkins.com/</a></p>
       <p>A comprehensive directory for used furniture, clothing, books & music, computers & electronics, sports & outdoor equipment, art & sewing materials, and antiques for all of Ithaca and Tompkins County.</p>
-      <ul>
-        <li><a href="/resources_stores.php">All Stores</a></li>
-        <li><a href="/resources_stores.php?category=Classic Thrift Stores">Classic Thrift Stores</a></li>
-        <li><a href="/resources_stores.php?category=Specialty Clothing">Specialty Clothing</a></li>
-        <li><a href="/resources_stores.php?category=Furniture/Books/Other">Furniture/Books/other</a></li>
-        <li><a href="/resources_stores.php?category=Sewing and Alteration Supplies">Sewing & Alteration Supplies</a></li>
-      </ul>
 
-      <?php
-      if (is_null($category)) {
-        // No store to query, so return everything!
-        ?>
+      <ul>
+      <li><a href="/resources_stores.php">All Stores </a></li>
+      <li><a href="/resources_stores.php?category=Classic Thrift Stores">Classic Thrift Stores</a></li>
+      <li><a href="/resources_stores.php?category=Specialty Clothing">Specialty Clothing</a></li>
+      <li><a href="/resources_stores.php?category=Furniture/Books/Other">Furniture/Books/Other</a></li>
+      <li><a href="/resources_stores.php?category=Sewing and Alteration Supplies">Sewing and Alteration Supplies</a></li>
+
+    </ul>
+
+    <?php
+    if ( is_null($category) ) {
+      // No store to query, so return everything!
+      ?>
         <h2>All Stores</h2>
         <?php
-
-        $sql = "SELECT * FROM stores";
-        $params = array();
+      $sql = "SELECT * FROM stores";
+      $params = array();
+      $result = exec_sql_query($db, $sql, $params);
       } else {
-        // We have a specific category of store to query!
-        ?>
-        <h2><?php echo htmlspecialchars($category) ?></h2>
-        <?php
 
-        $sql = "SELECT * FROM stores WHERE Category LIKE '%' || :category || '%'";
-        $params = array(':category' => $category);
-      }
+      ?>
+      <h2> <?php echo htmlspecialchars($category) ?></h2>
+      <?php
 
-      try {
-        $query = $db->prepare($sql);
-        if ($query and $query->execute($params)) {
-          $records = $query->fetchAll();
-        }
-      } catch (PDOException $e) {
-        handle_db_error($e);
+      $sql = "SELECT * FROM stores WHERE Category LIKE '%' || :category || '%'";
+      $params = array(':category' => $category);
+    }
+
+
+
+      $query = $db->prepare($sql);
+      if ($query and $query->execute($params)) {
+        $records = $query->fetchAll();
       }
 
       if (isset($records) and !empty($records)) {
