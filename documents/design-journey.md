@@ -270,7 +270,7 @@ like Abby can navigate the site and accomplish their tasks.
 
 __Scenario 1:__
 
-Abby is a freshman at Cornell who is passionate about sustainability. A friend tells her she should check out Cornell Thrift and she decides to go on the club's website. She learns about the Thrift Exchange Closets that the club runs, but is disappointed to see that there are no closets on North Campus, where Abby lives. Abby wants to ask the club if they have any plans to put on closet somewhere on North Campus.
+Abby is a freshman at Cornell who is passionate about sustainability. A friend tells her she should check out Cornell Thrift and she decides to go on the club's website. She learns about the Thrift Exchange Closets that the club runs, but is disappointed to see that there are no closets on North Campus, where Abby lives. Abby wants to ask the club if they have any plans to put a closet somewhere on North Campus.
 
 __Task 1:__ Abby wants to ask the club if they plan to add a Thrift Exchange Closet on North Campus.
 
@@ -534,31 +534,31 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: [Yes]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+    - Why? (Especially consider [Abby's]'s Motivations/Strategies.)
 
         [Tell us why..]
-     A common feature of forms across many websites is the need to submit them upon completion. Since there is a submit button present Abby will likely understand that to be an instruction and know she has to submit the form, despite her lack of comfort with computing tasks.
+     In order for her profile picture to be changed, Abby will have to upload it to the site. The most essential step to altering a picture on a website is uploading a new one. This is a feature that is common across many popular social networking sites that include profile pictures, like Facebook, Instagram, and LinkedIn. It is likely that Abby would be familiar with these sites and thus recognize that she has to upload a photo in order for it to change on the website, so this would be in line with her strategy to use familiar technological methods to accomplish her tasks.
 
 [Add as many actions as you need...]
 **Action # 1 : Click the browse button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will Abby know what to do at this step?
-    - Yes, maybe or no: [yes]
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
-      While Abby is not very comfortable with computers, she will likely understand that she needs to click the button to submit her responses as submit buttons are a common feature on many websites and Abby should understand submit to be an instruction and upon comprehensively reviewing the form she will likely figure out she needs to click the button.
+      Abby is not very comfortable with computers, so since the button does not explicitly say the word "upload" and the label only says "Profile" and not "Profile Picture" or "Upload profile picture," she may be unsure if that is the correct button to click. However, the text next to it saying "no file selected" may hint that she needs to click the button to upload a file from her computer. She also may assume that the profile label refers to the photo and understand she needs to click the browse button to upload a new photo from her computer. However, since the labels don't explicitly identify the task, it is hard to say whether Abby will know what to do.
 
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [maybe]
+    - Yes, maybe or no: [Maybe]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
-    Abby will only know if she did the right thing if there is a confirmation page. Right now, it is unclear if there will be a confirmation form once it is submitted. If there is no confirmation page, Abby will likely believe she did something wrong because she has low computer self-efficacy. If there is a confirmation page, Abby would likely know that she did the right thing because the page confirm it for her.
+    Once she clicks the browse button, she will see her Finder or My Computer page appear giving her the option to select a file, so she will understand that she is supposed to upload a file, and may then conclude that she has done the right thing. However, because she is so risk averse and uncomfortable with technology, she may doubt herself and believe that this file upload button is for a different file and not for the profile picture due to a lack of clear labeling on the form.
 
-**Action # 2 : Select the picture file she wants to upload**
+**Action # 2 : Select the picture file she wants to upload and click the open/upload button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will Abby know what to do at this step?
@@ -566,33 +566,32 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
-      While Abby is not very comfortable with computers, she will likely understand that she needs to click the button to submit her responses as submit buttons are a common feature on many websites and Abby should understand submit to be an instruction and upon comprehensively reviewing the form she will likely figure out she needs to click the button.
+      While Abby is not very comfortable with computers, she will likely understand that she needs to select the appropriate image file and click the open/upload button in order to upload it.
 
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [maybe]
+    - Yes, maybe or no: [Yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
-    Abby will only know if she did the right thing if there is a confirmation page. Right now, it is unclear if there will be a confirmation form once it is submitted. If there is no confirmation page, Abby will likely believe she did something wrong because she has low computer self-efficacy. If there is a confirmation page, Abby would likely know that she did the right thing because the page confirm it for her.
+    Abby will know that she did the right thing because she will see the file name that she selected appear on the screen, so despite her lack of confidence in her computer skills, she will know that she selected and uploaded the picture that she wanted to upload.
 
 **Action # 3 : Click the "Modify" button**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
 
   - Will Abby know what to do at this step?
-    - Yes, maybe or no: [yes]
+    - Yes, maybe or no: [no]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
         [Tell us why...]
-      While Abby is not very comfortable with computers, she will likely understand that she needs to click the button to submit her responses as submit buttons are a common feature on many websites and Abby should understand submit to be an instruction and upon comprehensively reviewing the form she will likely figure out she needs to click the button.
-
+      Abby may thing she has done all she needed to do by hitting the upload button. Since she is not particularly knowledgeable about technology and not interested in tinkering around with it, she may not understand that she needs to click the modify button in order to actually change the photo. She may think she has done everything she needed to do and click the link to return to the members page instead. Only then would she realize she had not done the right thing and potentially figure out she needed to click the modify button to solidify the changes.
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [maybe]
+    - Yes, maybe or no: [Maybe]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
         [Tell us why...]
-    Abby will only know if she did the right thing if there is a confirmation page. Right now, it is unclear if there will be a confirmation form once it is submitted. If there is no confirmation page, Abby will likely believe she did something wrong because she has low computer self-efficacy. If there is a confirmation page, Abby would likely know that she did the right thing because the page confirm it for her.
+    If she returns to the members page, she will immediately see the change in the image and know she did the right thing. If she does not return to the members page immediately, she may not know whether she successfully changed the image and because of her low self-efficacy, she may not believe she completed her goal.
 
 ### Cognitive Walk-though Results
 
@@ -601,6 +600,8 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
 [Your responses here should be **very** thorough and thoughtful.]
 
 Our current design does not make clear whether there will be a confirmation once the form is sucessfully submitted, or any corrective feedback should the user not fill in aspects of a form correctly. It is important that corrective feedback and a confirmation message are factored into the design as users with low self-efficacy may struggle with both understanding their mistakes and knowing if they submitted forms correctly because of a lack of feedback. Our final design should include a confirmation message for every form and corrective feedback when users submit invalid responses.
+
+We also do not always label our forms appropriately so that it is super clear what a user has to do, particularly when it comes to uploading a profile picture to the members page. Users who are less comfortable with technology or who don't like tinkering may be left unsure of what to do when attempting to do things like upload a new profile picture.
 
 ## Final Design
 
