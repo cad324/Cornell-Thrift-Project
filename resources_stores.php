@@ -50,8 +50,8 @@ function print_record($record)
       <li><a href="/resources_stores.php?category=Specialty Clothing">Specialty Clothing</a></li>
       <li><a href="/resources_stores.php?category=Furniture/Books/Other">Furniture/Books/Other</a></li>
       <li><a href="/resources_stores.php?category=Sewing and Alteration Supplies">Sewing and Alteration Supplies</a></li>
-
     </ul>
+
 
     <?php
     if ( is_null($category) ) {
