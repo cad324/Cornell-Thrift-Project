@@ -14,8 +14,13 @@ $records = exec_sql_query(
   "SELECT * FROM images"
 )->fetchAll();
 
-// User must be logged in to upload
-if (isset($_POST["uploadHome"])) {
+$eventpic = exec_sql_query(
+  $db,
+  "SELECT * FROM eventpic"
+)->fetchAll();
+
+// User must be logged in to upload to image gallery
+if (isset($_POST["uploadHome"]) && is_user_logged_in()) {
 
   // Filtering
   $upload_info = $_FILES["file_data"];
@@ -85,49 +90,80 @@ include("includes/heads.php"); ?>
       <p> Cornell Thrift’s mission is to reduce campus‐wide waste through redistribution of reusable personal items. The initiative was inspired by the concept of “free‐piles” seen in university co‐operative housing, along with the annual Dump‐and‐Run sale. We want to see reusable clothes, homeware, electronics, and small furniture going into homes and not trashcans ‐ all year round. <p>
     </div>
 
-    <div id="row">
 
-      <div id="colm1">
-        <figure class="homebox">
-          <a href="events.php">
-            <div id="topleft">
-              <h3>OUR EVENTS</h3>
-              <p> Find out how you can donate unused items and make a difference to the Ithaca community! </p>
-              <img src="images/r2.jpg" alt="team" class="static_img" />
-          </a>
-      </div>
-      </figure>
+    <div id="home_events_box">
+      <a href="about.php">
+        <h3 id="home_events">EVENTS</h3> <a>
+          <p>Cornell Thrift hosts events around campus, from a photo campaign at the Temple of Zeus to
+            a clothing exchange sloet at Willard Straight to mending workshops at the Willard Straight
+            International Lounge. Some of these activities are year long, while others are workshops and
+            partnered events. Learn more about the activities through the Events page.
+          </p>
+          <div class="slideshow_cont">
+            <div class="slidebox">
+              <?php
+              foreach ($records as $record) { ?>
+                <img alt="<?php echo $record["file_name"] ?>" src="uploads/slideshow/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>" class="slides">
+              <?php
+            }
+            ?> </div>
+            <?php
+            if (is_user_logged_in()) { ?>
+              <form id="home_upload_form" action="index.php" method="post" enctype="multipart/form-data">
+                <!-- Image cannot excede MAX_FILE_SIZE  -->
+                <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+                <label for="file_data">Upload</label>
+                <input id="file_data" type="file" name="file_data">
+                <button name="uploadHome" type="submit">Upload to Slideshow</button>
+              </form>
 
+              <form id="home_delete_form" action="home_delt.php" method="post" enctype="multipart/form-data">
+                <label name="delete_lab">Delete </label>
+                <button name="delete_butn" type="submit">Click here to delete</button>
+              </form>
+            <?php } ?>
+          </div>
+
+    </div>
+
+
+    <div id="home_events_box">
+      <a href="about.php">
+        <h3 id="home_events">EVENTS</h3> <a>
+          <p>Cornell Thrift hosts events around campus, from a photo campaign at the Temple of Zeus to
+            a clothing exchange sloet at Willard Straight to mending workshops at the Willard Straight
+            International Lounge. Some of these activities are year long, while others are workshops and
+            partnered events. Learn more about the activities through the Events page.
+          </p>
+          <div id="eventpics">
+            <?php
+            foreach ($eventpic as $ep) { ?>
+              <img alt="<?php echo $ep["file_name"] ?>" src="uploads/slideshow/<?php echo ($ep["id"] . "." . $ep["file_ext"]); ?>" class="eventpic_sizing">
+            <?php
+          }
+          ?> </div>
+    </div>
+
+
+    <div id="colm2">
       <figure class="homebox">
-        <a href="about.php">
-          <div id="bottomleft">
-            <h3>JOIN US</h3>
-            <p> Join our team! Get to know the eboard and how you can help out.</p>
-            <img src="images/r3.jpg" alt="team" class="static_img" />
+        <a href="resources_stores.php">
+          <div id="topright">
+            <h3>OTHER THRIFT ACTVITIES</h3>
+            <p> There are many more ways to help out! Cornell is surrounded by thrift stores. </p>
+            <img src="images/r4.jpg" alt="team" class="static_img" />
         </a>
     </div>
     </figure>
-  </div>
 
-  <div id="colm2">
     <figure class="homebox">
-      <a href="resources_stores.php">
-        <div id="topright">
-          <h3>OTHER THRIFT ACTVITIES</h3>
-          <p> There are many more ways to help out! Cornell is surrounded by thrift stores. </p>
-          <img src="images/r4.jpg" alt="team" class="static_img" />
+      <a href="contact.php">
+        <div id="bottomright">
+          <h3>CONTACT US/FAQS</h3>
+          <p> Have any more questions? Join our mailing list in the footer below or ask us a question! </p>
+          <img src="images/r2.jpg" alt="team" class="static_img" />
       </a>
   </div>
-  </figure>
-
-  <figure class="homebox">
-    <a href="contact.php">
-      <div id="bottomright">
-        <h3>CONTACT US/FAQS</h3>
-        <p> Have any more questions? Join our mailing list in the footer below or ask us a question! </p>
-        <img src="images/r2.jpg" alt="team" class="static_img" />
-    </a>
-    </div>
   </figure>
   </div>
   </div>
@@ -138,28 +174,6 @@ include("includes/heads.php"); ?>
       about dates, times, location. </p>
   </div>
 
-  <div class="slideshow_cont">
-    <div class="slidebox">
-      <?php
-      foreach ($records as $record) { ?>
-        <img alt="<?php echo $record["file_name"] ?>" src="uploads/slideshow/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>" class="slides">
-      <?php
-    }
-    ?> </div>
-    <form id="home_upload_form" action="index.php" method="post" enctype="multipart/form-data">
-      <!-- Image cannot excede MAX_FILE_SIZE  -->
-      <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
-      <label for="file_data">Upload</label>
-      <input id="file_data" type="file" name="file_data">
-      <button name="uploadHome" type="submit">Upload to Slideshow</button>
-    </form>
-
-    <form id="home_delete_form" action="home_delt.php" method="post" enctype="multipart/form-data">
-      <label name="delete_lab">Delete </label>
-      <button name="delete_butn" type="submit">Click here to delete</button>
-    </form>
-
-  </div>
 
   </div>
 
