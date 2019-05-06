@@ -59,7 +59,7 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
   <title><?php echo $title; ?></title>
 </head>
 
-<body>
+<body id="add_mem">
     <div>
         <h2>Add Members</h2>
 
@@ -76,7 +76,7 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
         <form id="members" method="post" action="add_member.php" enctype="multipart/form-data">
 
         <div class = "textbox">
-            <label for="input">Profile: </label>
+            <label for="input">Profile Picture: </label>
             <input type="file" name="file_input"/>
         </div>
 

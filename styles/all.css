@@ -294,7 +294,14 @@ fieldset {
 label{
   display:inline-block;
   text-align: right;
-  width:150px;
+}
+
+#modify label{
+  width:115px;
+}
+
+#add_mem label{
+  width:130px;
 }
 
 .add_buttom{
