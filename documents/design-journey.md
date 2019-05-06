@@ -82,7 +82,7 @@ We decided that the client (i.e. E-Board members) should be considered a second 
 [Include exploratory idea sketches of your website.]
 
 ### **Home Page**
-![Initial Design - About](home_page.jpg)
+![Initial Design - Home](home_page.jpg)
 
 ### **About Page**
 ![Initial Design - About](about_page.jpg)
@@ -120,7 +120,7 @@ Example:
 
 Our:
   - Home
-  - About(Members & Committees)
+  - Members(Add Members & Modify Members)
   - Our Events
   - Thrifting Resources
   - Contact Us
@@ -188,7 +188,7 @@ Milestone 1
 
 Initial Sketches
 - Home - Susan
-- About - Yuyi
+- Memebers - Yuyi
 - Our Events - Samantha
 - Thrifting Resources - Ha Yeon
 - Contact Us, Header/Footer, Login - Clive
@@ -413,7 +413,7 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
 
 #### Task 2 - Cognitive Walkthrough
 
-**Task 2: Client can modify members' information on About page.**
+**Task 2: Client can modify members' information on Members page.**
 
 [Add as many subgoals as you needs]
 
@@ -469,7 +469,7 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
 
       Abby may not know that to upload an eboard image that she should
-      go to the About page, but using the navigation bar is not a new task.
+      go to the Members page, but using the navigation bar is not a new task.
 
 [Add as many actions as you need...]
 **Action # 1 : Click on Members page in navigation bar**
@@ -486,7 +486,7 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-        Once Abby arrives in About page, she will know that this is the page to
+        Once Abby arrives in Members page, she will know that this is the page to
         upload an eboard image since she will see a gallery with eboard members.
 
 **Subgoal # 3 : Navigate to the link to modify her profile**
@@ -506,13 +506,13 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-    Abby doesn't like tinkering, but because there's a link at the top that tells her explicily where she needs to click if she wants to add a new member's information, she's less likely to get confused and more likely to complete this action successfully. The same reason goes with the "Delete" and "Modify" link below each picture. Abby doesn't need to tinker around at all to be able to find out the use of these links because they are so explicit.
+    Abby doesn't like tinkering, but there's no tinkering needed on this page. On the top of the Members page it clearly says "Meet Our E-Board Members" so Abby knows that all she needs to do to find her profile is to scroll down. Since there aren't that many E-board members, it wouldn't take Abby much time to find her own.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-      Because after Abby clicks on one of the links, she will be brought to the form section of the page. Although Abby has low self-efficacy, she's pretty familiar with forms, so she will know that she did the right thing.
+      She will recognize her own profile.
 
 **Action # 2 : Click the "Modify Member's Information" link**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
@@ -521,13 +521,13 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
-    Abby is an accountant, so she should be pretty familiar with forms. And since Abby feels comfortable working with technologies that she is alredy familiar with, she should be able to complete this action successfully.
+    Abby has low self-efficacy and doesn't like tinkering, but since there's a link that says "Modify Member's Information" directly below her profile, she will know that that's the link she needs to click to modify her profile without any tinkering.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-      Abby is pretty familiar with the forms.
+     After clicking on the "Modify Member's Information" link, Abby will be brought to a seperate page that says "Modify Abby's Information" with her existing profile and information there. Although Abby tends to have low self-efficacy, with the clear title and her existing profile, Abby will know that she did the right thing and has been brought to the right place.
 
 **Subgoal # 4 : Upload her new profile picture**
 	(e.g., "# 1 : Select the section of the document you want to print")
@@ -610,7 +610,7 @@ Our current design does not make clear whether there will be a confirmation once
 
 ![home final sketch](home_final.jpg)
  Based on Cognitive Walkthrough, I added links to each page and description in home.
-About
+Members
 
 We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.
 
@@ -908,7 +908,7 @@ function showSlides () {}
 ### about.php
 
 ```
-About Page Pseudocode:
+Members Page Pseudocode:
 
 function delete_member($img_id) {
   Delete the image that has the id as $img_id

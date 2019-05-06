@@ -10,7 +10,7 @@ $title = "ABOUT"
 
 <body id="about">
   <!-- TODO: This should be your main page for your site. -->
-  <h1>Meet Our Members!</h1>
+  <h1>Meet Our E-Board Members!</h1>
 
   <?php
   if (is_user_logged_in()) {
