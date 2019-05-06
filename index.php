@@ -71,11 +71,14 @@ if (isset($_POST["uploadHome"])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("includes/heads.php"); ?>
+
+<?php
+
+include("includes/heads.php"); ?>
 
 <body>
   <?php include("includes/header.php"); ?>
-  <div class="wrapper">
+  <div>
 
     <div id="mission">
       <h2> WHAT WE DO </h2>
@@ -86,56 +89,77 @@ if (isset($_POST["uploadHome"])) {
 
       <div id="colm1">
         <figure class="homebox">
-          <h3>OUR EVENTS</h3>
-          <p> Find out how you can donate unused items and make a difference to the Ithaca community! </p>
-          <a href="events.php"><img src="images/r2.jpg" alt="team" class="static_img" /></a>
-        </figure>
-
-        <figure class="homebox">
-          <h3>JOIN US</h3>
-          <p> Join our team! Get to know the eboard and how you can help out.</p>
-          <a href="about.php"><img src="images/r3.jpg" alt="team" class="static_img" /> </a>
-        </figure>
+          <a href="events.php">
+            <div id="topleft">
+              <h3>OUR EVENTS</h3>
+              <p> Find out how you can donate unused items and make a difference to the Ithaca community! </p>
+              <img src="images/r2.jpg" alt="team" class="static_img" />
+          </a>
       </div>
+      </figure>
 
-      <div id="colm2">
-        <figure class="homebox">
+      <figure class="homebox">
+        <a href="about.php">
+          <div id="bottomleft">
+            <h3>JOIN US</h3>
+            <p> Join our team! Get to know the eboard and how you can help out.</p>
+            <img src="images/r3.jpg" alt="team" class="static_img" />
+        </a>
+    </div>
+    </figure>
+  </div>
+
+  <div id="colm2">
+    <figure class="homebox">
+      <a href="resources_stores.php">
+        <div id="topright">
           <h3>OTHER THRIFT ACTVITIES</h3>
           <p> There are many more ways to help out! Cornell is surrounded by thrift stores. </p>
-          <a href="resources_stores.php"><img src="images/r4.jpg" alt="team" class="static_img" /></a>
-        </figure>
+          <img src="images/r4.jpg" alt="team" class="static_img" />
+      </a>
+  </div>
+  </figure>
 
-        <figure class="homebox">
-          <h3>CONTACT US/FAQS</h3>
-          <p> Have any more questions? Join our mailing list in the footer below or ask us a question! </p>
-          <a href="contact.php"><img src="images/r2.jpg" alt="team" class="static_img" /></a>
-        </figure>
-      </div>
+  <figure class="homebox">
+    <a href="contact.php">
+      <div id="bottomright">
+        <h3>CONTACT US/FAQS</h3>
+        <p> Have any more questions? Join our mailing list in the footer below or ask us a question! </p>
+        <img src="images/r2.jpg" alt="team" class="static_img" />
+    </a>
     </div>
+  </figure>
+  </div>
+  </div>
 
+  <div class="upcoming">
+    <h2>EVENTS HAPPENNING SOON</h2>
+    <p>We have many events coming soon. Check out our events pages for more information
+      about dates, times, location. </p>
+  </div>
 
-    <div class="slideshow">
-      <h2> Upcoming Event </h2>
+  <div class="slideshow_cont">
+    <div class="slidebox">
       <?php
       foreach ($records as $record) { ?>
         <img alt="<?php echo $record["file_name"] ?>" src="uploads/slideshow/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>" class="slides">
       <?php
     }
-    ?>
-      <form id="home_upload_form" action="index.php" method="post" enctype="multipart/form-data">
-        <!-- Image cannot excede MAX_FILE_SIZE  -->
-        <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
-        <label for="file_data">Upload</label>
-        <input id="file_data" type="file" name="file_data">
-        <button name="uploadHome" type="submit">Upload to Slideshow</button>
-      </form>
+    ?> </div>
+    <form id="home_upload_form" action="index.php" method="post" enctype="multipart/form-data">
+      <!-- Image cannot excede MAX_FILE_SIZE  -->
+      <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+      <label for="file_data">Upload</label>
+      <input id="file_data" type="file" name="file_data">
+      <button name="uploadHome" type="submit">Upload to Slideshow</button>
+    </form>
 
-      <form id="home_delete_form" action="home_delt.php" method="post" enctype="multipart/form-data">
-        <label name="delete_lab">Delete from Slideshow</label>
-        <button name="delete_butn" type="submit">Click here to delete</button>
-      </form>
+    <form id="home_delete_form" action="home_delt.php" method="post" enctype="multipart/form-data">
+      <label name="delete_lab">Delete </label>
+      <button name="delete_butn" type="submit">Click here to delete</button>
+    </form>
 
-    </div>
+  </div>
 
   </div>
 
