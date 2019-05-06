@@ -20,9 +20,10 @@ body {
 /* Navbar container */
 .navbar {
   overflow: hidden;
-  background-color: #333;
   font-family: Arial;
   padding: 10px;
+  background-color: white;
+  box-shadow: 0px 15px 10px -15px;
 }
 
 /* Adjusted this code  - Susan */
@@ -30,17 +31,24 @@ body {
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: green;
   text-align: center;
   padding: 14px 16px;
-  margin: 30px 50px 30px 50px;
+  margin: 30px 50px 5px 50px;
   text-decoration: none;
 }
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover {
   color: rgb(183, 178, 178);
+  animation: fadeIn 0.6s;
 }
+
+@keyframes fadeIn {
+  from {color: #fff}
+  to {color:rgb(183, 178, 178)}
+}
+
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
@@ -339,8 +347,9 @@ td,th {
 
 /* --------------logo?? ------------------*/
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  display: block;
+  margin: auto;
 }
 
 #logo_a {

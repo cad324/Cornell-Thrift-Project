@@ -1,4 +1,5 @@
 <header>
+  <img class="logo" src="images/logo.png" alt="logo"/>
   <div class="navbar" id="myHeader">
     <nav id="nav">
       <a class="home_link" href="index.php">Home</a>
