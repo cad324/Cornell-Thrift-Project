@@ -219,12 +219,12 @@ fieldset {
 #events_main {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 100px;
 }
 
 .events_row {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  /* flex-direction: row; */
 }
 
 #thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
