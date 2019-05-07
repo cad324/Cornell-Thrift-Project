@@ -41,5 +41,5 @@ See the course website for a detailed citation policy with more information on u
 
 Each team member should sign their name and include today's date and time to submit **FINAL VERSION**.
 
-- Full Name of Each Contributing Team Member: Clive Duncan, Ha Yeon Shin
+- Full Name of Each Contributing Team Member: Clive Duncan, Ha Yeon Shin, Yuyi He
 - Date & Time:
