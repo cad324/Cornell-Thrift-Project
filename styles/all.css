@@ -61,7 +61,6 @@ nav {
 .login_btn {
   -webkit-appearance: button;
   -moz-appearance: button;
-  appearance: button;
   cursor: pointer;
 }
 
@@ -305,7 +304,6 @@ fieldset {
 
 .event_forms {
   display: inline-block;
-  vertical-align: left;
 }
 
 .events_page label {
