@@ -314,7 +314,7 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
 
 [You may need to add additional subgoals and/or actions for each task.]
 
-**Task 1: Users wants to contact the club to ask a question.**
+**Task 1: Abby wants to ask the club if they plan to add a Thrift Exchange Closet on North Campus.**
 
 [Add as many subgoals as you needs]
 **Subgoal # 1 : Go to Contact page**
