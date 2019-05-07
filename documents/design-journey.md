@@ -494,9 +494,10 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
 
   - Will [persona name] have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: [yes]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
 
-        [Tell us why..]
+        Abby will be able to navigate to the link because if she tries to log in,
+        she will be able to see the form. s
 
 [Add as many actions as you need...]
 **Action # 1 : Find her profile on the members page**
