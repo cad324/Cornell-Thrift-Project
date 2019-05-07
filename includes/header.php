@@ -14,7 +14,7 @@
         <a class="login_btn" href="login.php">Login</a>
       <?php } else { ?>
         <form method="get" action="index.php" >
-          <input type="submit" name="logout" class="login_btn" value="Logout"/>
+          <button class="logout_btn" type="submit" name="logout" class="login_btn" value="Logout">Logout</button>
         </form>
       <?php } ?>
     </nav>
