@@ -609,6 +609,7 @@ We also do not always label our forms appropriately so that it is super clear wh
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
+### Home Page
 ![home final sketch](home_final.jpg)
  Based on Cognitive Walkthrough, I added links to each page and description in home.
 Members
@@ -620,9 +621,11 @@ Members Page:
 After consulting with our clients, we realize that we only need one table that holds all the information of the E-Board members.
 We also think that having a seperate form for "Modify Members" and "Add Members" is better than concatenate the two forms into one because this way, the users are less likely to get confiused on the use of the form.
 
+### Members Page
 This is what unlogged in users will see:
 ![Final Members Page](members_not_logged_in_final.JPG)
 
+### Members Page (logged in)
 This is what logged in users will see:
 ![Final Members Page Logged In](members_logged_in_final.JPG)
 
@@ -640,12 +643,29 @@ Events
 
 We made sure to clearly add a confirmation page so that  users who are less comfortable with computers understand that they have successfully submitted the form.
 
+### Events Page
+
 ![Final Events Page](events_final_page.jpg)
 
 ![Final Events Confirmation Page](events_final_confirmation.jpg)
 
 ![Final Resources sketch](final_resources.jpg)
 Resources page was pretty straightforward, so I just changed the logo.
+
+
+### Contact Page
+
+![Contact Page](contact_final.jpg)
+
+**Contact Confirmation Page**
+  ![Contact Confirmation Page](contact_confirmation.jpg)
+
+
+- Previously, the contact page had less content to populate the page. In response to milestone 3 feedback, more information was provided to the users in the form of links to the Thrift club's emails as well as their social media pages.
+
+### Login Page
+
+![Login Page](login_final.jpg)
 
 
 ## Database Schema

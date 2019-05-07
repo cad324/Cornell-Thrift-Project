@@ -25,8 +25,14 @@
             <p id="footer_contact">Contact Us</p>
             <a href="mailto:cornellthrift@gmail.com">cornellthrift@gmail.com</a>
             <p>Social</p>
-            <a target="_blank" href="https://www.facebook.com/cornellthrift/"><img class="social_img" src="images/facebook.png" alt="facebook icon" /></a>
             <a target="_blank" href="https://www.instagram.com/cornellthrift/?hl=en"><img class="social_img" src="images/instagram.png" alt="instagram icon" /></a>
+            <cite>
+                <a target="_blank" href="https://www.facebook.com/cornellthrift/"><img class="social_img" src="images/facebook.png" alt="facebook icon" /></a>
+                <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            </cite>
+            <!-- Image sources:
+            https://www.flaticon.com/free-icon/facebook_174848#term=facebook&page=1&position=1
+            https://www.flaticon.com/free-icon/instagram_733614#term=instagram&page=1&position=3 -->
         </div>
     </div>
     <p id="copyright">Copyright &copy <?php echo date("Y");?>
