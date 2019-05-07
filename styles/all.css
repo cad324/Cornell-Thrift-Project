@@ -196,24 +196,13 @@ fieldset {
   align-content: center;
   justify-content: center;
   padding: 10px 100px;
+  width: 1000px;
+  margin: 0px auto;
 }
 
 .events_row {
   display: block;
-  /* flex-direction: row; */
 }
-
-#thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
-  display: flex;
-  flex-direction: column;
-  max-width: 1000px;
-}
-
-/* #update_events, #add_events, #delete_events {
-  display: inline-block;
-  vertical-align: left;
-  max-width: 50px;
-} */
 
 .event_forms {
   display: inline-block;
