@@ -40,9 +40,9 @@ function print_record($record)
   <div id="content-wrap">
     <div class="resource_body">
 
-      <h1><u>Thrift Stores in Ithaca</u></h1>
+      <h1>Thrift Stores in Ithaca</h1>
       <!-- <p><a target="_blank" href="http://reusetompkins.com/">http://reusetompkins.com/</a></p> -->
-      <p>A <a target="_blank" href="http://reusetompkins.com/">comprehensive directory</a> for used furniture, clothing, books & music, computers & electronics, sports & outdoor equipment, art & sewing materials, and antiques for all of Ithaca and Tompkins County.</p>
+      <p>A <a class="text_link" target="_blank" href="http://reusetompkins.com/">comprehensive directory</a> for used furniture, clothing, books & music, computers & electronics, sports & outdoor equipment, art & sewing materials, and antiques for all of Ithaca and Tompkins County.</p>
 
       <!-- <ul>
       <li><a href="/resources_stores.php">All Stores </a></li>

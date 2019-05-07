@@ -81,6 +81,20 @@ nav {
   animation: fadeIn 0.5s;
 }
 
+.text_link {
+  text-decoration: underline;
+  color: blue;
+}
+
+.text_link:hover {
+  color:#188530;
+  animation: textLinkFade 0.2s;
+}
+
+@keyframes textLinkFade {
+  from {color: blue}
+  to {color: #188530}
+}
 
 /* taken from w3school for now*/
 * {box-sizing:border-box}
@@ -142,6 +156,7 @@ footer a {
 #colm1, #colm2 {
   float: left;
   width: 50%;
+  height: 950px;
 }
 
 .row:after {
