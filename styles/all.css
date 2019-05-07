@@ -58,7 +58,7 @@ nav {
 }
 
 
-#login_btn {
+.login_btn {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -193,6 +193,8 @@ fieldset {
 #events_main {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
   padding: 10px 100px;
 }
 
@@ -204,11 +206,22 @@ fieldset {
 #thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
 }
 
-#update_events, #add_events {
-  display: flex;
-  flex-direction: column;
+/* #update_events, #add_events, #delete_events {
+  display: inline-block;
+  vertical-align: left;
+  max-width: 50px;
+} */
+
+.event_forms {
+  display: inline-block;
+  vertical-align: left;
+}
+
+.events_page label {
+  margin-bottom: 10px;
 }
 
 .error {

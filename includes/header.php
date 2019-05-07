@@ -11,10 +11,10 @@
         <!-- <form action="login.php" >
           <input type="submit" id="login_btn" value="Login">
         </form> -->
-        <a id="login_btn" href="login.php">Login</a>
+        <a class="login_btn" href="login.php">Login</a>
       <?php } else { ?>
         <form method="get" action="index.php" >
-          <input type="submit" name="logout" id="login_btn" value="Logout"/>
+          <input type="submit" name="logout" class="login_btn" value="Logout"/>
         </form>
       <?php } ?>
     </nav>
