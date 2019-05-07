@@ -652,9 +652,9 @@ We made sure to clearly add a confirmation page so that  users who are less comf
 
 ![Final Events Confirmation Page](events_final_confirmation.jpg)
 
-![Final Resources sketch](final_resources.jpg)
-Resources page was pretty straightforward, so I just changed the logo.
-
+Resources
+![Final Resources sketch](Final_Stores_Near_By.jpg)
+Based on our cognitive walkthrough, we got rid of dropdown nav bar for Resources page. Instead, to avoid any confusion for users, we modified resources page to 'stores near by' page. We realized that having a page for just thrifting tips was unnecessary. Users will be able to easily find thrift stores in Ithaca by filtering category of the stores. 
 
 ### Contact Page
 
