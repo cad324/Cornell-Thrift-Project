@@ -87,7 +87,7 @@ nav {
 
 /* ------------------ footer ---------------------- */
 footer {
-  margin: 10px 0 0 0;
+  margin: 100px 0 0 0;
   width: 100%;
   background-color:#333;
   color: #fff;
@@ -179,8 +179,33 @@ footer a {
   margin: 50px 0 0 100px;
 }
 
+#msg_submit {
+  padding: 7px 25px;
+  border-radius: 25px;
+  font-size: 17px;
+  background-color: rgb(16, 100, 65);
+  color: white;
+}
+
 #contact_wrapper, #login_wrapper {
   margin: auto;
+}
+
+#contact_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#contact_wrapper div {
+  flex-grow: 1;
+}
+
+#contact_wrapper img {
+  width: 100px;
+}
+
+#contact_wrapper h2 {
+  text-align: left;
 }
 
 #contact_wrapper form div, #login_wrapper form div {
@@ -192,6 +217,21 @@ footer a {
   width: 70px;
   text-align: right;
   vertical-align: top;
+}
+
+#contact_wrapper textarea {
+  margin: 0px;
+  width: 560px;
+  height: 225px;
+  resize: none;
+}
+
+#contactForm {
+  display:inline-block;
+}
+
+#contact_submit_wrapper {
+  text-align:center;
 }
 
 #login_btn a {
@@ -228,6 +268,10 @@ fieldset {
 
 .events_page label {
   margin-bottom: 10px;
+}
+
+#pop_up, #behind_seams, #sewing_workshops {
+  margin:100px 0;
 }
 
 .error {
@@ -310,12 +354,18 @@ label{
 }
 
 .success {
-color: lightgreen;
+  color: lightgreen;
 }
+
+.success.dark {
+ color: green;
+}
+
 .resource_body{
   margin-left: 50px;
   margin-right: 50px;
 }
+
 .heavy_text {
   margin-left: 5%;
   margin-right: 5%;
@@ -351,7 +401,7 @@ td,th {
 
 /* --------------logo?? ------------------*/
 .logo {
-  width: 200px;
+  width: 120px;
   display: block;
   margin: auto;
 }
