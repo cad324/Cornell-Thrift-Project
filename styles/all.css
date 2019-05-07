@@ -62,6 +62,23 @@ nav {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
+  cursor: pointer;
+}
+
+.logout_btn {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 5px auto 5px auto;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout_btn:hover {
+  color: #679C44;
+  animation: fadeIn 0.5s;
 }
 
 
@@ -196,24 +213,13 @@ fieldset {
   align-content: center;
   justify-content: center;
   padding: 10px 100px;
+  width: 1000px;
+  margin: 0px auto;
 }
 
 .events_row {
   display: block;
-  /* flex-direction: row; */
 }
-
-#thrift_exchange, #pop_up, #behind_seams, #sewing_workshops {
-  display: flex;
-  flex-direction: column;
-  max-width: 1000px;
-}
-
-/* #update_events, #add_events, #delete_events {
-  display: inline-block;
-  vertical-align: left;
-  max-width: 50px;
-} */
 
 .event_forms {
   display: inline-block;
