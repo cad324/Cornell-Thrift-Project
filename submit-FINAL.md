@@ -37,7 +37,7 @@ See the course website for a detailed citation policy with more information on u
 
     Your assignment's **submission time** is the time of your **last push** and _not_ the time of your last commit (the dates next to commits in GitHub).
 
-- [] We are ready to have our assignment graded.
+- [x] We are ready to have our assignment graded.
 
 Each team member should sign their name and include today's date and time to submit **FINAL VERSION**.
 
