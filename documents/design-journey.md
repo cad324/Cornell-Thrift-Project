@@ -34,7 +34,7 @@ The purpose of the website is to promote Cornell Thrift and have Cornell student
 
 The potential audience for this website are members of the club and people at Cornell who are intersted in what Cornell Thrift do. The target audiences will be able to find mission of the club and more information (image and position) about eboard members. Also, they can look for the upcoming events/activities such as 'Thrift Exchange Closets' or 'Pop-up Shop'. For anyone who would like to be part of the club can subscribe for newsletter, they can fill out the form. Only Eboard members will be able to upload/delete events and gallery.
 
-We decided that the client (i.e. E-Board members) should be considered a second target audience because there is a lot of funcionality that the client requested for its e-board members. There are a lot of aspects of the website that need to be regularly updated and E-board needs access to that. This aspect of the website is significant enough that we believed that it warranted making the client a second target audience.
+We decided that the client (i.e. E-Board members) should be considered a secondary target audience because there is a lot of funcionality that the client requested for its e-board members. There are a lot of aspects of the website that need to be regularly updated and E-board needs access to that. This aspect of the website is significant enough that we believed that it warranted making the client a second target audience.
 
 
 ## Client Requirements & Target Audiences' Needs
@@ -169,14 +169,16 @@ Finally, we decided to create a separate page for the login form in order to mak
 
 [What interactive features will your site have? What PHP elements will you include?]
 * We have a login/logout page for the E-board members of Cornell Thrift. The login/logout link will appear on the top right of each page.
-* If a E-board member of Cornell Thrift is logged in, then he or she can upload new pictures and update events(make changes to the website)
+* If a E-board member of Cornell Thrift is logged in, then he or she can upload and delete new pictures, update member info, and update, add, and delete events(make changes to the website)
 * We have a contact form where people can put in their name and email address and write a message to the Cornell Thrift club.
 * Under each page, we will have a form that says "Sign up for the mailling list" and takes in people's email
+* We will dynamically render the events on the events page, the thrift stores on the stores nearby page, and the eboard members on the members page.
+* Users will be able to filter the thrift stores by category on the Stores Nearby page.
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
-* The login and logout functionality will make sure that Cornell Thrift's E-board members can edit their website and upload new contents which is what our client wants.
+* The login and logout functionality will make sure that Cornell Thrift's E-board members can edit their website and upload new content which is what our client wants.
 * The contact form allows people who are interested in Cornell Thrift to interact with the Eboard members which is what our client wants.
-* The mailling list sign up would allow people who are interest in Cornell Thrift to get more information about this club which is what our client wants to happen.
+* The mailling list sign up would allow people who are interested in Cornell Thrift to get more information about this club which is what our client wants to happen.
 
 ## Work Distribution
 
@@ -189,7 +191,7 @@ Milestone 1
 Initial Sketches
 - Home - Susan
 - Memebers - Yuyi
-- Our Events - Samantha
+- Events - Samantha
 - Thrifting Resources - Ha Yeon
 - Contact Us, Header/Footer, Login - Clive
 
@@ -235,7 +237,7 @@ At Every Submissions
 
 [Share the feedback notes you received from your client about your initial design.]
 
-The client said that they liked our initial design and had no major changes to add except to make sure that we use their new logo design that they shared with us in our header.
+The client said that they liked our initial design and had no major changes to suggest. They wanted us to make sure that we use their new logo design that they shared with us in our header. They also wanted us to make sure that we included up to date photographs and information about the club, with the most current events shown first.
 
 ## Iterated Design
 
@@ -244,6 +246,9 @@ The client said that they liked our initial design and had no major changes to a
 Here is the updated logo the client requested that we use. We will alter the header design to reflect that.
 
 ![Cornell Thrift Logo](ThriftLogoYellow.png)
+
+This is the updated events page based on client feedback.
+![Final Events Page](events_final_page.jpg)
 
 
 ## Evaluate your Design
@@ -641,9 +646,13 @@ This is what the Add Member's Form look like:
 
 Events
 
-We made sure to clearly add a confirmation page so that  users who are less comfortable with computers understand that they have successfully submitted the form.
+We altered the layout for the events page to be more streamlined as opposed to the two-column layout because we received comments during our demonstration that the page appeared very cluttered and it was difficult to focus on any one event. By creating a single column we hoped to make the page more aestetically pleasing. I also decided to add pictures to the page to make it more visually appealing and provide visual examples of what these events look like to students interested in the events the club runs. I also added an events name section to provide more clarity to visitors of the site about what exactly these events are and make it easier for E-board to make changes to individual events by being able to identify them by name.
 
-![Final Events Page](events_final_page.jpg)
+![Final Events Page Logged out View](p4events_Logged_out.jpg)
+
+![Final Events Page Logged in View](p4events_Logged_in.jpg)
+
+We made sure to clearly add a confirmation page so that  users who are less comfortable with computers understand that they have successfully submitted the form.
 
 ![Final Events Confirmation Page](events_final_confirmation.jpg)
 
