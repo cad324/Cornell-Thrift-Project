@@ -189,7 +189,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
 
 <?php include("includes/heads.php"); ?>
 
-<body>
+<body class = "events_page">
 
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php"); ?>
@@ -287,7 +287,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
         </div>
 
         <div>
-          <p>Behind the Seams is a photo campaign to get people thinking about the value of clothes by sharing the stories they hold. We're hoping to reduce waste by having people rethink the way they see their clothes. We hold an open photo shoot every other Friday from 12 - 2pm at Temple of Zeus, and new photos go up on our Behind the Seams Facebook page every Tuesday and Friday. </p>
+          <p>Behind the Seams is a photo campaign to get people thinking about the value of clothes by sharing the stories they hold. We're hoping to reduce waste by having people rethink the way they see their clothes. We hold an open photo shoot every other Friday from 12 - 2pm at Temple of Zeus, and new photos go up on our <a href = "https://www.facebook.com/behindtheseamscornellthrift/" target = "_blank"> Behind the Seams Facebook page </a>every Tuesday and Friday.</p>
         </div>
 
       </div>
@@ -329,7 +329,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
       <div class="events_row">
         <div id="updating_events">
           <!-- Form to update events -->
-          <fieldset>
+          <fieldset class = "event_forms">
             <h2>Update an Event?</h2>
             <?php
             if (isset($_POST["update_event"])&& $update_event == TRUE) {
@@ -337,7 +337,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
             } else {
             ?>
             <form id="update_events" action="events.php" method="post">
-
+              <div>
               <label for="event_options">Select an Event: </label>
               <!-- Will change this to a drop down later-->
               <select id = "event_options" name = "event_options">
@@ -351,31 +351,41 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
                 }
                 ?>
               </select>
+              </div>
               <?php
               if (isset($_POST["update_event"])&& $update_event == FALSE) {
                 echo "<p class = 'error'> Please add a change to at least one field before submitting the form</p>";
               }
               ?>
+              <div>
               <label for="update_name">Change Name: </label>
               <input id="update_name" type="text" name="update_name">
+              </div>
 
+              <div>
               <label for="update_date">Change Date: </label>
               <input id="update_date" type="date" name="update_date">
+              </div>
 
+              <div>
               <label for="update_time"> Change Time: </label>
               <input id="update_time" type="text" name="update_time">
+              </div>
 
+              <div>
               <label for="update_location"> Change Location: </label>
               <input id="update_location" type="text" name="update_location">
+              </div>
 
+              <div>
               <button name="update_event" type="submit">Update</button>
-
+              </div>
             </form>
             <?php } ?>
           </fieldset>
         </div>
         <div id="delete_add">
-          <fieldset>
+          <fieldset class = event_forms>
             <!--Form to remove events -->
             <h2>Delete an Event?</h2>
             <?php
@@ -402,7 +412,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
             <?php } ?>
           </fieldset>
 
-          <fieldset>
+          <fieldset class = "event_forms">
             <!--Form to add events -->
             <h2>Add an Event?</h2>
             <?php
@@ -411,9 +421,11 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
             } else {
             ?>
             <form id="add_events" action="events.php" method="post">
-
+              <div>
               <label for="pick_type">Categorize this event as a: </label>
+              </div>
 
+              <div>
               <?php
                 $sql = "SELECT * FROM categories";
                 $params = array();
@@ -423,10 +435,14 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
                   echo "<input type = 'radio' name='type' value = '". $category['id'] . "'>" . $category['category'] . "<br>";
                 }
               ?>
+              </div>
 
+              <div>
                 <input type = "radio" name = "type" value = "999999"> Other:<br>
                 <input id="other" type="text" name="new_type">
+              </div>
 
+              <div>
                 <?php
                   if (isset($_POST["add_event"])&& $need_category == TRUE) {
                     echo "<p class = 'error'> You must select a category or add one of your own.</p>";
@@ -438,7 +454,9 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
                     echo "<p class = 'error'> If you wish to select Other, you must name this new category.</p>";
                   }
                 ?>
+              </div>
 
+                <div>
                 <label for="new_name"> Event Name: </label>
                 <input id="new_name" type="text" name="new_name">
 
@@ -447,17 +465,26 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
                     echo "<p class = 'error'> You must provide a name for this event.</p>";
                   }
                 ?>
+                </div>
 
+                <div>
                 <label for="new_date">Date: </label>
                 <input id="new_date" type="date" name="new_date">
+                </div>
 
+                <div>
                 <label for="new_time">Time: </label>
                 <input id="new_time" type="text" name="new_time">
+                </div>
 
+                <div>
                 <label for="new_location">Location: </label>
                 <input id="new_location" type="text" name="new_location">
+                </div>
 
+                <div>
                 <button name="add_event" type="submit">Add</button>
+                </div>
 
             </form>
             <?php } ?>
@@ -467,7 +494,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
     }
     ?>
     </div>
-
+  </div>
     <?php include("includes/footer.php"); ?>
 </body>
 

@@ -40,21 +40,32 @@ function print_record($record)
   <div id="content-wrap">
     <div class="resource_body">
 
-      <h1><u>Thrift Stores in Ithaca</u></h1>
-      <p><a target="_blank" href="http://reusetompkins.com/">http://reusetompkins.com/</a></p>
-      <p>A comprehensive directory for used furniture, clothing, books & music, computers & electronics, sports & outdoor equipment, art & sewing materials, and antiques for all of Ithaca and Tompkins County.</p>
+      <h1>Thrift Stores in Ithaca</h1>
+      <!-- <p><a target="_blank" href="http://reusetompkins.com/">http://reusetompkins.com/</a></p> -->
+      <p>A <a class="text_link" target="_blank" href="http://reusetompkins.com/">comprehensive directory</a> for used furniture, clothing, books & music, computers & electronics, sports & outdoor equipment, art & sewing materials, and antiques for all of Ithaca and Tompkins County.</p>
 
-      <ul>
+      <!-- <ul>
       <li><a href="/resources_stores.php">All Stores </a></li>
-      <li><a href="/resources_stores.php?category=Classic Thrift Stores">Classic Thrift Stores</a></li>
+      <li><a href="/resources_stores.php?category=Classic Thrift Stores#filter">Classic Thrift Stores</a></li>
       <li><a href="/resources_stores.php?category=Specialty Clothing">Specialty Clothing</a></li>
       <li><a href="/resources_stores.php?category=Furniture/Books/Other">Furniture/Books/Other</a></li>
       <li><a href="/resources_stores.php?category=Sewing and Alteration Supplies">Sewing and Alteration Supplies</a></li>
-    </ul>
+    </ul> -->
 
+    <form method="get" id="filter">
+        <label for="storeID">Filter by: </label>
+        <select name="category">
+            <option value="">All Stores</option>
+            <option value="Classic Thrift Stores">Classic Thrift Stores</option>
+            <option value="Specialty Clothing">Specialty Clothing</option>
+            <option value="Furniture/Books/Other">Furniture/Books/Other</option>
+            <option value="Sewing and Alteration Supplies">Sewing and Alteration Supplies</option>
+        </select>
+        <input type="submit" value="Filter"/>
+    </form>
 
     <?php
-    if ( is_null($category) ) {
+    if (!$category) {
       // No store to query, so return everything!
       ?>
         <h2>All Stores</h2>

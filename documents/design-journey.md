@@ -314,7 +314,7 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
 
 [You may need to add additional subgoals and/or actions for each task.]
 
-**Task 1: Users wants to contact the club to ask a question.**
+**Task 1: Abby wants to ask the club if they plan to add a Thrift Exchange Closet on North Campus.**
 
 [Add as many subgoals as you needs]
 **Subgoal # 1 : Go to Contact page**
@@ -618,12 +618,26 @@ Members
 
 We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.
 
+Members Page:
+
+After consulting with our clients, we realize that we only need one table that holds all the information of the E-Board members.
+We also think that having a seperate form for "Modify Members" and "Add Members" is better than concatenate the two forms into one because this way, the users are less likely to get confiused on the use of the form.
+
 This is what unlogged in users will see:
-![Final About Page](about_final.JPG)
+![Final Members Page](members_not_logged_in_final.JPG)
 
 This is what logged in users will see:
-![Final About Page Logged In](about_final_logged_in.JPG)
-If the user clicks the "Modify" buttom, php will automatically fill out the "Add/Modify" form with the original information. The user just need to edit the category that he or she wants to modify, and click the "Add/Modify" buttom to update the information
+![Final Members Page Logged In](members_logged_in_final.JPG)
+
+If the user clicks the "Modify" buttom, php will automatically bring the user to a seperate page where there is a "Modify (Member's name) Information" form filled with this member's original information. The user just need to edit the category that he or she wants to modify, and click the "Modify" buttom to update the information.
+
+This is what the Modify Member's Form look like:
+![Modify Members Page](modify_member_final.JPG)
+
+If the user clicks the "Click Here to add a new member to the Eboard!" link, php will automatically bring the user to a seperate page where there is a "Add Members" form. The user just need to fill in all the categories and click the "Add" buttom to add the new mem,ber to the database.
+
+This is what the Add Member's Form look like:
+![Add Members Page](add_member_final.jpg)
 
 Events
 
