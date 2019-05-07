@@ -494,7 +494,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
     }
     ?>
     </div>
-
+  </div>
     <?php include("includes/footer.php"); ?>
 </body>
 
