@@ -494,9 +494,10 @@ __Task 2:__ Abby wants to change her photo on the website to her new headshot.
 
   - Will [persona name] have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: [yes]
-    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
 
-        [Tell us why..]
+        Abby will be able to navigate to the link because if she tries to log in,
+        she will be able to see the form. s
 
 [Add as many actions as you need...]
 **Action # 1 : Find her profile on the members page**
@@ -609,9 +610,11 @@ We also do not always label our forms appropriately so that it is super clear wh
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
-### Home Page
-![home final sketch](home_final.jpg)
+HOME
+
+![home final sketch](home_final_2.jpg)
  Based on Cognitive Walkthrough, I added links to each page and description in home.
+
 Members
 
 We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.
