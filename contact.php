@@ -60,10 +60,18 @@ if (isset($_POST["submit"])) {
       <div>
         <h2>EMAIL</h2>
         <a href="mailto:cornellthrift@gmail.com"><img src="images/email-icon.png" alt="email icon"></a>
+        <!--Source: http://uploads.strikinglycdn.com/static/icons/line-icons/28.png -->
         <h2>FACEBOOK</h2>
         <a target="_blank" href="https://www.facebook.com/cornellthrift/"><img src="images/fb-icon.png" alt="facebook icon"></a>
-        <h2>INSTAGRAAM</h2>
+        <!--Source: http://uploads.strikinglycdn.com/static/icons/line-icons/1.png -->
+        <h2>INSTAGRAM</h2>
+        <!--Source: http://uploads.strikinglycdn.com/static/icons/line-icons/94.png -->
         <a target="_blank" href="https://www.instagram.com/cornellthrift/?hl=en"><img src="images/ig-icon.png" alt="instagram icon"></a>
+        <cite>
+          image sources: <a href="http://uploads.strikinglycdn.com/static/icons/line-icons/28.png">email_icon</a>,
+                         <a href="http://uploads.strikinglycdn.com/static/icons/line-icons/1.png">fb_icon</a>,
+                         <a href="http://uploads.strikinglycdn.com/static/icons/line-icons/94.png">ig_icon</a>
+        <cite>
       </div>
     </div>
   </div>

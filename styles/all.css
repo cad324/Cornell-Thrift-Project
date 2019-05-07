@@ -441,6 +441,10 @@ td,th {
   margin: 0 !important;
 }
 
+cite {
+  font-size: 10px;
+}
+
 /* --------------logo?? ------------------*/
 .logo {
   width: 120px;
