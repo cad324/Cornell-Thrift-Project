@@ -609,8 +609,11 @@ We also do not always label our forms appropriately so that it is super clear wh
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 
-![home final sketch](home_final.jpg)
+HOME
+
+![home final sketch](home_final_2.jpg)
  Based on Cognitive Walkthrough, I added links to each page and description in home.
+
 Members
 
 We made sure that we have clear instructions throughout the webpage so people who don't like tinkering can complete their tasks without getting confused.

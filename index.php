@@ -14,10 +14,6 @@ $records = exec_sql_query(
   "SELECT * FROM images"
 )->fetchAll();
 
-$eventpic = exec_sql_query(
-  $db,
-  "SELECT * FROM eventpic"
-)->fetchAll();
 
 // User must be logged in to upload to image gallery
 if (isset($_POST["uploadHome"]) && is_user_logged_in()) {
@@ -90,88 +86,75 @@ include("includes/heads.php"); ?>
       <p> Cornell Thrift’s mission is to reduce campus‐wide waste through redistribution of reusable personal items. The initiative was inspired by the concept of “free‐piles” seen in university co‐operative housing, along with the annual Dump‐and‐Run sale. We want to see reusable clothes, homeware, electronics, and small furniture going into homes and not trashcans ‐ all year round. <p>
     </div>
 
-
-    <div id="home_events_box">
-      <a href="about.php">
-        <h3 id="home_events">EVENTS</h3> <a>
-          <p>Cornell Thrift hosts events around campus, from a photo campaign at the Temple of Zeus to
-            a clothing exchange sloet at Willard Straight to mending workshops at the Willard Straight
-            International Lounge. Some of these activities are year long, while others are workshops and
-            partnered events. Learn more about the activities through the Events page.
-          </p>
-          <div class="slideshow_cont">
-            <div class="slidebox">
-              <?php
-              foreach ($records as $record) { ?>
-                <img alt="<?php echo $record["file_name"] ?>" src="uploads/slideshow/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>" class="slides">
-              <?php
-            }
-            ?> </div>
-            <?php
-            if (is_user_logged_in()) { ?>
-              <form id="home_upload_form" action="index.php" method="post" enctype="multipart/form-data">
-                <!-- Image cannot excede MAX_FILE_SIZE  -->
-                <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
-                <label for="file_data">Upload</label>
-                <input id="file_data" type="file" name="file_data">
-                <button name="uploadHome" type="submit">Upload to Slideshow</button>
-              </form>
-
-              <form id="home_delete_form" action="home_delt.php" method="post" enctype="multipart/form-data">
-                <label name="delete_lab">Delete </label>
-                <button name="delete_butn" type="submit">Click here to delete</button>
-              </form>
-            <?php } ?>
-          </div>
-
-    </div>
-
-
-    <div id="home_events_box">
-      <a href="about.php">
-        <h3 id="home_events">EVENTS</h3> <a>
-          <p>Cornell Thrift hosts events around campus, from a photo campaign at the Temple of Zeus to
-            a clothing exchange sloet at Willard Straight to mending workshops at the Willard Straight
-            International Lounge. Some of these activities are year long, while others are workshops and
-            partnered events. Learn more about the activities through the Events page.
-          </p>
-          <div id="eventpics">
-            <?php
-            foreach ($eventpic as $ep) { ?>
-              <img alt="<?php echo $ep["file_name"] ?>" src="uploads/slideshow/<?php echo ($ep["id"] . "." . $ep["file_ext"]); ?>" class="eventpic_sizing">
-            <?php
-          }
-          ?> </div>
-    </div>
-
-
-    <div id="colm2">
-      <figure class="homebox">
-        <a href="resources_stores.php">
-          <div id="topright">
-            <h3>OTHER THRIFT ACTVITIES</h3>
-            <p> There are many more ways to help out! Cornell is surrounded by thrift stores. </p>
-            <img src="images/r4.jpg" alt="team" class="static_img" />
+    <div id="color_event">
+      <div id="event_slideshow_wrap">
+        <h3 class="home_titles"> <a href="about.php">EVENTS</a></h3>
         </a>
+        <div id="home_events_box">
+          <p>Cornell Thrift hosts events around campus, from a photo campaign at the Temple of Zeus to
+            a clothing exchange slot at Willard Straight to mending workshops at the Willard Straight
+            International Lounge. Some of these activities are year long, while others are workshops and
+            partnered events. Thrift with us and check out our upcoming events!
+          </p>
+        </div>
+
+        <div class="slidebox">
+          <?php
+          foreach ($records as $record) { ?>
+            <img alt="<?php echo $record["file_name"] ?>" src="uploads/slideshow/<?php echo ($record["id"] . "." . $record["file_ext"]); ?>" class="slides">
+          <?php
+        }
+        ?> </div>
+        <div id="log_in_form">
+          <?php
+          if (is_user_logged_in()) { ?>
+            <form id="home_upload_form" action="index.php" method="post" enctype="multipart/form-data">
+              <!-- Image cannot excede MAX_FILE_SIZE  -->
+              <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+              <label for="file_data">Upload</label>
+              <input id="file_data" type="file" name="file_data">
+              <button name="uploadHome" type="submit">Upload to Slideshow</button>
+            </form>
+
+            <form id="home_delete_form" action="home_delt.php" method="post" enctype="multipart/form-data">
+              <label name="delete_lab">Delete </label>
+              <button name="delete_butn" type="submit">Click here to delete</button>
+            </form>
+          <?php } ?>
+        </div>
+      </div>
     </div>
-    </figure>
 
-    <figure class="homebox">
-      <a href="contact.php">
-        <div id="bottomright">
-          <h3>CONTACT US/FAQS</h3>
-          <p> Have any more questions? Join our mailing list in the footer below or ask us a question! </p>
-          <img src="images/r2.jpg" alt="team" class="static_img" />
+    <div id="home_resource_box">
+      <h3 class="home_titles"> <a href="resources_stores.php">THRIFT RESOURCES</a></h3>
       </a>
-  </div>
-  </figure>
-  </div>
-  </div>
+      <!-- Source: //res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/v1/798878/banner_geb13y.png -->
+      <img src="//res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/v1/798878/banner_geb13y.png" alt="resource" id="home_resource_pic" alt="resource" />
+      <p>Ithaca is home to a variety of second hand stores, many which are close to campus. Explore these
+        stores and find out other ways in which you can help support the Cornell and Ithaca community
+        through recycling used items.
+      </p>
+    </div>
 
-  <div class="upcoming">
-    <h2>EVENTS HAPPENNING SOON</h2>
-    <p>We have many events coming soon. Check out our events pages for more information
-      about dates, times, location. </p>
+    <div id="color_mem">
+      <div id="home_members_box">
+        <h3 class="home_titles"> <a href="about.php">JOIN US!</a></h3>
+        <p>Do you also love Cornell Thrift? Join us at our Gbody meetings and get to know
+          the Cornell Thrift team.
+        </p>
+        <!-- Source: https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwju7rLi_oniAhVFp1kKHbRPBewQjRx6BAgBEAU&url=https%3A%2F%2Fwww.cantonga.gov%2Fgov%2Fdepartments%2Frecycling.htm&psig=AOvVaw1eHfaPl2PaWQ6dSiwd4KlN&ust=1557338074524599 -->
+        <img src="images/recycle.png" alt="recycles" id="recycle_pic" />
+      </div>
+    </div>
+
+    <div id="home_contact_box">
+      <h3 class="home_titles"><a href="contact.php">CONTACT US/FAQS</a></h3>
+      <p> Have any more questions? Join our mailing list in the footer below or ask us a question! </p>
+    </div>
+
+
+    </figure>
+  </div>
   </div>
 
 
