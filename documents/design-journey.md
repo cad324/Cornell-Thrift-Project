@@ -704,21 +704,30 @@ Table: about_images
 * ext: TEXT {Not}
 * job: TEXT {Not}
 
-Table: resources_stores
+Table: stores
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* store_name: TEXT {Not}
-* store_address: TEXT {Not}
-* store_description: TEXT {Not}
-* store_hours: TEXT {Not}
-* store_price: TEXT {Not}
+* category: TEXT {Not}
+* name: TEXT {Not}
+* address: TEXT {Not}
+* description: TEXT {Not}
+* hours: TEXT {Not}
+* price: TEXT {Not}
 
 Table: events
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
-* type: INTEGER {Not}
 * name: TEXT {Not}
 * date: TEXT {}
 * location: TEXT {}
 * time: TEXT {}
+
+Table: categories
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* category: TEXT {Not}
+
+Table: event_categories
+* id: INTEGER {PK, U, Not, AI} -- surrogate primary key
+* event_id INTEGER {Not}
+* category_id INTEGER {Not}
 
 Table: messages
 * id: INTEGER {PK, U, Not, AI} -- surrogate primary key
@@ -821,7 +830,7 @@ $update_event = exec_sql_query($db, $sql, $params);
 * modify_member.php - modify member form
 * events.php - events page
 * resources_tips.php - Cornell Thrift resources: thrift tips
-* resources_stores.php - Cornell Thrift resources: near by thrift stores
+* ~~resources_stores.php - Cornell Thrift resources: near by thrift stores~~
 * contact.php - the user submit a question page
 * login.php - log in page
 
@@ -1058,7 +1067,7 @@ if add form is submitted
 include footer.php
 ```
 
-
+NOTE: We ultimately decided to strike this page as it became difficult to style the header with a dropdown in the nav bar and since this page had less vital content we chose to cut it from the final website.
 ### resources_tips.php
 
 ```
@@ -1113,11 +1122,22 @@ include footer.php
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 
+We ultimately decided to strike the resource tip page as it became difficult to style the header with a dropdown in the nav bar. Since this page had less vital content we chose to cut it from the final website. While we would have liked to include it and are disappointed that we could not meet that client desire, we believe that the overall visual design of the website is now better off because of it.
 
 ## Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
 
+1. Home page introduces all the other pages of the site very well and provides internal links to direct visitors to other areas of the site.
+
+2. It is really easy for e-board members of the club to make necessary changes to the site without having to know how to code/make direct changes to the files.
+
+3. We make it really easy for people interested in the club to get more involved by offering both a mailing list and a get in touch form, as well as links to social media platforms in both the contact us page and the footer.
+
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
+If we had more time, we would have liked to figure out a way to still incorporate the thrifting tips page without sacrificing elements of design. We also would have liked to add a section that listed simply "Other Events" to include those with new categories that the club may come up with in the future. If there were more events or thrift stores that the club had to advertise, a search function would have been a useful feature to add.
+
 [3. Tell us anything else you need us to know for when we're looking at the project.]
+
+There is no other information needed. We hope that our project was able to satisy our clients needs and that they feel it is better suited to their needs than their previous website.

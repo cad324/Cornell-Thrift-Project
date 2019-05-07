@@ -41,5 +41,5 @@ See the course website for a detailed citation policy with more information on u
 
 Each team member should sign their name and include today's date and time to submit **FINAL VERSION**.
 
-- Full Name of Each Contributing Team Member: Clive Duncan, Ha Yeon Shin, Yuyi He, Susan Tan
-- Date & Time: May 7 2019 3:26 PM
+- Full Name of Each Contributing Team Member: Clive Duncan, Ha Yeon Shin, Yuyi He, Samantha Lustig, Susan Tan
+- Date & Time: 5/7/19 3:48pm
