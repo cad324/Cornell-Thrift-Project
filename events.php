@@ -287,7 +287,7 @@ if (isset($_POST["add_event"]) && is_user_logged_in()) {
         </div>
 
         <div>
-          <p>Behind the Seams is a photo campaign to get people thinking about the value of clothes by sharing the stories they hold. We're hoping to reduce waste by having people rethink the way they see their clothes. We hold an open photo shoot every other Friday from 12 - 2pm at Temple of Zeus, and new photos go up on our Behind the Seams Facebook page every Tuesday and Friday. </p>
+          <p>Behind the Seams is a photo campaign to get people thinking about the value of clothes by sharing the stories they hold. We're hoping to reduce waste by having people rethink the way they see their clothes. We hold an open photo shoot every other Friday from 12 - 2pm at Temple of Zeus, and new photos go up on our <a href = "https://www.facebook.com/behindtheseamscornellthrift/" target = "_blank"> Behind the Seams Facebook page </a>every Tuesday and Friday.</p>
         </div>
 
       </div>
